@@ -1,8 +1,21 @@
 @import '~sass/variables';
 
 header {
-  padding: 60px 0;
+  padding: 30px 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+}
+
+.logo,
+nav {
+  width: calc(50% - 15px);
+}
+
+.logo {
+  font-size: 3.6rem;
+  line-height: 1;
+  font-weight: 700;
+  color: $dark-blue;
 }

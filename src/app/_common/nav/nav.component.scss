@@ -1,1 +1,43 @@
 @import '~sass/variables';
+
+:host {
+  width: calc(50% - 15px);
+}
+
+nav {
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    li a {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $light-blue;
+      position: relative;
+      transition: all 0.2s ease;
+
+      &:hover,
+      &:focus {
+        color: $dark-blue;
+      }
+
+      &:active,
+      &.active {
+        &:after {
+          content: '';
+          width: 100%;
+          border-bottom: 2px solid $orange;
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      &.active {
+        color: $dark-blue;
+      }
+    }
+  }
+}
