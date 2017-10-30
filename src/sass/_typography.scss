@@ -1,0 +1,82 @@
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3.6rem;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 1px #ccc;
+}
+
+h2 {
+  font-size: 2rem;
+  // margin-bottom: 24px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: crimson;
+}
+
+.detail {
+  display: inline-block;
+  font-size: 1.6rem;
+
+  span:not(.chevron) {
+    display: block;
+  }
+}
+
+a {
+  color: crimson;
+
+  &:hover,
+  &:focus {
+    color: teal;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.chevron:after {
+  content: '';
+  border: 5px solid;
+  border-color: transparent transparent transparent #676d70;
+  display: inline-block;
+  height: 0;
+  margin: 0 5px 0 10px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.button {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 12px;
+  line-height: 1.6;
+  border-radius: 6px;
+  // align-self:flex-start;
+
+  &.primary {
+    background: #444;
+    color: #fff;
+  }
+
+  &.secondary {
+    background: #ccc;
+    color: #444;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+}
+
+input {
+  &[type="checkbox"] {
+    margin-right: 6px;
+  }
+}
