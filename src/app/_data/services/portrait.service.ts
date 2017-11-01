@@ -2,31 +2,29 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
-import { UserData } from './../models/user-data';
+import { Portrait } from './../models/portrait';
 
-import { USERDATA } from './../mock-user-data';
+import { PORTRAITS } from './../mock-portraits';
 
 // @Injectable()
 //
-// export class UserDataService {
+// export class PortraitService {
 //
-//   getUserData(): object {
+//   getPortrait(): object {
 //
-//     return USERDATA;
+//     return PORTRAITS;
 //
 //   }
 //
 // }
 
 @Injectable()
-export class UserDataService {
+export class PortraitService {
 
-   constructor(
-     private http: Http
-   ) {
+   constructor(private http: Http) {
    }
 
-  //  getUserData(): Observable<UserData[]> {
+  //  getPortrait(): Observable<Portrait[]> {
    //
   //     return this.http.get('http://billywatson.net/plusnet/userData.json')
   //        .map((res: Response) => res.json())
@@ -34,9 +32,9 @@ export class UserDataService {
    //
   //  }
 
-  getUserData(): Promise<UserData[]> {
+  getPortraits(): Promise<Portrait[]> {
 
-    return Promise.resolve(USERDATA);
+    return Promise.resolve(PORTRAITS);
 
   }
 

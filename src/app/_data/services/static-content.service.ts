@@ -2,31 +2,29 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
-import { UserData } from './../models/user-data';
+import { StaticContent } from './../models/static-content';
 
-import { USERDATA } from './../mock-user-data';
+import { CONTENT } from './../mock-static-content';
 
 // @Injectable()
 //
-// export class UserDataService {
+// export class StaticContentService {
 //
-//   getUserData(): object {
+//   getStaticContent(): object {
 //
-//     return USERDATA;
+//     return CONTENT;
 //
 //   }
 //
 // }
 
 @Injectable()
-export class UserDataService {
+export class StaticContentService {
 
-   constructor(
-     private http: Http
-   ) {
+   constructor(private http: Http) {
    }
 
-  //  getUserData(): Observable<UserData[]> {
+  //  getStaticContent(): Observable<StaticContent[]> {
    //
   //     return this.http.get('http://billywatson.net/plusnet/userData.json')
   //        .map((res: Response) => res.json())
@@ -34,9 +32,9 @@ export class UserDataService {
    //
   //  }
 
-  getUserData(): Promise<UserData[]> {
+  getStaticContent(): Promise<StaticContent[]> {
 
-    return Promise.resolve(USERDATA);
+    return Promise.resolve(CONTENT);
 
   }
 

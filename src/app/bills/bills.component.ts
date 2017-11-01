@@ -31,7 +31,7 @@ export class BillsComponent implements OnInit {
   ) {
 
     // this.dataLoaded = utils.getUserData();
-    utils.getUserData();
+    // utils.getUserData();
 
   }
 

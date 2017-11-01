@@ -28,7 +28,7 @@ export class ModalComponent implements OnInit {
     private utils: UtilsService
   ) {
 
-    utils.getUserData();
+    // utils.getUserData();
 
   }
 
@@ -44,12 +44,12 @@ export class ModalComponent implements OnInit {
     //   this.activatedBill = params.id;
     // });
 
-    this.sub = this.route.params.subscribe(params => {
-      this.activatedBill = +params['id']; // (+) converts string 'id' to a number
-      console.log(this.activatedBill);
-    });
-
-    console.log(this.activatedBill);
+    // this.sub = this.route.params.subscribe(params => {
+    //   this.activatedBill = +params['id']; // (+) converts string 'id' to a number
+    //   console.log(this.activatedBill);
+    // });
+    //
+    // console.log(this.activatedBill);
 
   }
 

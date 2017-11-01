@@ -10,7 +10,9 @@ import { HeaderComponent } from './_common/header/header.component';
 import { NavComponent } from './_common/nav/nav.component';
 import { ModalComponent } from './_common/modal/modal.component';
 
-import { UserDataService } from './_data/services/user-data.service';
+import { UtilsService } from './_data/services/utils.service';
+import { StaticContentService } from './_data/services/static-content.service';
+import { PortraitService } from './_data/services/portrait.service';
 import { FormatDatePipe } from './_pipes/format-date.pipe';
 
 @NgModule({
@@ -29,7 +31,9 @@ import { FormatDatePipe } from './_pipes/format-date.pipe';
     ModalComponent
   ],
   providers: [
-    UserDataService
+    UtilsService,
+    StaticContentService,
+    PortraitService
   ],
   bootstrap: [ AppComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

@@ -1,12 +1,12 @@
-<section class="content">
+<article class="intro">
+  <p *ngFor="let paragraph of home?.intro">{{ paragraph }}</p>
+</article>
 
-<!-- <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar
-dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra
-esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma
-gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec
-at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.
+<article class="portraits">
 
-Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut
-dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus.</p> -->
+  <div *ngFor="let portrait of portraits; let i = index" class="portrait group" [class.half]="i === 0" [class.quarter]="i !== 0">
+    <img [src]="'./../assets/' + portrait?.id + '.jpg'">
+    <div class="title"><h2>{{ portrait?.title }} {{ portrait?.subject }}</h2></div>
+  </div>
 
-</section>
+</article>

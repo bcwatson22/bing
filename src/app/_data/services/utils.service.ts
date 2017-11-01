@@ -1,21 +1,21 @@
 import { Injectable } from '@angular/core';
-import { UserDataService } from './user-data.service';
+import { PortraitService } from './portrait.service';
+import { StaticContentService } from './static-content.service';
 
 @Injectable()
 
 export class UtilsService {
 
-  private userData;
-  private currentUser;
-  private account;
-  private billing;
-  private latestBill;
-  private broadband;
-  private phone;
-  private mobile;
-  private tv;
+  private rawStatic;
+  private staticData;
 
-  constructor(private userDataService: UserDataService) {
+  // private rawPortraits;
+  private portraitData;
+
+  constructor(
+    private portraitService: PortraitService,
+    private staticService: StaticContentService
+  ) {
   }
 
   // getUserData(): void {
@@ -32,56 +32,68 @@ export class UtilsService {
   //
   // }
 
-  getUserData(): any {
+  getStaticContent(): void {
 
-    this.userDataService.getUserData().then(
+    this.staticService.getStaticContent().then(
       (val) => {
-        this.userData = val;
-        this.getTargetData(224401);
-
-        // return true;
+        this.rawStatic = val;
+        this.staticData = this.rawStatic[0];
       }
     );
 
   }
 
-  getTargetData(id): any {
+  getPortraits(): void {
 
-    let targetUser = this.userData.find(o => o.id === id);
-
-    // console.log(targetUser);
-
-    this.currentUser = targetUser;
-
-    // this.bindData();
-
-    return targetUser;
+    this.portraitService.getPortraits().then(
+      (val) => {
+        this.portraitData = val;
+        // this.portraitData = this.rawPortraits[0];
+      }
+    );
 
   }
 
-  getLatestBill(bills: any[]): any {
+  // getTargetData(): any {
+  //
+  //   let targetDate = this.rawStatic.find(o => o.id === id);
+  //
+  //   // console.log(targetUser);
+  //
+  //   this.currentUser = targetUser;
+  //
+  //   // this.bindData();
+  //
+  //   return targetUser;
+  //
+  // }
+  //
+  // getLatestBill(bills: any[]): any {
+  //
+  //   let latestBill = bills.slice(bills.length -1);
+  //
+  //   return latestBill[0];
+  //
+  // }
+  //
 
-    let latestBill = bills.slice(bills.length -1);
-
-    return latestBill[0];
-
-  }
-
-  bindData(key: string): any {
+  bindData(key: any): any {
 
     let binding;
 
-    if (key === 'latestBill') {
-
-      binding = this.getLatestBill(this.currentUser.billing.bills);
-
-    } else {
-
-      binding = this.currentUser[key];
-
-    }
+    binding = this.staticData[key];
 
     return binding;
+
+  }
+
+  bindPortraits(): any {
+
+    // let binding;
+    //
+    // binding = this.portraitData[key];
+
+    return this.portraitData;
 
   }
 
