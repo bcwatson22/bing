@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   title = 'Home';
 
   private home;
+  private unsorted;
   private portraits;
 
   constructor(
@@ -30,7 +31,20 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     this.home = this.utils.bindData('home');
-    this.portraits = this.utils.bindPortraits();
+    this.unsorted = this.utils.filterPortraits('home', true);
+    this.portraits = this.sortPortraits();
+
+  }
+
+  sortPortraits(): any {
+
+    let portraits = this.unsorted;
+
+    portraits.sort(function(a, b) {
+      return a.position - b.position;
+    });
+
+    return portraits;
 
   }
 

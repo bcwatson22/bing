@@ -41,9 +41,31 @@ body {
     width: calc(50% - 30px);
   }
 
+  &.stacked,
   &.quarter {
     width: calc(25% - 30px);
-    margin-top: 18px;
+  }
+
+  &.stacked {
+    margin-bottom: 18px;
+  }
+
+  &.third {
+    width: calc(33.33% - 30px);
+  }
+
+  &.landscape {
+    width: calc(75% - 30px);
+    margin-left: calc(25% + 15px);
+    position: relative;
+    overflow: visible;
+
+    blockquote {
+      margin-left: -25%;
+      border: 1px solid red;
+      width: 25%;
+      position: absolute;
+    }
   }
 
   img {

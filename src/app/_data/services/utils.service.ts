@@ -97,4 +97,12 @@ export class UtilsService {
 
   }
 
+  filterPortraits(key: string, value: any): any {
+
+    let pictures = this.portraitData.filter(o => eval('o.' + key) === value);
+
+    return pictures;
+
+  }
+
 }
