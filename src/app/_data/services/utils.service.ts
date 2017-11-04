@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Location } from '@angular/common';
 import { PortraitService } from './portrait.service';
 import { StaticContentService } from './static-content.service';
 
@@ -13,6 +14,7 @@ export class UtilsService {
   private portraitData;
 
   constructor(
+    private location: Location,
     private portraitService: PortraitService,
     private staticService: StaticContentService
   ) {
@@ -102,6 +104,21 @@ export class UtilsService {
     let pictures = this.portraitData.filter(o => eval('o.' + key) === value);
 
     return pictures;
+
+  }
+
+  getRouteParam(): string {
+
+    let urlPath = this.location.path().substr(1);
+    let parameter;
+
+    if (urlPath.indexOf('/') >= 0) {
+
+      parameter = urlPath.substring(urlPath.lastIndexOf('/') + 1, urlPath.length);
+
+    }
+
+    return parameter;
 
   }
 

@@ -3,6 +3,7 @@ export interface Portrait {
   subject: string;
   title?: string;
   material: string;
+  description: object;
   orientation: string;
   year: number;
   job?: string;

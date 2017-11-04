@@ -1,0 +1,17 @@
+@import '~sass/variables';
+
+footer {
+  padding: 30px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+small {
+  display: block;
+}
+
+.bw-logo img {
+  height: 40px;
+}

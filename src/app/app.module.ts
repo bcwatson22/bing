@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './_common/header/header.component';
 import { NavComponent } from './_common/nav/nav.component';
 import { ModalComponent } from './_common/modal/modal.component';
+import { FooterComponent } from './_common/footer/footer.component';
+import { PortraitComponent } from './_common/modal/portrait/portrait.component';
 
 import { UtilsService } from './_data/services/utils.service';
 import { StaticContentService } from './_data/services/static-content.service';
@@ -28,7 +30,9 @@ import { FormatDatePipe } from './_pipes/format-date.pipe';
     NavComponent,
     HeaderComponent,
     FormatDatePipe,
-    ModalComponent
+    ModalComponent,
+    FooterComponent,
+    PortraitComponent
   ],
   providers: [
     UtilsService,

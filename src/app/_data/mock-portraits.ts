@@ -1,64 +1,15 @@
 import { Portrait } from './models/portrait';
 
 export const PORTRAITS: Portrait[] = [
-  // {
-  //   id: 'jim-robinson',
-  //   subject: 'Jim Robinson',
-  //   title: 'Mr',
-  //   material: 'Oil on canvas',
-  //   orientation: 'portrait',
-  //   year: 2001,
-  //   home: true
-  // },
-  // {
-  //   id: 'harriet-brown',
-  //   subject: 'Harriet Brown',
-  //   title: 'Miss',
-  //   material: 'Chalk',
-  //   orientation: 'portrait',
-  //   year: 2001,
-  //   home: true
-  // },
-  // {
-  //   id: 'margaret-thompson',
-  //   subject: 'Margaret Thompson',
-  //   title: 'Mrs',
-  //   material: 'Oil on canvas',
-  //   orientation: 'portrait',
-  //   year: 2001,
-  //   home: true
-  // },
-  // {
-  //   id: 'phoebe-coultard',
-  //   subject: 'Phoebe Coultard',
-  //   title: 'Miss',
-  //   material: 'Oil on canvas',
-  //   orientation: 'portrait',
-  //   year: 2001,
-  //   home: true
-  // },
-  // {
-  //   id: 'robert-jones',
-  //   subject: 'Robert Jones',
-  //   title: 'Mr',
-  //   material: 'Chalk',
-  //   orientation: 'portrait',
-  //   year: 2001,
-  //   home: true
-  // },
-  // {
-  //   id: 'fred-gould',
-  //   subject: 'Fred Gould',
-  //   title: 'Yorkshire Property Developer',
-  //   material: 'Oil on canvas',
-  //   orientation: 'portrait',
-  //   year: 2001
-  // }
   {
     id: 'belinda-potter',
     subject: 'Belinda Potter',
     title: 'Miss',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -66,6 +17,10 @@ export const PORTRAITS: Portrait[] = [
     id: 'charles-and-cindy',
     subject: 'Charles and Cindy',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -74,6 +29,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Charlotte Jackson',
     title: 'Ms',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -82,6 +41,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Coleen Bunker',
     title: 'Miss',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -90,6 +53,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Frank Trinder',
     title: 'Mr',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001,
     home: true,
@@ -100,6 +67,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Fred Gould',
     title: 'Mr',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -107,6 +78,10 @@ export const PORTRAITS: Portrait[] = [
     id: 'gemma-and-tilly',
     subject: 'Gemma and Tilly',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001,
     home: true,
@@ -116,6 +91,10 @@ export const PORTRAITS: Portrait[] = [
     id: 'geraint-jones',
     subject: 'Geraint Jones',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -124,6 +103,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Gregory Heyji',
     title: 'Mr',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -132,6 +115,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Harriet Brown',
     title: 'Miss',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001,
     home: true,
@@ -142,6 +129,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Ian Mortimer',
     title: 'Mr',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001,
     home: true,
@@ -152,6 +143,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'James Reid',
     title: 'Mr',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -160,6 +155,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Jim Robinson',
     title: 'Mr',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001,
     home: true,
@@ -169,6 +168,10 @@ export const PORTRAITS: Portrait[] = [
     id: 'joe-white',
     subject: 'Joe White',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -177,6 +180,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Johnny Grey',
     title: 'Mr',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001,
     home: true,
@@ -186,6 +193,10 @@ export const PORTRAITS: Portrait[] = [
     id: 'kathryn-white',
     subject: 'Kathryn White',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -193,6 +204,10 @@ export const PORTRAITS: Portrait[] = [
     id: 'lisa-johnson',
     subject: 'Lisa Johnson',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -201,6 +216,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Lucy Chapman',
     title: 'Mrs',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -208,6 +227,10 @@ export const PORTRAITS: Portrait[] = [
     id: 'luke-carter',
     subject: 'Luke Carter',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -216,6 +239,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Margaret Thompson',
     title: 'Mrs',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001,
     home: true,
@@ -226,6 +253,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Nina Smith',
     title: 'Mrs',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001,
     home: true,
@@ -236,6 +267,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Phoebe Coultard',
     title: 'Miss',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001,
     home: true,
@@ -245,6 +280,10 @@ export const PORTRAITS: Portrait[] = [
     id: 'restucci-family',
     subject: 'Restucci Family',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'landscape',
     year: 2001,
     home: true,
@@ -254,6 +293,10 @@ export const PORTRAITS: Portrait[] = [
     id: 'richard-webster',
     subject: 'Richard Webster',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -262,6 +305,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Robert Jones',
     title: 'Mr',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001,
     home: true,
@@ -272,6 +319,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Robin Williamson',
     title: 'Mr',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001,
     home: true,
@@ -282,6 +333,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Sarah Harley',
     title: 'Ms',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001,
     home: true,
@@ -292,6 +347,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Simon Buckall',
     title: 'Mr',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -300,6 +359,10 @@ export const PORTRAITS: Portrait[] = [
     subject: 'Spencer Dyson',
     title: 'Sir',
     material: 'Chalk',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -307,6 +370,10 @@ export const PORTRAITS: Portrait[] = [
     id: 'tim-hardman',
     subject: 'Tim Hardman',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   },
@@ -314,6 +381,10 @@ export const PORTRAITS: Portrait[] = [
     id: 'violet-brando',
     subject: 'Violet Brando',
     material: 'Oil',
+    description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
+        "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    ],
     orientation: 'portrait',
     year: 2001
   }

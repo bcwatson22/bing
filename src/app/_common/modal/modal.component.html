@@ -1,19 +1,7 @@
-<div class="modal">
-  <div *ngIf="!bill">None here pal.</div>
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close" (click)="closeModal()">&times;</span>
-      <h2>
-        {{bill?.id}}
-        <!-- <ng-content select="[modal-header]"></ng-content> -->
-      </h2>
-    </div>
-    <div class="modal-body">
-      {{bill?.amount}}
-      <!-- <ng-content select="[modal-body]"></ng-content> -->
-    </div>
-    <div class="modal-footer">
-      {{bill?.date}}
-    </div>
-  </div>
+<div class="modal-bg" (click)="closeModal(bill)"></div>
+<div class="modal-content">
+  <button class="close" (click)="closeModal(bill)">&times;</button>
+  <h2>
+    {{data?.id}} intit
+  </h2>
 </div>

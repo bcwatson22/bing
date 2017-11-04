@@ -12,13 +12,14 @@ h3 {
 h1 {
   font-size: 3.6rem;
   margin-bottom: 12px;
-  text-shadow: 2px 2px 1px #ccc;
+  // text-shadow: 2px 2px 1px #ccc;
 }
 
 h2 {
   font-size: 2rem;
   // margin-bottom: 24px;
   font-weight: bold;
+  color: $orange;
 }
 
 h3 {
@@ -36,6 +37,7 @@ p {
 
 a {
   text-decoration: none;
+  color: $orange;
 
   // &:hover,
   // &:focus {
@@ -45,4 +47,13 @@ a {
   &:active {
     text-decoration: none;
   }
+}
+
+a,
+button {
+  border: none;
+
+   &:focus {
+     outline: 0;
+   }
 }
