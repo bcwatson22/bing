@@ -1,20 +1,24 @@
-<article class="intro">
-  <p *ngFor="let paragraph of home?.intro">{{ paragraph }}</p>
-</article>
+<section class="content">
 
-<article class="portraits group">
+  <article class="intro">
+    <p *ngFor="let paragraph of home?.intro">{{ paragraph }}</p>
+  </article>
 
-  <div *ngFor="let portrait of portraits; let i = index" class="holder" [class.half]="i === 0" [class.stacked]="i > 0 && i < 5" [class.quarter]="i > 5 && i < 10" [class.third]="i > 9 && i < 13" [class.landscape]="portrait.orientation === 'landscape'">
-    <blockquote *ngIf="portrait.orientation === 'landscape'">
-      <p>Medicine is good, but painting is better!</p>
-      <p>And people are the noblest but also the most challenging of subjects.</p>
-    </blockquote>
-    <div class="portrait">
-      <img [src]="'./../assets/' + portrait?.id + '.jpg'">
-      <div class="title" (click)="showPortrait(portrait?.id, true, $event)"><h2>{{ portrait?.title }} {{ portrait?.subject }}</h2></div>
+  <article class="portraits group">
+
+    <div *ngFor="let portrait of portraits; let i = index" class="holder" [class.half]="i === 0" [class.stacked]="i > 0 && i < 5" [class.quarter]="i > 5 && i < 10" [class.third]="i > 9 && i < 13" [class.landscape]="portrait.orientation === 'landscape'">
+      <blockquote *ngIf="portrait.orientation === 'landscape'">
+        <p>Medicine is good, but painting is better!</p>
+        <p>And people are the noblest but also the most challenging of subjects.</p>
+      </blockquote>
+      <div class="portrait">
+        <img [src]="'./../assets/' + portrait?.id + '.jpg'" [alt]="portrait?.subject + ' Portrait'">
+        <div class="title" (click)="showPortrait(portrait?.id, true, $event)"><h2>{{ portrait?.title }} {{ portrait?.subject }}</h2></div>
+      </div>
     </div>
-  </div>
 
-</article>
+  </article>
+
+</section>
 
 <portrait [data]="activatedPortrait" [@ModalAnimation]="{ value: modalState, params: { originTop: widgetTop, originLeft: widgetLeft } }" (modalClose)="modalClose(true)"></portrait>

@@ -16,6 +16,10 @@ import { UtilsService } from './_data/services/utils.service';
 import { StaticContentService } from './_data/services/static-content.service';
 import { PortraitService } from './_data/services/portrait.service';
 import { FormatDatePipe } from './_pipes/format-date.pipe';
+import { AboutComponent } from './about/about.component';
+import { PaintingsComponent } from './paintings/paintings.component';
+import { DrawingsComponent } from './drawings/drawings.component';
+import { CommissionComponent } from './commission/commission.component';
 
 @NgModule({
   imports: [
@@ -32,7 +36,11 @@ import { FormatDatePipe } from './_pipes/format-date.pipe';
     FormatDatePipe,
     ModalComponent,
     FooterComponent,
-    PortraitComponent
+    PortraitComponent,
+    AboutComponent,
+    PaintingsComponent,
+    DrawingsComponent,
+    CommissionComponent
   ],
   providers: [
     UtilsService,

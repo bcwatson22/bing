@@ -1,0 +1,20 @@
+<section class="content group">
+
+  <article class="block">
+    <h2>Biography</h2>
+    <p *ngFor="let paragraph of about?.biography">{{ paragraph }}</p>
+
+    <h2>Views on painting</h2>
+    <p *ngFor="let paragraph of about?.views">{{ paragraph }}</p>
+  </article>
+
+  <article class="block">
+    <img src="./assets/bing.jpg" alt="Bing Jones">
+
+    <blockquote>
+      <p>Painting for me is about presenting the world to the viewer in a sorted way.</p>
+      <p>Somehow one has to capture an essence of the subject and then re-construct it, resolving the parts into a whole.</p>
+    </blockquote>
+  </article>
+
+</section>
