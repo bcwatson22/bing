@@ -27,8 +27,8 @@ export class HomeComponent implements OnInit {
 
   private activatedPortrait;
   private modalState;
-  private widgetTop = '50%';
-  private widgetLeft = '50%';
+
+  private latLong;
 
   private coordinates: any;
 
@@ -133,7 +133,13 @@ export class HomeComponent implements OnInit {
 
     this.activatedPortrait = this.utils.activatePortraitData(this.portraits, id);
 
-    this.modalState = this.utils.pushHistory('home', id, animate, clickEvent);
+    this.modalState = this.utils.portraitLaunchUrl('home', id, animate, clickEvent);
+
+    if (clickEvent) {
+
+      this.latLong = this.utils.getPortraitCoordinates(clickEvent);
+
+    }
 
     // if (animate) {
     //
@@ -176,9 +182,11 @@ export class HomeComponent implements OnInit {
 
     if (history) {
 
-      let url = this.router.createUrlTree(['/home']).toString();
+      this.utils.portraitCloseUrl('home');
 
-      this.location.go(url);
+      // let url = this.router.createUrlTree(['/home']).toString();
+      //
+      // this.location.go(url);
 
     }
 

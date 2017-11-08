@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { PortraitService } from './portrait.service';
 import { StaticContentService } from './static-content.service';
+import { Coordinates } from './../models/coordinates';
 
 @Injectable()
 
@@ -13,6 +14,8 @@ export class UtilsService {
 
   // private rawPortraits;
   private portraitData;
+
+  private coordinates: Coordinates = new Coordinates();
 
   constructor(
     private router: Router,
@@ -109,7 +112,28 @@ export class UtilsService {
 
   }
 
-  pushHistory(baseUrl: string, id: string, animate: boolean, clickEvent: any): string {
+  getPortraitCoordinates(event: any): any {
+
+    let widget = event.currentTarget,
+        width = widget.offsetWidth,
+        height = widget.offsetHeight,
+        offset = widget.getBoundingClientRect(),
+        top = offset.top + (height / 2),
+        left = offset.left + (width / 2);
+
+    this.coordinates.width = width;
+    this.coordinates.height = height;
+    this.coordinates.top = top;
+    this.coordinates.left = left;
+
+    return this.coordinates;
+
+    // this.widgetTop = top + 'px';
+    // this.widgetLeft = left + 'px';
+
+  }
+
+  portraitLaunchUrl(baseUrl: string, id: string, animate: boolean, clickEvent: any): string {
 
     let url = this.router.createUrlTree(['/home', id]).toString();
 
@@ -119,7 +143,7 @@ export class UtilsService {
 
       if (clickEvent) {
 
-        this.getPortraitCoordinates(clickEvent);
+        // this.getPortraitCoordinates(clickEvent);
         this.location.go(url);
 
       }
@@ -137,17 +161,11 @@ export class UtilsService {
 
   }
 
-  getPortraitCoordinates(event: any): void {
+  portraitCloseUrl(base: string): void {
 
-    let widget = event.currentTarget,
-        width = widget.offsetWidth,
-        height = widget.offsetHeight,
-        offset = widget.getBoundingClientRect(),
-        top = offset.top + (height / 2),
-        left = offset.left + (width / 2);
+    let url = this.router.createUrlTree(['/' + base]).toString();
 
-    // this.widgetTop = top + 'px';
-    // this.widgetLeft = left + 'px';
+    this.location.go(url);
 
   }
 
