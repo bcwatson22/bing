@@ -190,8 +190,8 @@ export const PORTRAITS: Portrait[] = [
     position: 10
   },
   {
-    id: 'kathryn-white',
-    subject: 'Kathryn White',
+    id: 'kathryn-wright',
+    subject: 'Kathryn Wright',
     material: 'Oil',
     description: [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
@@ -279,7 +279,7 @@ export const PORTRAITS: Portrait[] = [
   {
     id: 'restucci-family',
     subject: 'Restucci Family',
-    material: 'Chalk',
+    material: 'Hybrid',
     description: [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla.",
         "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."

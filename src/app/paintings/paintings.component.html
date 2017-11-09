@@ -1,3 +1,26 @@
-<p>
-  paintings works!
-</p>
+<section class="content">
+
+  <header>
+
+    <article class="intro">
+      <p *ngFor="let paragraph of paintings?.intro">{{ paragraph }}</p>
+    </article>
+
+    <h1>{{title}}</h1>
+
+  </header>
+
+  <article class="portraits shuffle group">
+
+    <div *ngFor="let portrait of portraits; let i = index" class="holder">
+      <div class="portrait">
+        <img [src]="'./../assets/' + portrait?.id + '.jpg'" [alt]="portrait?.subject + ' Portrait'">
+        <div class="title" (click)="showPortrait(portrait?.id, true, $event)"><h2>{{ portrait?.title }} {{ portrait?.subject }}</h2></div>
+      </div>
+    </div>
+
+  </article>
+
+</section>
+
+<portrait [data]="activatedPortrait" [@ModalAnimation]="{ value: modalState, params: { originTop: widgetTop, originLeft: widgetLeft } }" (modalClose)="modalClose(true)"></portrait>

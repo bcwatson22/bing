@@ -89,6 +89,14 @@ export class UtilsService {
 
   }
 
+  shufflePortraits(collection: any): any {
+
+    let pictures = collection.sort(() => Math.random() - 0.5);
+
+    return pictures;
+
+  }
+
   getRouteParam(): string {
 
     let urlPath = this.location.path().substr(1);
@@ -135,7 +143,7 @@ export class UtilsService {
 
   portraitLaunchUrl(baseUrl: string, id: string, animate: boolean, clickEvent: any): string {
 
-    let url = this.router.createUrlTree(['/home', id]).toString();
+    let url = this.router.createUrlTree(['/' + baseUrl, id]).toString();
 
     if (animate) {
 
