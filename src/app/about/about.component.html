@@ -1,11 +1,10 @@
 <section class="content group">
 
   <article class="block">
-    <h2>Biography</h2>
-    <p *ngFor="let paragraph of about?.biography">{{ paragraph }}</p>
-
-    <h2>Views on painting</h2>
-    <p *ngFor="let paragraph of about?.views">{{ paragraph }}</p>
+    <div class="sub-section" *ngFor="let section of about">
+      <h2>{{section.title}}</h2>
+      <p *ngFor="let paragraph of section?.body">{{paragraph}}</p>
+    </div>
   </article>
 
   <article class="block">

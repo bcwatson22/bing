@@ -45,6 +45,10 @@ blockquote {
   font-weight: 700;
   margin: 30px 0;
 
+  .block & {
+    margin-top: 45px;
+  }
+
   // &:before,
   // p {
   //   margin-bottom: 30px;

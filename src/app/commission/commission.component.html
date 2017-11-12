@@ -1,3 +1,50 @@
-<p>
-  commission works!
-</p>
+<section class="content group">
+
+  <article class="block">
+    <h2>{{commission?.pricing.title}}</h2>
+    <p *ngFor="let paragraph of commission?.pricing.intro">{{paragraph}}</p>
+    <div class="sub-section" *ngFor="let section of commission?.pricing.content">
+      <h3>{{section.subheader}}</h3>
+      <p *ngFor="let paragraph of section?.body">{{paragraph}}</p>
+    </div>
+  </article>
+
+  <article class="block">
+    <h2>{{commission?.contact.title}}</h2>
+    <p *ngFor="let paragraph of commission?.contact.intro">{{paragraph}}</p>
+    <div class="sub-section" *ngFor="let section of commission?.contact.content">
+      <h3>{{section.subheader}}</h3>
+
+      <ng-container *ngIf="section.subheader === 'Post'">
+        <div class="vcard">
+          <div class="adr" itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address/">
+            <span *ngFor="let paragraph of section?.body; let i = index"
+              [class.street-address]="i === 1"
+              [class.locality]="i === 2"
+              [class.region]="i === 3"
+              [class.postal-code]="i === 4"
+              [class.country-name]="i === 5">{{paragraph}}</span>
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="section.subheader !== 'Post'">
+        <ng-container *ngIf="section.subheader === 'Email'">
+          <a href="mailto:{{section?.body[0]}}">
+            <p *ngFor="let paragraph of section?.body">{{paragraph}}</p>
+          </a>
+        </ng-container>
+
+        <ng-container *ngIf="section.subheader !== 'Email'">
+          <p *ngFor="let paragraph of section?.body">{{paragraph}}</p>
+        </ng-container>
+      </ng-container>
+    </div>
+
+    <blockquote>
+      <p>The painter has so much choice of approach, from the naive to the classical, slick realism to anti-art.</p>
+      <p>But the portrait painter is reined in with layers of expectation from sitter and paymaster what a challenge!</p>
+    </blockquote>
+  </article>
+
+</section>

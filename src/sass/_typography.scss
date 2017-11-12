@@ -21,18 +21,23 @@ h1 {
 h2 {
   font-size: 2rem;
   // margin-bottom: 24px;
-  font-weight: bold;
+  font-weight: 700;
   color: $orange;
-  margin-top: 45px;
 
-  &:first-of-type {
+  .sub-section & {
+    margin-top: 45px;
+  }
+
+  .sub-section:first-of-type & {
     margin-top: 0;
   }
 }
 
 h3 {
-  font-size: 1.2rem;
-  color: crimson;
+  font-weight: 700;
+  color: $dark-blue;
+  margin-bottom: 15px;
+  margin-top: 30px;
 }
 
 p {
@@ -64,4 +69,10 @@ button {
    &:focus {
      outline: 0;
    }
+}
+
+span {
+  .vcard & {
+    display: block;
+  }
 }
