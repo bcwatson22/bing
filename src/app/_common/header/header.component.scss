@@ -8,14 +8,30 @@ nav {
   align-items: center;
 }
 
-.logo,
+.bing-logo,
 ul {
   width: calc(50% - 15px);
 }
 
-.logo {
+.bing-logo {
   font-size: 3.6rem;
-  line-height: 1;
-  font-weight: 700;
-  color: $dark-blue;
+  // line-height: 1;
+  // font-weight: 700;
+  // color: $dark-blue;
+  // max-height: 47px;
+  text-indent: -99999rem;
+  // border: 1px solid $orange;
+  max-width: 495px;
+  background: url('/assets/bing-logo.png') 0 0 no-repeat;
+  background-size: 495px 47px;
+  background: url('/assets/bing-logo.svg') 0 0 no-repeat;
+  background-size: 100% auto;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
