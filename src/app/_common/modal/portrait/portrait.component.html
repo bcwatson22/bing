@@ -2,9 +2,9 @@
 <div class="modal-content">
   <button class="modal-close" (click)="closeModal(bill)"></button>
   <section class="portrait group">
-    <article class="picture">
+    <!-- <article class="picture"> -->
       <img *ngIf="data" [src]="'./../assets/' + data?.id + '.jpg'">
-    </article>
+    <!-- </article> -->
     <article class="details">
       <h1>{{data?.title}} {{data?.subject}}</h1>
       <h2>{{data?.material}}<span>, {{data?.year}}</span></h2>
