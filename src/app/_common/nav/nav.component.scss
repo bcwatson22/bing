@@ -19,6 +19,7 @@ ul {
     &:hover,
     &:focus {
       color: $dark-blue;
+      text-decoration: none;
     }
 
     &:active,
