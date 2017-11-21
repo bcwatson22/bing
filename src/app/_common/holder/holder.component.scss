@@ -2,9 +2,7 @@
 
 :host {
   margin: 15px;
-  // overflow: hidden;
   float: left;
-  // width: calc(50% - 30px);
   width: calc(25% - 30px);
   position: relative;
 
@@ -59,34 +57,8 @@
     blockquote {
       width: calc(25% - 20px);
       margin: 0 30px 0 0;
-      // font-size: 2.4rem;
-      // color: $dark-blue;
-      // font-weight: 700;
-      //
-      // &:before,
-      // p {
-      //   margin-bottom: 30px;
-      // }
-      //
-      // p:last-of-type {
-      //   margin: 0;
-      // }
-      //
-      // &:before {
-      //   content: '\201c';
-      //   color: $orange;
-      //   font-size: 20rem;
-      //   line-height: 0;
-      //   display: block;
-      //   padding-top: 70px;
-      // }
     }
   }
-
-  // img {
-  //   width: 100%;
-  //   height: auto;
-  // }
 
   .title {
     position: absolute;

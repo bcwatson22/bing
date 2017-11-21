@@ -136,9 +136,6 @@ export class UtilsService {
 
     return this.coordinates;
 
-    // this.widgetTop = top + 'px';
-    // this.widgetLeft = left + 'px';
-
   }
 
   portraitLaunchUrl(baseUrl: string, id: string, animate: boolean, clickEvent: any): string {
@@ -147,11 +144,8 @@ export class UtilsService {
 
     if (animate) {
 
-      // this.modalState = 'animate';
-
       if (clickEvent) {
 
-        // this.getPortraitCoordinates(clickEvent);
         this.location.go(url);
 
       }
@@ -160,7 +154,6 @@ export class UtilsService {
 
     } else {
 
-      // this.modalState = 'active';
       this.location.replaceState(url);
 
       return 'active';

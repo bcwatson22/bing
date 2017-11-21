@@ -90,46 +90,7 @@ export class HomeComponent implements OnInit {
 
   }
 
-  // activatePortraitData(id: string): any {
-  //
-  //   let targetPortrait = this.portraits.find(o => o.id == id);
-  //
-  //   return targetPortrait;
-  //
-  // }
-  //
-  // pushHistory(baseUrl: string, id: string, animate: boolean, clickEvent: any): string {
-  //
-  //   let url = this.router.createUrlTree(['/home', id]).toString();
-  //
-  //   if (animate) {
-  //
-  //     // this.modalState = 'animate';
-  //
-  //     if (clickEvent) {
-  //
-  //       this.getPortraitCoordinates(clickEvent);
-  //       this.location.go(url);
-  //
-  //     }
-  //
-  //     return 'animate';
-  //
-  //   } else {
-  //
-  //     // this.modalState = 'active';
-  //     this.location.replaceState(url);
-  //
-  //     return 'active';
-  //
-  //   }
-  //
-  // }
-
   showPortrait($event): void {
-
-    // let targetPortrait = this.portraits.find(o => o.id == id);
-    // let url = this.router.createUrlTree(['/home', id]).toString();
 
     this.activatedPortrait = this.utils.activatePortraitData(this.portraits, $event.id);
 
@@ -141,52 +102,15 @@ export class HomeComponent implements OnInit {
 
     }
 
-    // if (animate) {
-    //
-    //   this.modalState = 'animate';
-    //
-    //   if (clickEvent) {
-    //
-    //     this.getPortraitCoordinates(clickEvent);
-    //     this.location.go(url);
-    //
-    //   }
-    //
-    // } else {
-    //
-    //   this.modalState = 'active';
-    //   this.location.replaceState(url);
-    //
-    // }
-
   }
-
-  // getPortraitCoordinates(event: any): void {
-  //
-  //   let widget = event.currentTarget,
-  //       width = widget.offsetWidth,
-  //       height = widget.offsetHeight,
-  //       offset = widget.getBoundingClientRect(),
-  //       top = offset.top + (height / 2),
-  //       left = offset.left + (width / 2);
-  //
-  //   this.widgetTop = top + 'px';
-  //   this.widgetLeft = left + 'px';
-  //
-  // }
 
   modalClose(history: boolean): void {
 
     this.modalState = null;
-    // this.activatedPortrait = null;
 
     if (history) {
 
       this.utils.portraitCloseUrl('home');
-
-      // let url = this.router.createUrlTree(['/home']).toString();
-      //
-      // this.location.go(url);
 
     }
 
