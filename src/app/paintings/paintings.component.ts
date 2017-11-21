@@ -48,7 +48,7 @@ export class PaintingsComponent implements OnInit {
 
       if (portraitParam) {
 
-        this.showPortrait(portraitParam, true, false);
+        this.showPortrait({id: portraitParam, animate: true, clickEvent: false});
 
       } else {
 
@@ -72,21 +72,21 @@ export class PaintingsComponent implements OnInit {
 
     if (portraitParam) {
 
-      this.showPortrait(portraitParam, false, false);
+      this.showPortrait({id: portraitParam, animate: false, clickEvent: false});
 
     }
 
   }
 
-  showPortrait(id: string, animate: boolean, clickEvent: any): void {
+  showPortrait($event): void {
 
-    this.activatedPortrait = this.utils.activatePortraitData(this.portraits, id);
+    this.activatedPortrait = this.utils.activatePortraitData(this.portraits, $event.id);
 
-    this.modalState = this.utils.portraitLaunchUrl('paintings', id, animate, clickEvent);
+    this.modalState = this.utils.portraitLaunchUrl('paintings', $event.id, $event.animate, $event.clickEvent);
 
-    if (clickEvent) {
+    if ($event.clickEvent) {
 
-      this.latLong = this.utils.getPortraitCoordinates(clickEvent);
+      this.latLong = this.utils.getPortraitCoordinates($event.clickEvent);
 
     }
 

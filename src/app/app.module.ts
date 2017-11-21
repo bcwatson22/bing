@@ -20,6 +20,7 @@ import { AboutComponent } from './about/about.component';
 import { PaintingsComponent } from './paintings/paintings.component';
 import { DrawingsComponent } from './drawings/drawings.component';
 import { CommissionComponent } from './commission/commission.component';
+import { HolderComponent } from './_common/holder/holder.component';
 
 @NgModule({
   imports: [
@@ -40,7 +41,8 @@ import { CommissionComponent } from './commission/commission.component';
     AboutComponent,
     PaintingsComponent,
     DrawingsComponent,
-    CommissionComponent
+    CommissionComponent,
+    HolderComponent
   ],
   providers: [
     UtilsService,

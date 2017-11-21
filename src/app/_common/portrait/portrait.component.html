@@ -1,0 +1,18 @@
+<div class="modal-bg" (click)="closeModal(bill)"></div>
+<div class="modal-content">
+  <button class="modal-close" (click)="closeModal(bill)"></button>
+  <section class="portrait group">
+    <!-- <article class="picture"> -->
+      <img *ngIf="data" [src]="'./../assets/' + data?.id + '.jpg'">
+    <!-- </article> -->
+    <article class="details">
+      <h1>{{data?.title}} {{data?.subject}}</h1>
+      <h2>{{data?.material}}<span>, {{data?.year}}</span></h2>
+      <h3 *ngIf="data?.job">{{data?.job}}</h3>
+
+      <div class="description">
+        <p *ngFor="let paragraph of data?.description">{{paragraph}}</p>
+      </div>
+    </article>
+  </section>
+</div>

@@ -12,12 +12,7 @@
 
   <article class="portraits shuffle group">
 
-    <div *ngFor="let portrait of portraits; let i = index" class="holder">
-      <div class="portrait">
-        <img [src]="'./../assets/' + portrait?.id + '.jpg'" [alt]="portrait?.subject + ' Portrait'">
-        <div class="title" (click)="showPortrait(portrait?.id, true, $event)"><h2>{{portrait?.title}} {{ portrait?.subject}}</h2></div>
-      </div>
-    </div>
+    <holder *ngFor="let portrait of portraits; let i = index" class="holder" [portrait]="portrait" (showPortrait)="showPortrait($event)"></holder>
 
   </article>
 

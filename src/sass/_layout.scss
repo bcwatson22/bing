@@ -79,117 +79,117 @@ blockquote {
   }
 }
 
-.holder {
-  margin: 15px;
-  // overflow: hidden;
-  float: left;
-  // width: calc(50% - 30px);
-  width: calc(25% - 30px);
-  position: relative;
-
-  .portrait {
-    overflow: hidden;
-    position: relative;
-    // box-shadow: 0 0 3px 1px $dark-grey;
-
-    &:hover,
-    &:focus {
-      .title {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    &:active {
-      .title {
-          background: rgba($orange, 0.8);
-          transition: all 0.1s ease;
-      }
-    }
-  }
-
-  &.half {
-    width: calc(50% - 30px);
-  }
-
-  &.stacked,
-  &.quarter {
-    width: calc(25% - 30px);
-  }
-
-  &.stacked {
-    margin-bottom: 18px;
-  }
-
-  &.third {
-    width: calc(33.33% - 30px);
-  }
-
-  &.landscape {
-    width: calc(100% - 30px);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    .portrait {
-      width: calc(75% - 10px);
-    }
-
-    blockquote {
-      width: calc(25% - 20px);
-      margin: 0 30px 0 0;
-      // font-size: 2.4rem;
-      // color: $dark-blue;
-      // font-weight: 700;
-      //
-      // &:before,
-      // p {
-      //   margin-bottom: 30px;
-      // }
-      //
-      // p:last-of-type {
-      //   margin: 0;
-      // }
-      //
-      // &:before {
-      //   content: '\201c';
-      //   color: $orange;
-      //   font-size: 20rem;
-      //   line-height: 0;
-      //   display: block;
-      //   padding-top: 70px;
-      // }
-    }
-  }
-
-  // img {
-  //   width: 100%;
-  //   height: auto;
-  // }
-
-  .title {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    padding: 15px;
-    text-align: center;
-    cursor: pointer;
-    background: rgba($dark-blue, 0.8);
-    opacity: 0;
-    transform: translateY(100%);
-    transition: all 0.25s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    h2 {
-      color: #fff;
-      margin: 0;
-    }
-  }
-}
+// .holder {
+//   margin: 15px;
+//   // overflow: hidden;
+//   float: left;
+//   // width: calc(50% - 30px);
+//   width: calc(25% - 30px);
+//   position: relative;
+//
+//   .portrait {
+//     overflow: hidden;
+//     position: relative;
+//     // box-shadow: 0 0 3px 1px $dark-grey;
+//
+//     &:hover,
+//     &:focus {
+//       .title {
+//         opacity: 1;
+//         transform: translateY(0);
+//       }
+//     }
+//
+//     &:active {
+//       .title {
+//           background: rgba($orange, 0.8);
+//           transition: all 0.1s ease;
+//       }
+//     }
+//   }
+//
+//   &.half {
+//     width: calc(50% - 30px);
+//   }
+//
+//   &.stacked,
+//   &.quarter {
+//     width: calc(25% - 30px);
+//   }
+//
+//   &.stacked {
+//     margin-bottom: 18px;
+//   }
+//
+//   &.third {
+//     width: calc(33.33% - 30px);
+//   }
+//
+//   &.landscape {
+//     width: calc(100% - 30px);
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: center;
+//
+//     .portrait {
+//       width: calc(75% - 10px);
+//     }
+//
+//     blockquote {
+//       width: calc(25% - 20px);
+//       margin: 0 30px 0 0;
+//       // font-size: 2.4rem;
+//       // color: $dark-blue;
+//       // font-weight: 700;
+//       //
+//       // &:before,
+//       // p {
+//       //   margin-bottom: 30px;
+//       // }
+//       //
+//       // p:last-of-type {
+//       //   margin: 0;
+//       // }
+//       //
+//       // &:before {
+//       //   content: '\201c';
+//       //   color: $orange;
+//       //   font-size: 20rem;
+//       //   line-height: 0;
+//       //   display: block;
+//       //   padding-top: 70px;
+//       // }
+//     }
+//   }
+//
+//   // img {
+//   //   width: 100%;
+//   //   height: auto;
+//   // }
+//
+//   .title {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
+//     padding: 15px;
+//     text-align: center;
+//     cursor: pointer;
+//     background: rgba($dark-blue, 0.8);
+//     opacity: 0;
+//     transform: translateY(100%);
+//     transition: all 0.25s ease;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//
+//     h2 {
+//       color: #fff;
+//       margin: 0;
+//     }
+//   }
+// }
 
 .block {
   width: calc(50% - 30px);

@@ -1,0 +1,10 @@
+<blockquote *ngIf="blockquote">
+  <p>Medicine is good, but painting is better!</p>
+  <p>And people are the noblest but also the most challenging of subjects.</p>
+</blockquote>
+<div class="portrait">
+  <img [src]="'./../assets/' + portrait?.id + '.jpg'" [alt]="portrait?.subject + ' Portrait'">
+  <div class="title" (click)="launchModal(portrait?.id, true, $event)">
+    <h2>{{portrait?.title}} {{portrait?.subject}}</h2>
+  </div>
+</div>

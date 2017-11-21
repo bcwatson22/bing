@@ -2,7 +2,7 @@
 
   <header>
 
-    <h1>{{title}}</h1> 
+    <h1>{{title}}</h1>
 
     <article class="intro">
       <p *ngFor="let paragraph of home?.intro">{{paragraph}}</p>
@@ -12,16 +12,7 @@
 
   <article class="portraits group">
 
-    <div *ngFor="let portrait of portraits; let i = index" class="holder" [class.half]="i === 0" [class.stacked]="i > 0 && i < 5" [class.quarter]="i > 5 && i < 10" [class.third]="i > 9 && i < 13" [class.landscape]="portrait.orientation === 'landscape'">
-      <blockquote *ngIf="portrait.orientation === 'landscape'">
-        <p>Medicine is good, but painting is better!</p>
-        <p>And people are the noblest but also the most challenging of subjects.</p>
-      </blockquote>
-      <div class="portrait">
-        <img [src]="'./../assets/' + portrait?.id + '.jpg'" [alt]="portrait?.subject + ' Portrait'">
-        <div class="title" (click)="showPortrait(portrait?.id, true, $event)"><h2>{{portrait?.title}} {{portrait?.subject}}</h2></div>
-      </div>
-    </div>
+    <holder *ngFor="let portrait of portraits; let i = index" class="holder" [class.half]="i === 0" [class.stacked]="i > 0 && i < 5" [class.quarter]="i > 5 && i < 10" [class.third]="i > 9 && i < 13" [class.landscape]="portrait.orientation === 'landscape'" [portrait]="portrait" [blockquote]="portrait.orientation === 'landscape' ? true : false" (showPortrait)="showPortrait($event)"></holder>
 
   </article>
 
