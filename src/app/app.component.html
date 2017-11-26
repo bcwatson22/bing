@@ -1,9 +1,9 @@
 <!-- <div class="main" [@RouterAnimation]="routerState" (@RouterAnimation.done)="animationDone($event)"> -->
 <main class="group">
 
-  <page-head></page-head>
+  <page-head [targetPage]="targetPage"></page-head>
 
-  <router-outlet></router-outlet>
+  <router-outlet [@routerAnimation]="routerState"></router-outlet>
 
   <page-foot></page-foot>
 

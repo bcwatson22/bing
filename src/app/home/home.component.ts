@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
 
   private latLong;
 
-  private coordinates: any;
+  // private coordinates: any;
 
   // coordinates.top = '50%';
 
@@ -98,7 +98,7 @@ export class HomeComponent implements OnInit {
 
     if ($event.clickEvent) {
 
-      this.latLong = this.utils.getPortraitCoordinates($event.clickEvent);
+      this.latLong = this.utils.getElementCoordinates($event.clickEvent, true);
 
     }
 

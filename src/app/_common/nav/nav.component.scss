@@ -1,7 +1,10 @@
 @import '~sass/variables';
+@import '~sass/mixins';
 
 :host {
   width: calc(50% - 15px);
+  position: relative;
+  padding: 2px 0;
 }
 
 ul {
@@ -22,21 +25,42 @@ ul {
       text-decoration: none;
     }
 
-    &:active,
-    &.active {
-      &:after {
-        content: '';
-        width: 100%;
-        border-bottom: 2px solid $orange;
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-      }
-    }
+    // &:active,
+    // &.active {
+    //   &:after {
+    //     content: '';
+    //     width: 100%;
+    //     border-bottom: 2px solid $orange;
+    //     display: block;
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //   }
+    // }
 
     &.active {
       color: $dark-blue;
     }
+  }
+}
+
+.nav-indicator {
+  opacity: 0;
+  border-bottom: 2px solid $orange;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+  text-indent: -99999rem;
+  @include hwa();
+
+  &.init {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  &.resize {
+    transition: all 0.3s ease;
   }
 }

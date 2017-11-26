@@ -15,7 +15,7 @@ export class UtilsService {
   // private rawPortraits;
   private portraitData;
 
-  private coordinates: Coordinates = new Coordinates();
+  // private coordinates: Coordinates = new Coordinates();
 
   constructor(
     private router: Router,
@@ -120,21 +120,28 @@ export class UtilsService {
 
   }
 
-  getPortraitCoordinates(event: any): any {
+  getElementCoordinates(target: any, click: boolean): any {
 
-    let widget = event.currentTarget,
-        width = widget.offsetWidth,
-        height = widget.offsetHeight,
-        offset = widget.getBoundingClientRect(),
-        top = offset.top + (height / 2),
-        left = offset.left + (width / 2);
+    let coordinates: Coordinates = new Coordinates();
 
-    this.coordinates.width = width;
-    this.coordinates.height = height;
-    this.coordinates.top = top;
-    this.coordinates.left = left;
+    let element = (click === true) ? target.currentTarget : target;
 
-    return this.coordinates;
+    if (element) {
+
+      let width = element.offsetWidth,
+          height = element.offsetHeight,
+          offset = element.getBoundingClientRect(),
+          top = offset.top,
+          left = offset.left;
+
+      coordinates.width = width;
+      coordinates.height = height;
+      coordinates.top = top;
+      coordinates.left = left;
+
+    }
+
+    return coordinates;
 
   }
 

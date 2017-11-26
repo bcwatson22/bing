@@ -30,7 +30,7 @@ export class DrawingsComponent implements OnInit {
 
   private latLong;
 
-  private coordinates: any;
+  // private coordinates: any;
 
   constructor(
     private location: Location,
@@ -86,7 +86,7 @@ export class DrawingsComponent implements OnInit {
 
     if ($event.clickEvent) {
 
-      this.latLong = this.utils.getPortraitCoordinates($event.clickEvent);
+      this.latLong = this.utils.getElementCoordinates($event.clickEvent, true);
 
     }
 
