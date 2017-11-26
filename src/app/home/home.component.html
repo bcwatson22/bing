@@ -12,7 +12,7 @@
 
   <article class="portraits group">
 
-    <holder *ngFor="let portrait of portraits; let i = index" class="holder" [class.half]="i === 0" [class.stacked]="i > 0 && i < 5" [class.quarter]="i > 5 && i < 10" [class.third]="i > 9 && i < 13" [class.landscape]="portrait.orientation === 'landscape'" [portrait]="portrait" [blockquote]="portrait.orientation === 'landscape' ? true : false" (showPortrait)="showPortrait($event)"></holder>
+    <thumbnail *ngFor="let portrait of portraits; let i = index" class="holder" [class.half]="i === 0" [class.stacked]="i > 0 && i < 5" [class.quarter]="i > 5 && i < 10" [class.third]="i > 9 && i < 13" [class.landscape]="portrait.orientation === 'landscape'" [portrait]="portrait" [blockquote]="portrait.orientation === 'landscape' ? true : false" (showPortrait)="showPortrait($event)"></thumbnail>
 
   </article>
 
