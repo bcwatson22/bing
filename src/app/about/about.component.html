@@ -1,7 +1,7 @@
 <section class="content group">
 
   <article class="block">
-    <div class="sub-section" *ngFor="let section of about">
+    <div class="sub-section" *ngFor="let section of about?.content">
       <h2>{{section.title}}</h2>
       <p *ngFor="let paragraph of section?.body">{{paragraph}}</p>
     </div>

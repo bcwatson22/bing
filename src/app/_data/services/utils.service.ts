@@ -112,6 +112,23 @@ export class UtilsService {
 
   }
 
+  matchBaseRoute(current: string, target: string): any {
+
+    current = current.indexOf('/') >= 0 ? current.substring(0, current.indexOf('/')) : current;
+    target = target.indexOf('/') >= 0 ? target.substring(0, target.indexOf('/')) : target;
+
+    if (current === target) {
+
+      return true;
+
+    } else {
+
+      return false;
+
+    }
+
+  }
+
   activatePortraitData(collection: any, id: string): any {
 
     let targetPortrait = collection.find(o => o.id == id);

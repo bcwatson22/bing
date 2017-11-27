@@ -3,6 +3,7 @@ import { Router, NavigationStart } from '@angular/router';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/pairwise';
 import { RouterAnimation } from './_animations/router';
+import { StaticContentService } from './_data/services/static-content.service';
 import { UtilsService } from './_data/services/utils.service';
 // import { NavItem } from './_data/models/nav-item';
 // import { NavItemService } from './_data/services/nav-item.service';
@@ -23,6 +24,7 @@ import { UtilsService } from './_data/services/utils.service';
 export class AppComponent implements OnInit {
 
   private routerState: string;
+  private static: any;
 
   private initialPage: string;
   private currentPage: string;
@@ -32,10 +34,11 @@ export class AppComponent implements OnInit {
   private parentLatLong: any;
   private targetLatLong: any;
 
-  private indicator = document.querySelectorAll('.nav-indicator')[0];
+  // private indicator = document.querySelectorAll('.nav-indicator')[0];
 
   constructor(
     private router: Router,
+    private staticService: StaticContentService,
     private utils: UtilsService
   ) {
 
@@ -44,23 +47,33 @@ export class AppComponent implements OnInit {
       .pairwise()
       .subscribe((value: [NavigationStart, NavigationStart]) => {
 
+        console.log(this.routerState);
+
         this.currentPage = value[0].url.substr(1);
         this.targetPage = value[1].url.substr(1);
 
+        let sameBase = utils.matchBaseRoute(this.currentPage, this.targetPage);
+
+        if (!sameBase) {
+
+          let currentItem = this.static[this.currentPage];
+          let targetItem = this.static[this.targetPage];
+
+          this.routerState = this.animationDirection(currentItem.position, targetItem.position);
+
+        }
+
         this.animateIndicator(false);
 
-        // console.log(this.targetPage);
-
-        // let currentItem = this.navItems.find(o => o.id === currentPage);
-        // let targetItem = this.navItems.find(o => o.id === targetPage);
-        //
-        // this.routerState = this.animationDirection(currentItem.position, targetItem.position);
+        console.log(this.routerState);
 
     });
 
   }
 
   ngOnInit(): void {
+
+    this.staticService.getStaticContent().then(data => this.static = data[0]);
 
     this.initialPage = window.location.pathname.substr(1);
 
@@ -69,6 +82,36 @@ export class AppComponent implements OnInit {
     let $indicator = <HTMLElement>document.querySelectorAll('.nav-indicator')[0];
 
     $indicator.classList.add('init');
+
+  }
+
+  animationDirection(current: number, target: number): string {
+
+    let direction = (current < target) ? 'next' : 'prev';
+
+    return direction;
+
+  }
+
+  animationStart(event: any): void {
+
+    this.updateMainStyle('200%');
+
+  }
+
+  animationDone(event: any): void {
+
+    this.updateMainStyle('auto');
+
+    this.routerState = 'none';
+
+  }
+
+  updateMainStyle(style: string): void {
+
+    let $main = <HTMLElement>document.querySelectorAll('main')[0];
+
+    $main.style.height = style;
 
   }
 

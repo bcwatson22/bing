@@ -3,7 +3,15 @@
 
   <page-head [targetPage]="targetPage"></page-head>
 
-  <router-outlet [@routerAnimation]="routerState"></router-outlet>
+  <section class="route-holder" [@routerAnimation]="routerState" (@routerAnimation.start)="animationStart($event)" (@routerAnimation.done)="animationDone($event)">
+
+    <!-- <article [@routerAnimation]="routerState" (@routerAnimation.done)="animationDone($event)"> -->
+
+      <router-outlet></router-outlet>
+
+    <!-- </article> -->
+
+  </section>
 
   <page-foot></page-foot>
 

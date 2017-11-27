@@ -4,123 +4,118 @@ export const RouterAnimation = trigger('routerAnimation', [
 
   transition('* => prev', [
     // initial state of new route
-    query(':enter',
+    query(':enter, :leave',
       style({
         // position: 'fixed',
-        // overflow: 'hidden',
-        // width: 'calc(100% - 100px)',
-        // height: '100%',
-        // transform: 'translateY(-100%)'
-
+        // width: 'calc(100% - (100vh / 7))',
+        // height: '100%'
+        position: 'absolute'
       }),
       { optional: true }
     ),
-    // query('widget',
-    //   style({
-    //     transform: 'translateY(50px)',
-    //     opacity: 0,
-    //   }),
-    //   { optional: true }
-    // ),
+    query(':enter',
+      style({
+        transform: 'translateX(-5%)',
+        opacity: '0',
+        zIndex: '2'
+        // background: '#f0f0f1'
+      }),
+      { optional: true }
+    ),
+    query(':leave',
+      style({
+        transform: 'scale(1)',
+        opacity: '1',
+        zIndex: '1'
+      }),
+      { optional: true }
+    ),
     sequence([
       group([
         // move page off screen bottom on leave
         query(':leave',
-          animate('500ms cubic-bezier(0.77, 0, 0.175, 1)',
+          // animate('500ms cubic-bezier(0.77, 0, 0.175, 1)',
+          animate('300ms ease',
             style({
               // position: 'fixed',
-              // overflow: 'hidden',
-              // width: 'calc(100% - 100px)',
+              // width: 'calc(100% - (100vh / 7))',
               // height: '100%',
               // transform: 'translateY(100%)'
-
+              transform: 'scale(0.95)',
+              opacity: '1'
             })
           ),
           { optional: true }
         ),
         // move page in screen from top to bottom
         query(':enter',
-          animate('500ms cubic-bezier(0.77, 0, 0.175, 1)',
+          animate('350ms ease',
             style({
-              transform: 'translateY(0%)'
+              // transform: 'translateY(0%)'
+              transform: 'translateX(0%)',
+              opacity: '1',
+              background: '#f0f0f1',
             })
           ),
           { optional: true }
         ),
-      ]),
-      // query('widget', stagger('80ms', [
-      //   animate('300ms ease',
-      //     style({
-      //       transform: 'translateY(0px)',
-      //       opacity: 1,
-      //     })
-      //   )]),
-      //   { optional: true }
-      // )
+      ])
     ])
-    // group([
-    //   // move page off screen bottom on leave
-    //   query(':leave',
-    //     animate('500ms cubic-bezier(0.77, 0, 0.175, 1)',
-    //       style({
-    //         position: 'fixed',
-    // overflow: 'hidden',
-    //         width: '100%',
-    //         height: '100%',
-    //         transform: 'translateY(100%)'
-    //       })
-    //     ),
-    //   {optional:true}),
-    //   // move page in screen from top to bottom
-    //   query(':enter',
-    //     animate('500ms cubic-bezier(0.77, 0, 0.175, 1)',
-    //       style({
-    //         transform: 'translateY(0%)'
-    //       })
-    //     ),
-    //     {optional:true}
-    //   ),
-    //
-    //   query('widget', stagger('500ms', [
-    //     animate('700ms', style({opacity: '1'}))
-    //   ])),
-    // ]),
   ]),
   transition('* => next', [
     // Initial state of new route
-    query(':enter',
+    query(':enter, :leave',
       style({
-        // position: 'fixed',
-        // overflow: 'hidden',
-        // width: 'calc(100% - 100px)',
-        // height: '100%',
-        // transform: 'translateY(100%)'
+        position: 'absolute'
       }),
       { optional: true }
     ),
-    group([
-      // move page off screen top on leave
-      query(':leave',
-        animate('500ms cubic-bezier(0.77, 0, 0.175, 1)',
-          style({
-            // position: 'fixed',
-            // overflow: 'hidden',
-            // width: 'calc(100% - 100px)',
-            // height: '100%',
-            // transform: 'translateY(-100%)'
-          })
+    query(':enter',
+      style({
+        // transform: 'translateY(100%)'
+        transform: 'scale(0.95)',
+        opacity: '0'
+      }),
+      { optional: true }
+    ),
+    query(':leave',
+      style({
+        transform: 'translateX(0%)',
+        opacity: '1'
+      }),
+      { optional: true }
+    ),
+    sequence([
+      group([
+        // move page off screen bottom on leave
+        query(':leave',
+          animate('350ms ease',
+            style({
+              // position: 'fixed',
+              // width: 'calc(100% - (100vh / 7))',
+              // height: '100%',
+              // transform: 'translateY(-100%)'
+              background: '#f0f0f1',
+              transform: 'translateX(-5%)',
+              opacity: '0'
+            })
+          ),
+          { optional: true }
         ),
-        { optional: true }
-      ),
-      // move page in screen from top to bottom
-      query(':enter',
-        animate('500ms cubic-bezier(0.77, 0, 0.175, 1)',
-          style({
-            // transform: 'translateY(0%)'
-          })
+        // move page in screen from top to bottom
+        query(':enter',
+          animate('350ms ease',
+            style({
+              // transform: 'translateY(0%)'
+              // background: '#f0f0f1',
+              transform: 'scale(1)',
+              opacity: '1'
+            })
+          ),
+          { optional: true }
         ),
-        { optional: true }
-      )
-    ]),
+      ])
+    ])
+
   ])
 ])
