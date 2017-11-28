@@ -2,10 +2,12 @@ export interface Portrait {
   id: string;
   subject: string;
   title?: string;
-  material: string;
-  description: object;
+  type: string;
   orientation: string;
-  year: number;
+  material?: string;
+  description?: object;
+  modifier?: string;
+  year?: number;
   job?: string;
   home?: boolean;
   position?: number;

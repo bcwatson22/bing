@@ -47,8 +47,6 @@ export class AppComponent implements OnInit {
       .pairwise()
       .subscribe((value: [NavigationStart, NavigationStart]) => {
 
-        console.log(this.routerState);
-
         this.currentPage = value[0].url.substr(1);
         this.targetPage = value[1].url.substr(1);
 
@@ -65,8 +63,6 @@ export class AppComponent implements OnInit {
 
         this.animateIndicator(false);
 
-        console.log(this.routerState);
-
     });
 
   }
@@ -75,7 +71,9 @@ export class AppComponent implements OnInit {
 
     this.staticService.getStaticContent().then(data => this.static = data[0]);
 
-    this.initialPage = window.location.pathname.substr(1);
+    let pathname = window.location.pathname.substr(1);
+
+    this.initialPage = pathname.indexOf('/') >= 0 ? pathname.substring(0, pathname.indexOf('/')) : pathname;
 
     this.animateIndicator(true);
 
