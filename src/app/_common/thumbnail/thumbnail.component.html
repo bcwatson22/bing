@@ -3,9 +3,9 @@
   <p>And people are the noblest but also the most challenging of subjects.</p>
 </blockquote>
 <div class="portrait">
-  <img src="./../assets/transparent.png">
-  <img class="thumb" *ngIf="!portrait?.modifier" [src]="'./../assets/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg'" [alt]="portrait?.subject + ' Portrait'">
-  <img class="thumb" *ngIf="portrait?.modifier" [src]="'./../assets/pictures/' + portrait?.type + '/' + portrait?.id + '-' + portrait?.modifier + '-1200.jpg'"[alt]="portrait?.subject + ' Portrait'">
+  <img class="thumb" src="./../assets/thumbnail.png">
+  <img class="preview" [src]="'./../assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg'" [alt]="portrait?.subject + ' Portrait'">
+  <!-- <img class="thumb" [src]="'./../assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-' + portrait?.modifier + '-1200.jpg'"[alt]="portrait?.subject + ' Portrait'"> -->
   <div class="title" (click)="launchModal(portrait?.id, true, $event)">
     <h2>{{portrait?.title}} {{portrait?.subject}}</h2>
   </div>

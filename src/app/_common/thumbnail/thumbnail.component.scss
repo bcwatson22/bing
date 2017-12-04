@@ -58,9 +58,17 @@
       width: calc(25% - 20px);
       margin: 0 30px 0 0;
     }
+
+    .thumb {
+      position: absolute;
+    }
+
+    .preview {
+      position: relative;
+    }
   }
 
-  .thumb {
+  .preview {
     position: absolute;
     top: 0;
   }
@@ -85,6 +93,30 @@
     h2 {
       color: #fff;
       margin: 0;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  :host {
+    margin: 10px;
+    width: calc(25% - 20px);
+
+    &.half {
+      width: calc(50% - 20px);
+    }
+
+    &.stacked,
+    &.quarter {
+      width: calc(25% - 20px);
+    }
+
+    &.stacked {
+      margin-bottom: 14px;
+    }
+
+    &.third {
+      width: calc(33.33% - 20px);
     }
   }
 }

@@ -70,6 +70,8 @@ export class HomeComponent implements OnInit {
 
     let portraitParam = this.utils.getRouteParam();
 
+    console.log(this.portraits);
+
     if (portraitParam) {
 
       this.showPortrait({id: portraitParam, animate: false, clickEvent: false});
@@ -107,6 +109,7 @@ export class HomeComponent implements OnInit {
   modalClose(history: boolean): void {
 
     this.modalState = null;
+    // this.activatedPortrait = {};
 
     if (history) {
 

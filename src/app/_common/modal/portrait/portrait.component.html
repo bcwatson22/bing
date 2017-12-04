@@ -3,13 +3,13 @@
   <button class="modal-close" (click)="closeModal(bill)"></button>
   <section class="portrait group">
     <!-- <article class="picture"> -->
-      <!-- <img *ngIf="data" [src]="'./../assets/pictures/' + data?.type + '/' + data?.id + '-1200.jpg'"[alt]="data?.subject + ' Portrait'"> -->
-      <img *ngIf="!data?.modifier" [src]="'./../assets/pictures/' + data?.type + '/' + data?.id + '-1200.jpg'" [alt]="data?.subject + ' Portrait'">
-      <img *ngIf="data?.modifier" [src]="'./../assets/pictures/' + data?.type + '/' + data?.id + '-' + data?.modifier + '-1200.jpg'"[alt]="data?.subject + ' Portrait'">
+      <!-- <img *ngIf="data" [src]="'./../assets/images/pictures/' + data?.type + '/' + data?.id + '-1200.jpg'"[alt]="data?.subject + ' Portrait'"> -->
+      <img *ngIf="!data?.modifier" [src]="'./../assets/images/pictures/' + data?.type + '/' + data?.id + '-1200.jpg'" [alt]="data?.subject + ' Portrait'">
+      <img *ngIf="data?.modifier" [src]="'./../assets/images/pictures/' + data?.type + '/' + data?.id + '-' + data?.modifier + '-1200.jpg'"[alt]="data?.subject + ' Portrait'">
     <!-- </article> -->
     <article class="details">
       <h1>{{data?.title}} {{data?.subject}}</h1>
-      <h2>{{data?.material}}<span>, {{data?.year}}</span></h2>
+      <h2>{{data?.material}}</h2>
       <h3 *ngIf="data?.job">{{data?.job}}</h3>
 
       <div class="description">

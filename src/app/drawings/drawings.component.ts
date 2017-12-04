@@ -95,6 +95,7 @@ export class DrawingsComponent implements OnInit {
   modalClose(history: boolean): void {
 
     this.modalState = null;
+    this.activatedPortrait = null;
 
     if (history) {
 
