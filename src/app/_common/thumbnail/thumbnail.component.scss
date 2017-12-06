@@ -29,6 +29,10 @@
 
   &.half {
     width: calc(50% - 30px);
+
+    &:nth-of-type(2) {
+      float: right;
+    }
   }
 
   &.stacked,

@@ -15,7 +15,11 @@
     <div class="sub-section" *ngFor="let section of commission?.contact.content">
       <h3>{{section.subheader}}</h3>
 
-      <ng-container *ngIf="section.subheader === 'Post'">
+      <ng-container *ngIf="section.subheader !== 'Address'">
+        <p *ngFor="let paragraph of section?.body" [innerHTML]="paragraph | keepHtml">twat</p>
+      </ng-container>
+
+      <ng-container *ngIf="section.subheader === 'Address'">
         <div class="vcard">
           <div class="adr" itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address/">
             <span *ngFor="let paragraph of section?.body; let i = index"
@@ -26,18 +30,6 @@
               [class.country-name]="i === 5">{{paragraph}}</span>
           </div>
         </div>
-      </ng-container>
-
-      <ng-container *ngIf="section.subheader !== 'Post'">
-        <ng-container *ngIf="section.subheader === 'Email'">
-          <a href="mailto:{{section?.body[0]}}">
-            <p *ngFor="let paragraph of section?.body">{{paragraph}}</p>
-          </a>
-        </ng-container>
-
-        <ng-container *ngIf="section.subheader !== 'Email'">
-          <p *ngFor="let paragraph of section?.body">{{paragraph}}</p>
-        </ng-container>
       </ng-container>
     </div>
 

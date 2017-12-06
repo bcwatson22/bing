@@ -20,7 +20,9 @@ import { CommissionComponent } from './commission/commission.component';
 import { UtilsService } from './_data/services/utils.service';
 import { StaticContentService } from './_data/services/static-content.service';
 import { PortraitService } from './_data/services/portrait.service';
+
 import { FormatDatePipe } from './_pipes/format-date.pipe';
+import { KeepHtmlPipe } from './_pipes/keep-html.pipe';
 
 @NgModule({
   imports: [
@@ -34,7 +36,6 @@ import { FormatDatePipe } from './_pipes/format-date.pipe';
     HomeComponent,
     NavComponent,
     HeaderComponent,
-    FormatDatePipe,
     ModalComponent,
     FooterComponent,
     PortraitComponent,
@@ -42,7 +43,9 @@ import { FormatDatePipe } from './_pipes/format-date.pipe';
     PaintingsComponent,
     DrawingsComponent,
     CommissionComponent,
-    ThumbnailComponent
+    ThumbnailComponent,
+    FormatDatePipe,
+    KeepHtmlPipe
   ],
   providers: [
     UtilsService,

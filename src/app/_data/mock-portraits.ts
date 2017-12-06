@@ -544,9 +544,9 @@ export const PORTRAITS: Portrait[] = [
   {
     "id": "phoebe-coultard",
     "subject": "Phoebe Coultard",
-    "type": "drawing",
+    "type": "painting",
     "orientation": "portrait",
-    "material": "Coloured chalk drawing on Ingres Paper",
+    "material": "Oil and tempera on canvas",
     "description": [
       "Informal, colourful and impressionistic."
     ]

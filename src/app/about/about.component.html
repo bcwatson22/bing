@@ -3,12 +3,12 @@
   <article class="block">
     <div class="sub-section" *ngFor="let section of about?.content">
       <h2>{{section.title}}</h2>
-      <p *ngFor="let paragraph of section?.body">{{paragraph}}</p>
+      <p *ngFor="let paragraph of section?.body" [innerHTML]="paragraph | keepHtml"></p>
     </div>
   </article>
 
   <article class="block">
-    <img src="./assets/bing.jpg" alt="Bing Jones">
+    <img src="./assets/images/global/bing-1200.jpg" alt="Bing Jones">
 
     <blockquote>
       <p>Painting for me is about presenting the world to the viewer in a sorted way.</p>

@@ -83,7 +83,7 @@ export class UtilsService {
 
   filterPortraits(key: string, value: any): any {
 
-    let pictures = this.portraitData.filter(o => eval('o.' + key) === value);
+    let pictures = this.portraitData.filter(o => o[key] === value);
 
     return pictures;
 
@@ -191,6 +191,86 @@ export class UtilsService {
     let url = this.router.createUrlTree(['/' + base]).toString();
 
     this.location.go(url);
+
+  }
+
+  getHomeClasses(i: number): string {
+
+    let styleClass;
+
+    switch (i) {
+
+      case 0:
+        styleClass = 'half';
+        break;
+
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+        styleClass = 'stacked';
+        break;
+
+      case 6:
+      case 7:
+      case 8:
+        styleClass = 'quarter';
+        break;
+
+      case 10:
+      case 11:
+      case 12:
+        styleClass = 'third';
+        break;
+
+    }
+
+    return styleClass;
+
+  }
+
+  getThumbClasses(i: number): string {
+
+    i += 1;
+
+    let styleClass;
+
+    switch (i) {
+
+      case 1:
+      case 9:
+        styleClass = 'half';
+        break;
+
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+      case 10:
+      case 11:
+      case 12:
+      case 13:
+        styleClass = 'stacked';
+        break;
+
+      case 6:
+      case 7:
+      case 8:
+      case 14:
+      case 15:
+      case 16:
+        styleClass = 'third';
+        break;
+
+      // case 10:
+      // case 11:
+      // case 12:
+      //   styleClass = 'third';
+      //   break;
+
+    }
+
+    return styleClass;
 
   }
 

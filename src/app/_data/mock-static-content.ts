@@ -17,20 +17,24 @@ export const CONTENT: StaticContent[] = [{
       {
         "title": "Biography",
         "body": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui sque dictum lorem arcu, sit amet vestibulum leo molestie sit  amet. Maecenas quis vehicula massa. Praesent nisl dolor, ulla mcorper id elementum vel, suscipit vel augue. Donec non.",
-          "Mauris ac orci pulvinar bibendum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec pharetra risus ipsum, ut congue lectus semper eget. Aliquam blandit ut nisi eu facilisis.",
-          "Praesent venenatis magna vel libero volutpat, nec fermentum lacus venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mattis risus quis nibh posuere sodales.",
-          "Maecenas in sodales lacus. Pellentesque pharetra aliquet ligula.",
-          "Eu auctor. Nullam ut sollicitudin dolor. Duis a venenatis nulla. Nunc arcu tortor, Eu auctor. Nullam ut sollicitudin dolor. Duis a venenatis nulla. Nunc arcu tortor."
+          "Bing Jones paints and draws portraits from live sittings.",
+          "He has a purpose built studio in Sheffield, with controlled natural light.",
+          "He also arranges sittings in London and will travel elsewhere.",
+          "He feels are sittings are essential to achieve a convincing three dimensional effect.",
+          "He has undertaken academic, professional and corporate commissions for 30 years.",
+          "He has drawn and painted hundreds of children and dozens of family groups.",
+          "He works from live sittings using traditional methods.",
+          "He was trained at the University of Bristol and at Sheffield School of Art and Design.",
+          "He lives with his wife who is both an artist and lecturer in the History of Art.",
+          "They have four grown children.",
+          "For more information about the artist see Bing’s blog <a href=\"http://lifeofaportraitpainter.blogspot.co.uk\" target=\"_blank\">lifeofaportraitpainter.blogspot.co.uk<\/a>"
         ]
       },
       {
-        "title": "Views on painting",
+        "title": "Contact",
         "body": [
-          "Pharetra sit amet accumsan ut, porttitor ut metus. Aenean tempor, nunc ac vestibulum accumsan, felis purus ullamcorper velit, cursus rhoncus turpis nulla eget nulla. Ut ac lorem maximus, lobortis felis mattis, egestas eros.",
-          "Nunc malesuada diam at lacus vulputate, non congue velit vehicula. Nullam pellentesque quis orci sit amet imperdiet. Curabitur pharetra sem ac dapibus ullamcorper.",
-          "Posuere felis sit amet lectus facilisis, sed laoreet libero dap ibus. Quisque vel erat sodales, malesuada urna tempus, conse quat felis. Nunc in mi risus. Pellentesque luctus ultricies arcu id.",
-          "Duis mollis dui purus, non mattis purus cursus quis. Nulla facilisi. Sed ac orci gravida, fringilla arcu sit amet, dapibus purus. Sed sagittis, elit et molestie gravida, nisi felis mollis odio, ac dapibus nisi tortor a nulla. Vestibulum tincidunt sodales bibendum. Cras viverra nulla tellus, at auctor orci gravida ac. Proin mollis."
+          "<a href=\"mailto:bing@bingjones.co.uk\">bing@bingjones.co.uk<\/a>",
+          "<a href=\"mailto:bingportraits@gmail.com\">bingportraits@gmail.com<\/a>"
         ]
       }
     ]
@@ -58,41 +62,30 @@ export const CONTENT: StaticContent[] = [{
       ],
       "content": [
         {
-          "subheader": "Size",
+          "subheader": "Every commission is different.",
           "body": [
-            "I am happy to discuss any size from around 8x10 inches upwards. Traditional English middle-sized portraits are 25x30 inches unframed. I am happy to discuss the optimum size in terms of the content, budget and where the picture might hang."
+            "Each begins with a discussion of what you might like.",
+            "Please don’t hesitate to contact the artist by phone or email."
           ]
         },
         {
-          "subheader": "Content",
+          "subheader": "Sittings are in Sheffield or London.",
           "body": [
-            "A simple head and shoulders will be relatively straightforward. Hands, the full-length figure, a specified setting or personal references may be more involved and more expensive.",
-            "I am keen to discuss any interesting or imaginative ideas: groups, families, settings and objects with a personal ring. I have painted and drawn many children. Traditional oil paint is very flexible!"
+            "The artist will be happy to discuss other venues.",
+            "They are generally for about an hour, with regular breaks."
           ]
         },
         {
-          "subheader": "Sittings",
+          "subheader": "Pricing illustration",
           "body": [
-            "Live sittings are important and may involve travel. I like to meet the sitter if at all possible. I work from photographs when time is limited or when major distances are involved. I live in Sheffield but I am often in London and will travel whenever necessary. Again, please feel free to discuss any preference."
-          ]
-        },
-        {
-          "subheader": "Price Illustration",
-          "body": [
-            "Chalk drawings start at £1500.00. Oil portraits start at around £2500.00 for a head and shoulders. Half-length portraits, including hands, start at around £4000.00. Each portrait will require discussion and an individual quote."
-          ]
-        },
-        {
-          "subheader": "Local Drawings",
-          "body": [
-            "If you live within travelling distance of Sheffield and are willing to attend the artists studio, single sitting pen and wash or graphite sketches can be arranged for as little as £75.00.",
-            "Chalk sketches will cost a little more but both are very suitable for children and groups. Similarly, oil sketches and be arranged for a reduced price. Portraits can be tailored to suit most pockets. Please pick up the phone to discuss any queries."
-          ]
-        },
-        {
-          "subheader": "Frames",
-          "body": [
-            "I am keen to advise on and provide frames, which vary in price and will be additional to the costs above."
+            "Charcoal drawings from £250 single sitting.",
+            "Coloured chalk drawings from £500, usually two sittings.",
+            "Larger and more finished drawings from £1000, two or more sittings.",
+            "Oil Portraits from £2500 for a head and shoulders. Three or more sittings.",
+            "Half-length portraits, including hands, from £4000. Up to five sittings.",
+            "Full-length portraits from £6000.",
+            "Group portraits and specified additional subjects such as landscape backgrounds are priced around the number of subjects. The artist will organise and coordinate sittings with each sitter.",
+            "A bonding and team-building exercise, this is sometimes a challenge and always a pleasure!"
           ]
         }
       ]
@@ -104,7 +97,19 @@ export const CONTENT: StaticContent[] = [{
       ],
       "content": [
         {
-          "subheader": "Post",
+          "subheader": "Email",
+          "body": [
+            "<a href=\"mailto:bing@bingjones.co.uk\">bing@bingjones.co.uk<\/a> or <a href=\"mailto:bingportraits@gmail.com\">bingportraits@gmail.com<\/a>"
+          ]
+        },
+        {
+          "subheader": "Phone",
+          "body": [
+            "07711 447306"
+          ]
+        },
+        {
+          "subheader": "Address",
           "body": [
             "Bing Jones",
             "14 Whiteley Wood Road",
@@ -112,24 +117,6 @@ export const CONTENT: StaticContent[] = [{
             "South Yorkshire",
             "S11 7FE",
             "United Kingdom"
-          ]
-        },
-        {
-          "subheader": "Email",
-          "body": [
-            "bing@bingjones.co.uk"
-          ]
-        },
-        {
-          "subheader": "Phone",
-          "body": [
-            "+44 (0)114 2301003"
-          ]
-        },
-        {
-          "subheader": "Mobile",
-          "body": [
-            "+44 (0)7711 447306"
           ]
         }
       ]

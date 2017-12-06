@@ -63,7 +63,7 @@ export class PaintingsComponent implements OnInit {
   ngOnInit() {
 
     this.paintings = this.utils.bindData('paintings');
-    this.unsorted = this.utils.filterPortraits('material', 'Oil');
+    this.unsorted = this.utils.filterPortraits('type', 'painting');
     // this.portraits = this.sortPortraits();
 
     this.portraits = this.utils.shufflePortraits(this.unsorted);

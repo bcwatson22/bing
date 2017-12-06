@@ -12,10 +12,10 @@
 
   <article class="portraits group">
 
-    <thumbnail *ngFor="let portrait of portraits; let i = index" class="holder" [class.half]="i === 0" [class.stacked]="i > 0 && i < 5" [class.quarter]="i > 5 && i < 10" [class.third]="i > 9 && i < 13" [class.landscape]="portrait.orientation === 'landscape'" [portrait]="portrait" [blockquote]="portrait.orientation === 'landscape' ? true : false" (showPortrait)="showPortrait($event)"></thumbnail>
+    <thumbnail *ngFor="let portrait of portraits; let i = index" [class]="utils.getHomeClasses(i)" [class.landscape]="portrait.orientation === 'landscape'" [portrait]="portrait" [blockquote]="portrait.orientation === 'landscape' ? true : false" (showPortrait)="showPortrait($event)"></thumbnail>
 
   </article>
 
 </section>
 
-<portrait [data]="activatedPortrait" [@ModalAnimation]="{ value: modalState, params: { originTop: widgetTop, originLeft: widgetLeft } }" (modalClose)="modalClose(true)"></portrait>
+<portrait *ngIf="activatedPortrait" [data]="activatedPortrait" [@ModalAnimation]="{ value: modalState, params: { originTop: widgetTop, originLeft: widgetLeft } }" (@ModalAnimation.done)="modalDone($event)" (modalClose)="modalClose(true)"></portrait>

@@ -68,9 +68,11 @@ export class HomeComponent implements OnInit {
     this.unsorted = this.utils.filterPortraits('home', true);
     this.portraits = this.sortPortraits();
 
+    // this.activatedPortrait = this.portraits[0];
+
     let portraitParam = this.utils.getRouteParam();
 
-    console.log(this.portraits);
+    // console.log(this.portraits);
 
     if (portraitParam) {
 
@@ -96,6 +98,8 @@ export class HomeComponent implements OnInit {
 
     this.activatedPortrait = this.utils.activatePortraitData(this.portraits, $event.id);
 
+    console.log(this.activatedPortrait.description);
+
     this.modalState = this.utils.portraitLaunchUrl('home', $event.id, $event.animate, $event.clickEvent);
 
     if ($event.clickEvent) {
@@ -109,13 +113,20 @@ export class HomeComponent implements OnInit {
   modalClose(history: boolean): void {
 
     this.modalState = null;
-    // this.activatedPortrait = {};
+    // this.activatedPortrait.description = this.activatedPortrait.description;
 
     if (history) {
 
       this.utils.portraitCloseUrl('home');
 
     }
+
+  }
+
+  modalDone(): void {
+
+    // this.activatedPortrait = {};
+    // this.activatedPortrait.description = [];
 
   }
 
