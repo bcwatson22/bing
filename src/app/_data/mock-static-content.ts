@@ -4,11 +4,7 @@ export const CONTENT: StaticContent[] = [{
   "home": {
     "position": 1,
     "intro": [
-      "Traditional portraits from live sittings.",
-      "Paintings in oil and tempera, drawings in chalk and charcoal.",
-      "Corporate, Academic, Children and Families.",
-      "Individual and group portraits.",
-      "Sittings in Yorkshire and London."
+      "Traditional portraits from live sittings. Paintings in oil and tempera, drawings in chalk and charcoal. Individual and group portraits. Corporate, Academic, Children and Families. Sittings in Yorkshire and London."
     ]
   },
   "about": {

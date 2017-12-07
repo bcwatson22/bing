@@ -1,0 +1,97 @@
+.flex {
+  .group:after {
+    display: none;
+  }
+}
+
+nav,
+nav ul,
+.landscape,
+footer {
+  .flex & {
+    display: flex;
+  }
+}
+
+nav,
+nav ul,
+footer {
+  .flex & {
+    justify-content: space-between;
+  }
+}
+
+nav,
+.landscape,
+footer {
+  .flex & {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+nav {
+  .bing-logo {
+    float: left;
+  }
+
+  .main-nav {
+    float: right;
+    padding-top: 12px;
+  }
+
+  ul {
+    li {
+      float: left;
+      margin-right: 4%;
+      // width: 16%;
+      text-align: center;
+
+      // &:first-of-type {
+      //   float: left;
+      // }
+    }
+  }
+
+  .flex & {
+    .main-nav {
+      padding: 0;
+    }
+
+    ul li {
+      margin: 0;
+    }
+  }
+}
+
+.route-holder {
+  clear: both;
+}
+
+.landscape {
+  .thumbnail {
+    float: right;
+  }
+
+  aside {
+    float: left;
+
+    .pullquote {
+      padding-top: 30%;
+
+      .flex & {
+        padding: 0;
+      }
+    }
+  }
+}
+
+footer {
+  .small-print {
+    float: left;
+  }
+
+  .bw-logo {
+    float: right;
+  }
+}

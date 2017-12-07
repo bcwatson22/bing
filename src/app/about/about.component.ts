@@ -9,6 +9,8 @@ import { UtilsService } from './../_data/services/utils.service';
 
 export class AboutComponent implements OnInit {
 
+  title = 'About';
+
   private about;
 
   constructor(

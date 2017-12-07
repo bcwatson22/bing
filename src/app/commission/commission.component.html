@@ -1,6 +1,7 @@
 <section class="content group">
 
   <article class="block">
+    <h1>{{ title }}</h1>
     <h2>{{commission?.pricing.title}}</h2>
     <p *ngFor="let paragraph of commission?.pricing.intro">{{paragraph}}</p>
     <div class="sub-section" *ngFor="let section of commission?.pricing.content">
@@ -10,13 +11,15 @@
   </article>
 
   <article class="block">
+    <img src="./assets/images/global/studio-1200.jpg" alt="Whitely Wood Studio">
+
     <h2>{{commission?.contact.title}}</h2>
     <p *ngFor="let paragraph of commission?.contact.intro">{{paragraph}}</p>
     <div class="sub-section" *ngFor="let section of commission?.contact.content">
       <h3>{{section.subheader}}</h3>
 
       <ng-container *ngIf="section.subheader !== 'Address'">
-        <p *ngFor="let paragraph of section?.body" [innerHTML]="paragraph | keepHtml">twat</p>
+        <p *ngFor="let paragraph of section?.body" [innerHTML]="paragraph | keepHtml"></p>
       </ng-container>
 
       <ng-container *ngIf="section.subheader === 'Address'">
@@ -33,10 +36,10 @@
       </ng-container>
     </div>
 
-    <blockquote>
+    <!-- <blockquote>
       <p>The painter has so much choice of approach, from the naive to the classical, slick realism to anti-art.</p>
       <p>But the portrait painter is reined in with layers of expectation from sitter and paymaster what a challenge!</p>
-    </blockquote>
+    </blockquote> -->
   </article>
 
 </section>

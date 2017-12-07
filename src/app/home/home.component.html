@@ -1,10 +1,10 @@
 <section class="content">
 
-  <header>
+  <header class="group">
 
     <h1>{{title}}</h1>
 
-    <article class="intro">
+    <article *ngIf="home?.intro" class="intro">
       <p *ngFor="let paragraph of home?.intro">{{paragraph}}</p>
     </article>
 
@@ -12,7 +12,7 @@
 
   <article class="portraits group">
 
-    <thumbnail *ngFor="let portrait of portraits; let i = index" [class]="utils.getHomeClasses(i)" [class.landscape]="portrait.orientation === 'landscape'" [portrait]="portrait" [blockquote]="portrait.orientation === 'landscape' ? true : false" (showPortrait)="showPortrait($event)"></thumbnail>
+    <thumbnail *ngFor="let portrait of portraits; let i = index" [class]="utils.getHomeClasses(i)" [class.group]="portrait.orientation === 'landscape'" [class.landscape]="portrait.orientation === 'landscape'" [portrait]="portrait" [blockquote]="portrait.orientation === 'landscape' ? true : false" (showPortrait)="showPortrait($event)"></thumbnail>
 
   </article>
 

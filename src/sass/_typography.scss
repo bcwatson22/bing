@@ -25,9 +25,8 @@ h3 {
 
 h1 {
   font-size: 3.6rem;
-  margin-bottom: 12px;
-  margin-right: auto;
-  margin-left: auto;
+  margin-bottom: 30px;
+  text-align: center;
   // text-shadow: 2px 2px 1px #ccc;
 }
 
@@ -37,13 +36,13 @@ h2 {
   font-weight: 700;
   color: $orange;
 
-  .sub-section & {
-    margin-top: 45px;
-  }
+  // .sub-section & {
+    margin-top: 60px;
+  // }
 
-  .sub-section:first-of-type & {
-    margin-top: 0;
-  }
+  // .sub-section:first-of-type & {
+  //   margin-top: 0;
+  // }
 }
 
 h3 {

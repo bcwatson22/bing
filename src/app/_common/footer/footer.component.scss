@@ -2,34 +2,26 @@
 
 footer {
   padding: 30px 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
 }
 
 small {
   display: block;
 }
 
-.bw-logo img {
-  height: 40px;
-  width: auto;
-}
-
 .bw-logo {
+  width: 50%;
   font-size: 3.6rem;
-  // line-height: 1;
-  // font-weight: 700;
-  // color: $dark-blue;
-  // max-height: 47px;
   text-indent: -99999rem;
-  // border: 1px solid $orange;
   max-width: 115px;
   background: url('/assets/images/global/bw-logo.png') 0 0 no-repeat;
   background-size: 115px 40px;
   background: url('/assets/images/global/bw-logo.svg') 0 0 no-repeat, linear-gradient(transparent, transparent);
   background-size: 100% auto;
+
+  img {
+    height: 40px;
+    width: auto;
+  }
 
   &:hover {
     opacity: 0.8;

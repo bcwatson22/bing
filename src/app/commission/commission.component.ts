@@ -9,6 +9,8 @@ import { UtilsService } from './../_data/services/utils.service';
 
 export class CommissionComponent implements OnInit {
 
+  title = 'Commission';
+
   private commission;
 
   constructor(

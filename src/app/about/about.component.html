@@ -1,6 +1,7 @@
 <section class="content group">
 
   <article class="block">
+    <h1>{{ title }}</h1>
     <div class="sub-section" *ngFor="let section of about?.content">
       <h2>{{section.title}}</h2>
       <p *ngFor="let paragraph of section?.body" [innerHTML]="paragraph | keepHtml"></p>
@@ -10,10 +11,12 @@
   <article class="block">
     <img src="./assets/images/global/bing-1200.jpg" alt="Bing Jones">
 
-    <blockquote>
-      <p>Painting for me is about presenting the world to the viewer in a sorted way.</p>
-      <p>Somehow one has to capture an essence of the subject and then re-construct it, resolving the parts into a whole.</p>
-    </blockquote>
+    <aside>
+      <div class="pullquote">
+        <p>Painting for me is about presenting the world to the viewer in a sorted way.</p>
+        <p>Somehow one has to capture an essence of the subject and then re-construct it, resolving the parts into a whole.</p>
+      </div>
+    </aside>
   </article>
 
 </section>

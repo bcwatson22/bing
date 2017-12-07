@@ -2,11 +2,11 @@
 
   <header>
 
-    <article class="intro">
+    <h1>{{title}}</h1>
+
+    <article *ngIf="drawings?.intro" class="intro">
       <p *ngFor="let paragraph of drawings?.intro">{{paragraph}}</p>
     </article>
-
-    <h1>{{title}}</h1>
 
   </header>
 

@@ -50,17 +50,25 @@
 
   &.landscape {
     width: calc(100% - 30px);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    // height: 100%;
 
     .thumbnail {
+      // float: right;
       width: calc(75% - 10px);
     }
 
-    blockquote {
+    aside {
+      // float: left;
       width: calc(25% - 20px);
       margin: 0 30px 0 0;
+      // position: relative;
+
+      // .pullquote {
+      //   padding-top: 30%;
+      // }
     }
 
     .grid {
@@ -90,13 +98,14 @@
     opacity: 0;
     transform: translateY(100%);
     transition: all 0.25s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     h2 {
       color: #fff;
       margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
