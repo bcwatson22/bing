@@ -23,6 +23,9 @@ export class PaintingsComponent implements OnInit {
 
   private paintings;
   private unsorted;
+  private shuffled;
+  private landscape;
+  private portrait;
   private portraits;
 
   private activatedPortrait;
@@ -63,10 +66,13 @@ export class PaintingsComponent implements OnInit {
   ngOnInit() {
 
     this.paintings = this.utils.bindData('paintings');
-    this.unsorted = this.utils.filterPortraits('type', 'painting');
-    // this.portraits = this.sortPortraits();
+    this.unsorted = this.utils.filterPortraits('type', 'painting', false);
 
-    this.portraits = this.utils.shufflePortraits(this.unsorted);
+    this.shuffled = this.utils.shufflePortraits(this.unsorted);
+    this.landscape = this.utils.filterPortraits('orientation', 'landscape', this.shuffled);
+    this.portrait = this.utils.filterPortraits('orientation', 'portrait', this.shuffled);
+
+    this.portraits = this.utils.insertLandscapes(this.portrait, this.landscape);
 
     let portraitParam = this.utils.getRouteParam();
 

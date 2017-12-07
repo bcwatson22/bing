@@ -18,4 +18,4 @@
 
 </section>
 
-<portrait *ngIf="activatedPortrait" [data]="activatedPortrait" [@ModalAnimation]="{ value: modalState, params: { originTop: widgetTop, originLeft: widgetLeft } }" (@ModalAnimation.done)="modalDone($event)" (modalClose)="modalClose(true)"></portrait>
+<portrait *ngIf="activatedPortrait" [data]="activatedPortrait" [@ModalAnimation]="{ value: modalState, params: { originTop: widgetTop, originLeft: widgetLeft } }" (modalClose)="modalClose(true)"></portrait>

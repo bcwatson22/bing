@@ -6,7 +6,7 @@
   width: calc(25% - 30px);
   position: relative;
 
-  .portrait {
+  .thumbnail {
     overflow: hidden;
     position: relative;
     // box-shadow: 0 0 3px 1px $dark-grey;
@@ -54,7 +54,7 @@
     flex-wrap: wrap;
     align-items: center;
 
-    .portrait {
+    .thumbnail {
       width: calc(75% - 10px);
     }
 
@@ -63,7 +63,7 @@
       margin: 0 30px 0 0;
     }
 
-    .thumb {
+    .grid {
       position: absolute;
     }
 

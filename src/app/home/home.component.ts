@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     this.home = this.utils.bindData('home');
-    this.unsorted = this.utils.filterPortraits('home', true);
+    this.unsorted = this.utils.filterPortraits('home', true, false);
     this.portraits = this.sortPortraits();
 
     // this.activatedPortrait = this.portraits[0];
@@ -98,7 +98,7 @@ export class HomeComponent implements OnInit {
 
     this.activatedPortrait = this.utils.activatePortraitData(this.portraits, $event.id);
 
-    console.log(this.activatedPortrait.description);
+    // console.log(this.activatedPortrait.description);
 
     this.modalState = this.utils.portraitLaunchUrl('home', $event.id, $event.animate, $event.clickEvent);
 
@@ -113,20 +113,13 @@ export class HomeComponent implements OnInit {
   modalClose(history: boolean): void {
 
     this.modalState = null;
-    // this.activatedPortrait.description = this.activatedPortrait.description;
+    this.activatedPortrait = null;
 
     if (history) {
 
       this.utils.portraitCloseUrl('home');
 
     }
-
-  }
-
-  modalDone(): void {
-
-    // this.activatedPortrait = {};
-    // this.activatedPortrait.description = [];
 
   }
 

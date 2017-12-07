@@ -1,7 +1,7 @@
 <div class="modal-bg" (click)="closeModal()"></div>
-<div class="modal-content">
+<div class="modal-content group">
   <button class="modal-close" (click)="closeModal()"></button>
-  <section class="portrait group">
+  <section [class]="data?.orientation">
     <!-- <article class="picture"> -->
       <!-- <img *ngIf="data" [src]="'./../assets/images/pictures/' + data?.type + '/' + data?.id + '-1200.jpg'"[alt]="data?.subject + ' Portrait'"> -->
       <img *ngIf="data" [src]="'./../assets/images/pictures/' + data?.type + '/' + data?.id + '-1200.jpg'" [alt]="data?.subject + ' Portrait'">
