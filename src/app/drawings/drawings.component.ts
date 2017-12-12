@@ -21,19 +21,19 @@ export class DrawingsComponent implements OnInit {
 
   title = 'Drawings';
 
-  private drawings;
-  private unsorted;
-  private shuffled;
-  private landscape;
-  private portrait;
-  private portraits;
+  public drawings;
+  public unsorted;
+  public shuffled;
+  public landscape;
+  public portrait;
+  public portraits;
 
-  private activatedPortrait;
-  private modalState;
+  public activatedPortrait;
+  public modalState;
 
-  private latLong;
-
-  // private coordinates: any;
+  public latLong;
+  public widgetTop;
+  public widgetLeft;
 
   constructor(
     private location: Location,

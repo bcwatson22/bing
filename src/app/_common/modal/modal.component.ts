@@ -17,9 +17,9 @@ export class ModalComponent implements OnInit {
 
   }
 
-  closeModal(activeBill: any): void {
+  closeModal(): void {
 
-    this.modalClose.emit(activeBill);
+    this.modalClose.emit();
 
   }
 

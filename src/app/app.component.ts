@@ -23,16 +23,16 @@ import { UtilsService } from './_data/services/utils.service';
 
 export class AppComponent implements OnInit {
 
-  private routerState: string;
-  private static: any;
+  public routerState: string;
+  public static: any;
 
-  private initialPage: string;
-  private currentPage: string;
-  private targetPage: string;
+  public initialPage: string;
+  public currentPage: string;
+  public targetPage: string;
 
-  private currentLatLong: any;
-  private parentLatLong: any;
-  private targetLatLong: any;
+  public currentLatLong: any;
+  public parentLatLong: any;
+  public targetLatLong: any;
 
   // private indicator = document.querySelectorAll('.nav-indicator')[0];
 

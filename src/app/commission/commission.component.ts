@@ -11,7 +11,7 @@ export class CommissionComponent implements OnInit {
 
   title = 'Commission';
 
-  private commission;
+  public commission;
 
   constructor(
     private utils: UtilsService

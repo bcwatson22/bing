@@ -21,18 +21,14 @@ export class HomeComponent implements OnInit {
 
   title = 'Home';
 
-  private home;
-  private unsorted;
-  private portraits;
+  public home;
+  public unsorted;
+  public portraits;
 
-  private activatedPortrait;
-  private modalState;
+  public activatedPortrait;
+  public modalState;
 
-  private latLong;
-
-  // private coordinates: any;
-
-  // coordinates.top = '50%';
+  public latLong;
 
   constructor(
     private location: Location,
