@@ -1,13 +1,13 @@
 <aside *ngIf="blockquote">
-  <!-- <img class="grid" src="../assets/images/global/thumbnail.png"> -->
+  <!-- <img class="grid" src="assets/images/global/thumbnail.png"> -->
   <div class="pullquote">
     <p>Medicine is good, but painting is better!</p>
     <p>And people are the noblest but also the most challenging of subjects.</p>
   </div>
 </aside>
 <div class="thumbnail">
-  <img class="grid" src="../assets/images/global/thumbnail.png">
-  <img class="preview" [src]="'../assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg'" [alt]="portrait?.subject + ' Portrait'">
+  <img class="grid" src="assets/images/global/thumbnail.png">
+  <img class="preview" [src]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg'" [alt]="portrait?.subject + ' Portrait'">
   <div class="title" (click)="launchModal(portrait?.id, true, $event)">
     <h2>{{portrait?.title}} {{portrait?.subject}}</h2>
   </div>
