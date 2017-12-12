@@ -243,17 +243,17 @@ export class UtilsService {
         styleClass = 'stacked';
         break;
 
+      case 6:
       case 7:
       case 8:
-      case 9:
-      case 10:
-        styleClass = 'quarter';
+        styleClass = 'third';
         break;
 
+      case 10:
       case 11:
       case 12:
       case 13:
-        styleClass = 'third';
+        styleClass = 'quarter';
         break;
 
       default:

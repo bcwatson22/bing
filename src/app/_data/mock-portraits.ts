@@ -56,7 +56,7 @@ export const PORTRAITS: Portrait[] = [
       "Hands make a composition."
     ],
     "home": true,
-    "position": 12
+    "position": 13
   },
   {
     "id": "andrew",
@@ -68,7 +68,7 @@ export const PORTRAITS: Portrait[] = [
       "A portrait of a pupil at Harrow School. Catching the likeness in a rich traditional celebration of youth and learning."
     ],
     "home": true,
-    "position": 2
+    "position": 3
   },
   {
     "id": "the-tree-surgeon",
@@ -121,7 +121,7 @@ export const PORTRAITS: Portrait[] = [
       "He holds a bound volume of the Journal he edited for many years, Archives of Disease in Childhood, the Journal of the Royal College of Paediatrics and Child Health."
     ],
     "home": true,
-    "position": 3
+    "position": 8
   },
   {
     "id": "bert-magee-detail",
@@ -175,7 +175,7 @@ export const PORTRAITS: Portrait[] = [
       "It has the rich tone and impressionist feel of a traditional painted portrait."
     ],
     "home": true,
-    "position": 7
+    "position": 11
   },
   {
     "id": "charlie-watson",
@@ -207,7 +207,7 @@ export const PORTRAITS: Portrait[] = [
       "A detailed traditional chalk portrait of the professional, commissioned by his colleagues. Head and shoulders drawn from two live sittings."
     ],
     "home": true,
-    "position": 8
+    "position": 6
   },
   {
     "id": "cowling-charlotte",
@@ -350,7 +350,7 @@ export const PORTRAITS: Portrait[] = [
       "Presention by the Royal College of General Practitioners. The power of a portrait celebrates both individual achievement and empowers the institution."
     ],
     "home": true,
-    "position": 4
+    "position": 12
   },
   {
     "id": "david-haslam-with-picture",
@@ -372,7 +372,7 @@ export const PORTRAITS: Portrait[] = [
       "A retirement portrait of a charismatic academic catching likeness and personality."
     ],
     "home": true,
-    "position": 11
+    "position": 10
   },
   {
     "id": "issy",
@@ -384,7 +384,7 @@ export const PORTRAITS: Portrait[] = [
       "Youth with a striking look."
     ],
     "home": true,
-    "position": 13
+    "position": 7
   },
   {
     "id": "jean-dann",
@@ -539,7 +539,7 @@ export const PORTRAITS: Portrait[] = [
       "A detailed record of facial expression and character captured in two sittings in a single day. A retirement portrait."
     ],
     "home": true,
-    "position": 10
+    "position": 5
   },
   {
     "id": "phoebe-coultard",
@@ -621,7 +621,7 @@ export const PORTRAITS: Portrait[] = [
       "Here is a traditional chalk drawing of the daughter of Sheffield's Mistress Cutler. This was drawn in two sittings whilst the sitter was on a visit from the US."
     ],
     "home": true,
-    "position": 9
+    "position": 2
   },
   {
     "id": "stockley-family",
@@ -633,7 +633,7 @@ export const PORTRAITS: Portrait[] = [
       "A large family group composition of four head and shoulder portraits. This was painted from preparatory drawings at both group and individual sittings."
     ],
     "home": true,
-    "position": 6
+    "position": 9
   },
   {
     "id": "rachael-stockley",
@@ -685,7 +685,7 @@ export const PORTRAITS: Portrait[] = [
       "Portait head catching the likeness and painted from live sittings in Sheffield. A retirement and birthday present from his wife."
     ],
     "home": true,
-    "position": 5
+    "position": 4
   },
   {
     "id": "will-stone",
