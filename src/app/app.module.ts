@@ -26,7 +26,7 @@ import { KeepHtmlPipe } from './_pipes/keep-html.pipe';
 
 @NgModule({
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'bing'}),
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpModule

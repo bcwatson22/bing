@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Location, PlatformLocation } from '@angular/common';
 import { UtilsService } from './../_data/services/utils.service';
@@ -34,7 +35,8 @@ export class HomeComponent implements OnInit {
     private location: Location,
     private platform: PlatformLocation,
     private router: Router,
-    private utils: UtilsService
+    private utils: UtilsService,
+    meta: Meta, title: Title
   ) {
 
     utils.getStaticContent();
@@ -54,7 +56,16 @@ export class HomeComponent implements OnInit {
 
       }
 
-     });
+    });
+
+    // Sets the <title></title>
+    title.setTitle('Blogist');
+
+    // Sets the <meta> tag for the page
+    meta.addTags([
+      { name: 'author', content: 'Blogist' },
+      { name: 'description', content: 'This is a description.' },
+    ]);
 
   }
 
