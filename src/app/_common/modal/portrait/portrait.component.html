@@ -3,9 +3,9 @@
   <button class="modal-close" (click)="closeModal()"></button>
   <section [class]="data?.orientation">
     <!-- <article class="picture"> -->
-      <!-- <img *ngIf="data" [src]="'./../assets/images/pictures/' + data?.type + '/' + data?.id + '-1200.jpg'"[alt]="data?.subject + ' Portrait'"> -->
-      <img *ngIf="data" [src]="'./../assets/images/pictures/' + data?.type + '/' + data?.id + '-1200.jpg'" [alt]="data?.subject + ' Portrait'">
-      <!-- <img *ngIf="data?.modifier" [src]="'./../assets/images/pictures/' + data?.type + '/' + data?.id + '-' + data?.modifier + '-1200.jpg'"[alt]="data?.subject + ' Portrait'"> -->
+      <!-- <img *ngIf="data" [src]="'../assets/images/pictures/' + data?.type + '/' + data?.id + '-1200.jpg'"[alt]="data?.subject + ' Portrait'"> -->
+      <img *ngIf="data" [src]="'../assets/images/pictures/' + data?.type + '/' + data?.id + '-1200.jpg'" [alt]="data?.subject + ' Portrait'">
+      <!-- <img *ngIf="data?.modifier" [src]="'../assets/images/pictures/' + data?.type + '/' + data?.id + '-' + data?.modifier + '-1200.jpg'"[alt]="data?.subject + ' Portrait'"> -->
     <!-- </article> -->
     <article class="details">
       <h1>{{data?.title}} {{data?.subject}}</h1>
