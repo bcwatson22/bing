@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><script>(function() {
+      if (sessionStorage.fonts) {
+        document.documentElement.classList.add('wf-active');
+      }
+      // let flexSupport = CSS.supports('flex-wrap', 'wrap');
+      // if (flexSupport) {
+      //   document.documentElement.classList.add('flex');
+      // }
+      let flexSupport = document.createElement('p').style.flexWrap;
+      if (typeof(flexSupport) !== 'undefined') {
+        document.documentElement.classList.add('flex');
+      }
+    })();</script><meta charset="utf-8"><title>Bing Jones Portraits</title><base href="/"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="favicon.ico"><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async></script><script>WebFontConfig = {
+      google: {
+        families: ['Montserrat:300,700']
+      },
+      custom: {
+        families: ['fontawesome'],
+        testStrings: {
+          'fontawesome': '\uf00c\uf000'
+        }
+      },
+      timeout: 2000,
+      active: function () {
+        sessionStorage.fonts = true;
+      }
+    };</script><script src="https://use.fontawesome.com/6f17dc7be1.js"></script><!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet"> --><link href="styles.eec680cab5eaa116844e.bundle.css" rel="stylesheet"/></head><body><app-root></app-root><script type="text/javascript" src="inline.cbff5b473870f90ac1d5.bundle.js"></script><script type="text/javascript" src="polyfills.71b130084c52939ca448.bundle.js"></script><script type="text/javascript" src="vendor.315877109628a9bdf800.bundle.js"></script><script type="text/javascript" src="main.a43fab752b3047795717.bundle.js"></script></body></html>
