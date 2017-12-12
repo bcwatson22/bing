@@ -77,3 +77,22 @@ span {
     display: block;
   }
 }
+
+@media screen and (max-width: 900px) {
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    margin-top: 20px;
+  }
+
+}

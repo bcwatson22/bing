@@ -1,5 +1,6 @@
 @import '~sass/variables';
 @import '~sass/mixins';
+@import '~sass/animations';
 
 .modal-bg {
   position: fixed;
@@ -55,9 +56,15 @@
     padding: 30px 30px 0 0;
   }
 
-  h2 {
-    span {
-      font-weight: 300;
+  h1 {
+    position: relative;
+
+    .pointer {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: -200%;
+      animation: pointer 2s infinite;
     }
   }
 
@@ -93,4 +100,86 @@
   &:active {
     background: $orange;
   }
+}
+
+@media screen and (max-width: 950px) {
+
+  .modal-content {
+    .landscape {
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .details {
+        padding-top: 0;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+
+  .modal-content {
+    .portrait {
+      img {
+        margin-right: 20px;
+      }
+    }
+
+    .details {
+      padding-right: 0;
+    }
+
+    h1 {
+      word-wrap: break-word;
+      hyphens: auto;
+    }
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+
+  .modal-content {
+    padding: 20px;
+
+    .portrait {
+      overflow: scroll;
+
+      img {
+        margin: 0 0 30px;
+      }
+    }
+
+    h1 {
+      clear: both;
+
+      .pointer {
+        display: block;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .modal-content {
+    .portrait {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    h1 {
+      .pointer {
+        top: -600%;
+        right: 20px;
+      }
+    }
+  }
+
 }

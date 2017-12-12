@@ -4,7 +4,7 @@ export const CONTENT: StaticContent[] = [{
   "home": {
     "position": 1,
     "intro": [
-      "Traditional portraits from live sittings. Paintings in oil and tempera, drawings in chalk and charcoal. Individual and group portraits. Corporate, Academic, Children and Families. Sittings in Yorkshire and London."
+      "Traditional portraits from live sittings. Paintings in oil and tempera, drawings in chalk and charcoal. Individual and group portraits. Corporate, academic, families and children. Sittings in Yorkshire and London."
     ]
   },
   "about": {
@@ -14,15 +14,12 @@ export const CONTENT: StaticContent[] = [{
         "title": "Biography",
         "body": [
           "Bing Jones paints and draws portraits from live sittings.",
-          "He has a purpose built studio in Sheffield, with controlled natural light.",
-          "He also arranges sittings in London and will travel elsewhere.",
-          "He feels are sittings are essential to achieve a convincing three dimensional effect.",
-          "He has undertaken academic, professional and corporate commissions for 30 years.",
-          "He has drawn and painted hundreds of children and dozens of family groups.",
+          "He has a purpose built studio in Sheffield, with controlled natural light, but also arranges sittings in London and will travel elsewhere.",
+          "He feels the sittings are essential to achieve a convincing three dimensional effect.",
+          "He has undertaken academic, professional and corporate commissions for 30 years and has drawn and painted hundreds of children and dozens of family groups.",
           "He works from live sittings using traditional methods.",
           "He was trained at the University of Bristol and at Sheffield School of Art and Design.",
-          "He lives with his wife who is both an artist and lecturer in the History of Art.",
-          "They have four grown children.",
+          "He lives with his wife who is both an artist and lecturer in the History of Art. They have four grown children.",
           "For more information about the artist see Bing’s blog <a href=\"http://lifeofaportraitpainter.blogspot.co.uk\" target=\"_blank\">lifeofaportraitpainter.blogspot.co.uk<\/a>"
         ]
       },
