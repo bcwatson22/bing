@@ -27,22 +27,13 @@ h1 {
   font-size: 3.6rem;
   margin-bottom: 30px;
   text-align: center;
-  // text-shadow: 2px 2px 1px #ccc;
 }
 
 h2 {
   font-size: 2rem;
-  // margin-bottom: 24px;
   font-weight: 700;
   color: $orange;
-
-  // .sub-section & {
-    margin-top: 60px;
-  // }
-
-  // .sub-section:first-of-type & {
-  //   margin-top: 0;
-  // }
+  margin-top: 60px;
 }
 
 h3 {
@@ -55,10 +46,6 @@ h3 {
 
 p {
   margin-bottom: 15px;
-
-  // &:last-of-type {
-  //   margin-bottom: 0;
-  // }
 }
 
 a {

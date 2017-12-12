@@ -9,8 +9,6 @@
 
 ul {
   width: 100%;
-  // display: flex;
-  // justify-content: space-between;
 
   li a {
     font-size: 1.6rem;
@@ -30,19 +28,6 @@ ul {
         opacity: 1;
       }
     }
-
-    // &:active,
-    // &.active {
-    //   &:after {
-    //     content: '';
-    //     width: 100%;
-    //     border-bottom: 2px solid $orange;
-    //     display: block;
-    //     position: absolute;
-    //     bottom: 0;
-    //     left: 0;
-    //   }
-    // }
 
     &.active {
       color: $dark-blue;
