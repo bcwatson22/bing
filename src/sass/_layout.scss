@@ -14,6 +14,7 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
+  padding: 0 15px;
 }
 
 header {
@@ -112,6 +113,10 @@ aside {
 
 @media screen and (max-width: 900px) {
 
+  main {
+    padding: 0 10px;
+  }
+
   header {
     // margin-bottom: 10px;
 
@@ -139,6 +144,10 @@ aside {
 }
 
 @media screen and (max-width: 600px) {
+
+  main {
+    padding: 0 5px;
+  }
 
   header {
     h1,
