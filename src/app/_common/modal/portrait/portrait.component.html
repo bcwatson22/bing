@@ -8,7 +8,7 @@
       <!-- <img *ngIf="data?.modifier" [src]="'assets/images/pictures/' + data?.type + '/' + data?.id + '-' + data?.modifier + '-1200.jpg'"[alt]="data?.subject + ' Portrait'"> -->
     <!-- </article> -->
     <article class="details">
-      <h1>{{data?.title}} {{data?.subject}} <span class="pointer"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span></h1>
+      <h1>{{data?.title}} {{data?.subject}}</h1>
       <h2>{{data?.material}}</h2>
       <h3 *ngIf="data?.job">{{data?.job}}</h3>
 
@@ -17,4 +17,5 @@
       </div>
     </article>
   </section>
+  <span class="pointer"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
 </div>
