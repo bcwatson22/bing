@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/pairwise';
@@ -13,7 +13,6 @@ import { UtilsService } from './_data/services/utils.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None,
   animations: [
     RouterAnimation
   ],

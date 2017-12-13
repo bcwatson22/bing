@@ -1,5 +1,5 @@
-@import '~sass/variables';
-@import '~sass/mixins';
+@import '../../../sass/_variables.scss';
+@import '../../../sass/_mixins.scss';
 
 :host {
   width: calc(50% - 15px);
