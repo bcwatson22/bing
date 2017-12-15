@@ -46,15 +46,13 @@ export const CONTENT: StaticContent[] = [{
   "paintings": {
     "position": 3,
     "quotes": [
-      [
-        "blah blah blah"
-      ]
+
     ]
   },
   "drawings": {
     "position": 4,
-    "intro": [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla."
+    "quotes": [
+
     ]
   },
   "commission": {
@@ -88,8 +86,9 @@ export const CONTENT: StaticContent[] = [{
             "Oil Portraits from £2500 for a head and shoulders. Three or more sittings.",
             "Half-length portraits, including hands, from £4000. Up to five sittings.",
             "Full-length portraits from £6000.",
-            "Group portraits and specified additional subjects such as landscape backgrounds are priced around the number of subjects. The artist will organise and coordinate sittings with each sitter.",
-            "A bonding and team-building exercise, this is sometimes a challenge and always a pleasure!"
+            "Group portraits are priced around the number of subjects. The artist will organise and coordinate sittings with each sitter. They are a bonding and team-building exercise, sometimes a challenge and always a pleasure!",
+            "Personalised additional subjects such as landscape backgrounds will be included with pleasure and priced individually.",
+            "Frames can be discussed, priced, arranged and fitted if required."
           ]
         }
       ]

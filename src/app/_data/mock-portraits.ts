@@ -210,8 +210,8 @@ export const PORTRAITS: Portrait[] = [
     "position": 6
   },
   {
-    "id": "cowling-charlotte",
-    "subject": "Cowling Charlotte",
+    "id": "charlotte-cowling",
+    "subject": "Charlotte Cowling",
     "type": "drawing",
     "orientation": "portrait",
     "material": "Coloured chalk drawing on Ingres Paper",
@@ -337,7 +337,7 @@ export const PORTRAITS: Portrait[] = [
     "material": "Oil and tempera on canvas",
     "description": [
       "A traditional family group portrait in a Derbyshire landscape including a much loved dog.",
-      "A loving family record with lasting power. Painted from both individual and group sittings."
+      "A loving family record. Painted from both individual and group sittings."
     ]
   },
   {
@@ -494,8 +494,9 @@ export const PORTRAITS: Portrait[] = [
     "material": "Coloured chalk drawing on Ingres Paper",
     "description": [
       "Conte crayon is a type of chalk, which can be used for broad sweeping strokes or can be sharpened to give very fine detail. The effect is similar to a pastel picture. The colours in these portrait drawings can be merged with great subtlety and the portrait commission undertaken from live sittings in the studio or from a photograph.",
-      "Typically, formal institutional or academic commissions will take several sittings. They can be mounted and framed to give an impressive result. Bing Jones has been commissioned by a number of prestigious medical Royal Colleges to paint their presidents and other senior officers.",
-      "This was drawn at three live sittings at the Royal College of Ophthalmologists in a lovely Regency Room overlooking Regent’s Park where it now hangs."
+      "Typically, formal institutional or academic commissions will take several sittings. They can be mounted and framed to give an impressive result.",
+      "President of the Royal College of Ophthalmologists. Bing Jones has been commissioned by a number of prestigious medical Royal Colleges to paint their presidents and other senior officers.",
+      "This was drawn at three live sittings at the Royal College of Ophthalmologists in a lovely Regency Room overlooking Regent's Park where it now hangs."
     ]
   },
   {
@@ -505,7 +506,7 @@ export const PORTRAITS: Portrait[] = [
     "orientation": "portrait",
     "material": "Coloured chalk drawing on Ingres Paper",
     "description": [
-      "President of the Royal College of Op."
+      "President of the Royal College of Ophthalmologists."
     ]
   },
   {

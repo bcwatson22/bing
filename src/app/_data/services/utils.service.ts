@@ -266,7 +266,7 @@ export class UtilsService {
 
   }
 
-  getThumbClasses(i: number, collection: any, landscape: boolean, quote: any): string {
+  getThumbClasses(i: number, collection: any, orientation: string, quote: any): string {
 
     i += 1;
 
@@ -377,7 +377,7 @@ export class UtilsService {
 
     // let landscapeItems = this.filterPortraits('orientation', 'landscape', collection);;
 
-    if (landscape && !quote) styleClass += ' wide';
+    if (orientation === 'landscape' && !quote) styleClass += ' wide';
 
     if (!collection.length && i === 9) styleClass = 'none';
 
