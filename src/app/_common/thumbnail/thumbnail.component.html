@@ -1,8 +1,6 @@
 <aside *ngIf="blockquote">
-  <!-- <img class="grid" src="assets/images/global/thumbnail.png"> -->
   <div class="pullquote">
-    <p>Medicine is good, but painting is better!</p>
-    <p>And people are the noblest but also the most challenging of subjects.</p>
+    <p *ngFor="let paragraph of blockquote">{{paragraph}}</p>
   </div>
 </aside>
 <div class="thumbnail">

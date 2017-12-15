@@ -5,6 +5,11 @@ export const CONTENT: StaticContent[] = [{
     "position": 1,
     "intro": [
       "Traditional portraits from live sittings. Paintings in oil and tempera, drawings in chalk and charcoal. Individual and group portraits. Corporate, academic, families and children. Sittings in Yorkshire and London."
+    ],
+    "quotes": [
+        [
+          "People are the noblest but also the most challenging of subjects."
+        ]
     ]
   },
   "about": {
@@ -14,13 +19,13 @@ export const CONTENT: StaticContent[] = [{
         "title": "Biography",
         "body": [
           "Bing Jones paints and draws portraits from live sittings.",
-          "He has a purpose built studio in Sheffield, with controlled natural light, but also arranges sittings in London and will travel elsewhere.",
-          "He feels the sittings are essential to achieve a convincing three dimensional effect.",
+          "He has a purpose built studio in Sheffield, with controlled natural light. He also arranges sittings in London and will travel elsewhere by arrangement.",
+          "He feels the sittings are essential to achieve a satisfying traditional result.",
           "He has undertaken academic, professional and corporate commissions for 30 years and has drawn and painted hundreds of children and dozens of family groups.",
           "He works from live sittings using traditional methods.",
-          "He was trained at the University of Bristol and at Sheffield School of Art and Design.",
+          "He was trained in medicine at the University of Bristol and in painting at Sheffield School of Art and Design. He has combined careers in portrait painting and medicine all his working life.",
           "He lives with his wife who is both an artist and lecturer in the History of Art. They have four grown children.",
-          "For more information about the artist see Bing’s blog <a href=\"http://lifeofaportraitpainter.blogspot.co.uk\" target=\"_blank\">lifeofaportraitpainter.blogspot.co.uk<\/a>"
+          "For more information about the artist see Bing's blog <a href=\"http://lifeofaportraitpainter.blogspot.co.uk\" target=\"_blank\">lifeofaportraitpainter.blogspot.co.uk<\/a>."
         ]
       },
       {
@@ -30,20 +35,26 @@ export const CONTENT: StaticContent[] = [{
           "<a href=\"mailto:bingportraits@gmail.com\">bingportraits@gmail.com<\/a>"
         ]
       }
+    ],
+    "quotes": [
+        [
+          "Painting for me is about presenting the world to the viewer in a sorted way.",
+          "Somehow one has to capture an essence of the subject and then re-construct it, resolving the parts into a whole."
+        ]
     ]
   },
   "paintings": {
     "position": 3,
-    "intro": [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla."
-      // "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
+    "quotes": [
+      [
+        "blah blah blah"
+      ]
     ]
   },
   "drawings": {
     "position": 4,
     "intro": [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed rutrum justo, non pulvinar dolor. Fusce hendrerit elit eu felis dapibus cursus. Mauris vel lectus ut ipsum luctus semper. Pra esent non lectus efficitur, egestas nunc vel, venenatis arcu. Orci varius natoque penatibus etma gnis dis parturient montes, nascetur ridiculus mus. Ut ut odio eget enim molestie commodonec at velit. Aenean augue sem, vestibulum id nulla rutrum, consequat iaculis nulla."
-      // "Morbi bibendum vulputate mattis. Donec nec lorem felis. Donec ut cursus libero. Vestibulum ut dapibus orci. Donec aliquet felis porttitor ipsum facilisis, sit amet egestas purus faucibus."
     ]
   },
   "commission": {
@@ -113,6 +124,12 @@ export const CONTENT: StaticContent[] = [{
           ]
         }
       ]
-    }
+    },
+    "quotes": [
+      [
+        "The painter has so much choice of approach, from the naive to the classical, slick realism to anti-art.",
+        "But the portrait painter is reined in with layers of expectation from sitter and paymaster - what a challenge!"
+      ]
+    ]
   }
 }];

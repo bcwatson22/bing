@@ -12,7 +12,7 @@
 
   <article class="portraits shuffle group">
 
-    <thumbnail *ngFor="let portrait of portraits; let i = index" [class]="utils.getThumbClasses(i, landscape)" [portrait]="portrait" [blockquote]="portrait.orientation === 'landscape' ? true : false" (showPortrait)="showPortrait($event)"></thumbnail>
+    <thumbnail *ngFor="let portrait of portraits; let i = index" [class]="portrait?.orientation === 'landscape' ? utils.getThumbClasses(i, landscape, true, paintings?.quotes[utils.getQuoteIndex(i)]) : utils.getThumbClasses(i, landscape, false, false)" [portrait]="portrait" [blockquote]="portrait?.orientation === 'landscape' && paintings?.quotes ? paintings?.quotes[utils.getQuoteIndex(i)] : false" (showPortrait)="showPortrait($event)"></thumbnail>
 
   </article>
 

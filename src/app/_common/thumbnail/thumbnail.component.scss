@@ -59,6 +59,10 @@
       width: calc(75% - 10px);
     }
 
+    &.wide .thumbnail {
+      width: 100%;
+    }
+
     aside {
       width: calc(25% - 20px);
       margin: 0 30px 0 0;

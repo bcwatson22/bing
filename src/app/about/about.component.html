@@ -11,10 +11,9 @@
   <article class="block">
     <img src="assets/images/global/bing-1200.jpg" alt="Bing Jones">
 
-    <aside>
+    <aside *ngIf="about.quotes">
       <div class="pullquote">
-        <p>Painting for me is about presenting the world to the viewer in a sorted way.</p>
-        <p>Somehow one has to capture an essence of the subject and then re-construct it, resolving the parts into a whole.</p>
+        <p *ngFor="let paragraph of about?.quotes[0]">{{paragraph}}</p>
       </div>
     </aside>
   </article>

@@ -266,7 +266,7 @@ export class UtilsService {
 
   }
 
-  getThumbClasses(i: number, collection: any): string {
+  getThumbClasses(i: number, collection: any, landscape: boolean, quote: any): string {
 
     i += 1;
 
@@ -377,12 +377,21 @@ export class UtilsService {
 
     // let landscapeItems = this.filterPortraits('orientation', 'landscape', collection);;
 
-    if (!collection.length && i === 9) {
-      console.log('warn');
-      styleClass = 'none';
-    }
+    if (landscape && !quote) styleClass += ' wide';
+
+    if (!collection.length && i === 9) styleClass = 'none';
 
     return styleClass;
+
+  }
+
+  getQuoteIndex(i: number): number {
+
+    i += 1;
+
+    let index = Math.floor(i / 18);
+
+    return index;
 
   }
 
