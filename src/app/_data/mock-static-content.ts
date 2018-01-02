@@ -45,83 +45,110 @@ export const CONTENT: StaticContent[] = [{
   },
   "paintings": {
     "position": 3,
+    "intro": [
+      "Oil portaits make a lasting record of the sitters likeness, expression and personality. Traditional portraits in oil and tempera on canvas use proven centuries-old methods. These paintings will probably outlive artist and sitter, and enrich both families and institutions."
+    ],
     "quotes": [
 
     ]
   },
   "drawings": {
     "position": 4,
+    "intro": [
+      "Traditional drawings in charcoal or chalk, with coloured pastel shades, catch expression and likeness in a fresh and lively manner. These can be made quickly or in more detail. They are often commissioned as presents, for birthdays, weddings or retirement."
+    ],
     "quotes": [
 
     ]
   },
   "commission": {
     "position": 5,
-    "pricing": {
-      "title": "Pricing of commissioned portraits",
-      "intro": [
-        "Prices vary with size, content and the number of sittings."
-      ],
-      "content": [
-        {
-          "subheader": "Every commission is different.",
-          "body": [
-            "Each begins with a discussion of what you might like.",
-            "Please don’t hesitate to contact the artist by phone or email."
-          ]
-        },
-        {
-          "subheader": "Sittings are in Sheffield or London.",
-          "body": [
-            "The artist will be happy to discuss other venues.",
-            "They are generally for about an hour, with regular breaks."
-          ]
-        },
-        {
-          "subheader": "Pricing illustration",
-          "body": [
-            "Charcoal drawings from £250 single sitting.",
-            "Coloured chalk drawings from £500, usually two sittings.",
-            "Larger and more finished drawings from £1000, two or more sittings.",
-            "Oil Portraits from £2500 for a head and shoulders. Three or more sittings.",
-            "Half-length portraits, including hands, from £4000. Up to five sittings.",
-            "Full-length portraits from £6000.",
-            "Group portraits are priced around the number of subjects. The artist will organise and coordinate sittings with each sitter. They are a bonding and team-building exercise, sometimes a challenge and always a pleasure!",
-            "Personalised additional subjects such as landscape backgrounds will be included with pleasure and priced individually.",
-            "Frames can be discussed, priced, arranged and fitted if required."
-          ]
-        }
-      ]
-    },
-    "contact": {
-      "title": "Contact",
-      "intro": [
-
-      ],
-      "content": [
-        {
-          "subheader": "Email",
-          "body": [
-            "<a href=\"mailto:bing@bingjones.co.uk\">bing@bingjones.co.uk<\/a> or <a href=\"mailto:bingportraits@gmail.com\">bingportraits@gmail.com<\/a>"
-          ]
-        },
-        {
-          "subheader": "Phone",
-          "body": [
-            "07711 447306"
-          ]
-        },
-        {
-          "subheader": "Address",
-          "body": [
-            "Bing Jones",
-            "14 Whiteley Wood Road",
-            "Sheffield",
-            "South Yorkshire",
-            "S11 7FE",
-            "United Kingdom"
-          ]
-        }
+    "pricing": [
+      {
+        "title": "Pricing of commissioned portraits",
+        "intro": [
+          "Prices vary with size, content and the number of sittings."
+        ],
+        "content": [
+          {
+            "subheader": "Every commission is different",
+            "body": [
+              "Each begins with a discussion of what you might like.",
+              "Please don't hesitate to contact the artist by phone or email."
+            ]
+          },
+          {
+            "subheader": "Sittings are in Sheffield or London",
+            "body": [
+              "The artist will be happy to discuss other venues.",
+              "They are generally for about an hour, with regular breaks."
+            ]
+          },
+          {
+            "subheader": "Pricing illustration",
+            "body": [
+              "Charcoal drawings from £250 single sitting.",
+              "Coloured chalk drawings from £500, usually two sittings.",
+              "Larger and more finished drawings from £1000, two or more sittings.",
+              "Oil Portraits from £2500 for a head and shoulders. Three or more sittings.",
+              "Half-length portraits, including hands, from £4000. Up to five sittings.",
+              "Full-length portraits from £6000.",
+              "Group portraits are priced around the number of subjects. The artist will organise and coordinate sittings with each sitter. They are a bonding and team-building exercise, sometimes a challenge and always a pleasure!",
+              "Personalised additional subjects such as landscape backgrounds will be included with pleasure and priced individually.",
+              "Frames can be discussed, priced, arranged and fitted if required."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Contact",
+        "intro": [],
+        "content": [
+          {
+            "subheader": "Email",
+            "body": [
+              "<a href=\"mailto:bing@bingjones.co.uk\">bing@bingjones.co.uk<\/a> or <a href=\"mailto:bingportraits@gmail.com\">bingportraits@gmail.com<\/a>"
+            ]
+          },
+          {
+            "subheader": "Phone",
+            "body": [
+              "07711 447306"
+            ]
+          },
+          {
+            "subheader": "Address",
+            "body": [
+              "Bing Jones",
+              "14 Whiteley Wood Road",
+              "Sheffield",
+              "South Yorkshire",
+              "S11 7FE",
+              "United Kingdom"
+            ]
+          }
+        ]
+      }
+    ],
+    "comments": {
+      "title": "Sitter's comments",
+      "body": [
+        "I just had to let you know that the picture has arrived safely at our home and we are absolutely delighted with it.",
+        "My parents were thrilled with the portrait and it has been hung in the place of honour.",
+        "Just to let you know how delighted Tom and I are with my portrait.",
+        "My portrait is safely home and in pride of place on display. Everyone is delighted with it and many complimentary comments have been made.",
+        "Just a note to say how absolutely delighted I am with the portrait. It's absolutely everything I had hoped.",
+        "We were filled with admiration for your skill in drawing.",
+        "Just wanted to say Daniel's picture is wonderful.",
+        "What a splendid occasion yesterday! Thank you very much for 'painting' me - I thoroughly enjoyed our collaboration. The finished portrait was exactly as I would wish to be remembered. Certainly my family and colleagues enjoyed the unveiling as much as I did. Very best wishes.",
+        "Wow - looks really impressive! Thanks so much, as ever.",
+        "My mother described herself as 'absolutely delighted' with the portrait, which for her is extremely effusive - I fear I may have set a birthday present standard which I will be unable to match in future! She was really pleased with both the idea and the portrait itself.",
+        "I wanted to say how much I enjoyed coming and sitting for the portrait.",
+        "A big thank you for the wonderful portrait of my son. It truly captures the essence... his humanity in particular. Now I have him 'resident' on the dining room wall. It is great - I am so happy! Thank you very much.",
+        "I love the painting. Especially its severity. Love it. Thanks a lot!",
+        "We are absolutely delighted with the picture and look forward to many years of appreciation. Like you we will miss the interaction of being a sitter.",
+        "You've captured his essence.",
+        "I just wanted to let you know how much I love the children's portraits - they look wonderful on the wall and I'll never tire of looking at them. The whole process was very enjoyable... it was a real pleasure to meet you!"
       ]
     },
     "quotes": [

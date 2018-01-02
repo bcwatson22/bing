@@ -257,7 +257,7 @@ export class UtilsService {
         break;
 
       default:
-        styleClass = 'wide';
+        styleClass = '';
         break;
 
     }

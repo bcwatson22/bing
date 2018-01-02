@@ -2,39 +2,39 @@
 
   <article class="block">
     <h1>{{ title }}</h1>
-    <h2>{{commission?.pricing.title}}</h2>
-    <p *ngFor="let paragraph of commission?.pricing.intro">{{paragraph}}</p>
-    <div class="sub-section" *ngFor="let section of commission?.pricing.content">
-      <h3>{{section.subheader}}</h3>
-      <p *ngFor="let paragraph of section?.body">{{paragraph}}</p>
-    </div>
+    <ng-container *ngFor="let subsection of commission?.pricing">
+      <h2>{{subsection?.title}}</h2>
+      <p *ngFor="let paragraph of subsection?.intro">{{paragraph}}</p>
+      <div class="sub-section" *ngFor="let section of subsection?.content">
+        <h3>{{section.subheader}}</h3>
+
+        <ng-container *ngIf="section.subheader !== 'Address'">
+          <p *ngFor="let paragraph of section?.body" [innerHTML]="paragraph | keepHtml"></p>
+        </ng-container>
+
+        <ng-container *ngIf="section.subheader === 'Address'">
+          <div class="vcard">
+            <div class="adr" itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address/">
+              <span *ngFor="let paragraph of section?.body; let i = index"
+                [class.street-address]="i === 1"
+                [class.locality]="i === 2"
+                [class.region]="i === 3"
+                [class.postal-code]="i === 4"
+                [class.country-name]="i === 5">{{paragraph}}</span>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
   </article>
 
   <article class="block">
     <img src="assets/images/global/studio-1200.jpg" alt="Whitely Wood Studio">
 
-    <h2>{{commission?.contact.title}}</h2>
-    <p *ngFor="let paragraph of commission?.contact.intro">{{paragraph}}</p>
-    <div class="sub-section" *ngFor="let section of commission?.contact.content">
-      <h3>{{section.subheader}}</h3>
-
-      <ng-container *ngIf="section.subheader !== 'Address'">
-        <p *ngFor="let paragraph of section?.body" [innerHTML]="paragraph | keepHtml"></p>
-      </ng-container>
-
-      <ng-container *ngIf="section.subheader === 'Address'">
-        <div class="vcard">
-          <div class="adr" itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address/">
-            <span *ngFor="let paragraph of section?.body; let i = index"
-              [class.street-address]="i === 1"
-              [class.locality]="i === 2"
-              [class.region]="i === 3"
-              [class.postal-code]="i === 4"
-              [class.country-name]="i === 5">{{paragraph}}</span>
-          </div>
-        </div>
-      </ng-container>
-    </div>
+    <h2>{{commission?.comments.title}}</h2>
+    <blockquote *ngFor="let paragraph of commission?.comments.body">
+      <p class="quote">{{paragraph}}</p>
+    </blockquote>
   </article>
 
 </section>

@@ -46,6 +46,21 @@ h3 {
 
 p {
   margin-bottom: 15px;
+
+  &.quote {
+    position: relative;
+    text-indent: 30px;
+
+    &:before {
+      content: '\201C';
+      color: $dark-blue;
+      font-size: 6rem;
+      line-height: 0.85;
+      position: absolute;
+      left: -30px;
+      top: 0px;
+    }
+  }
 }
 
 a {

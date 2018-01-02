@@ -55,7 +55,8 @@
   &.landscape {
     width: calc(100% - 30px);
 
-    .thumbnail {
+    .thumbnail,
+    &.wide aside + .thumbnail {
       width: calc(75% - 10px);
     }
 
