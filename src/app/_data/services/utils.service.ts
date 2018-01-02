@@ -375,8 +375,6 @@ export class UtilsService {
 
     }
 
-    // let landscapeItems = this.filterPortraits('orientation', 'landscape', collection);;
-
     if (orientation === 'landscape' && !quote) styleClass += ' wide';
 
     if (!collection.length && i === 9) styleClass = 'none';

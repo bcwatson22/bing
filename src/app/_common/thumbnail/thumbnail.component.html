@@ -5,7 +5,19 @@
 </aside>
 <div class="thumbnail">
   <img class="grid" src="assets/images/global/thumbnail.png">
-  <img class="preview" [src]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg'" [alt]="portrait?.subject + ' Portrait'">
+
+  <img *ngIf="portrait?.orientation === 'landscape'" class="preview" sizes="100vw"
+    [srcset]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-2400.jpg 2400w,
+        assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg 1200w,
+        assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-600.jpg 600w'"
+    [src]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-2400.jpg'" [alt]="portrait?.subject + ' Portrait'">
+
+  <img *ngIf="portrait?.orientation !== 'landscape'" class="preview" sizes="50vw"
+    [srcset]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg 1200w,
+        assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-600.jpg 600w,
+        assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-300.jpg 300w'"
+    [src]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg'" [alt]="portrait?.subject + ' Portrait'">
+
   <div class="title" (click)="launchModal(portrait?.id, true, $event)">
     <h2>{{portrait?.title}} {{portrait?.subject}}</h2>
   </div>
