@@ -9,7 +9,11 @@
   </article>
 
   <article class="block">
-    <img src="assets/images/global/bing-1200.jpg" alt="Bing Jones">
+    <img srcset="assets/images/global/bing-300.jpg 300w,
+          assets/images/global/bing-600.jpg 600w,
+          assets/images/global/bing-1200.jpg 1200w"
+      sizes="(min-width: 601px) 50vw, 100vw"
+      src="assets/images/global/bing-1200.jpg" alt="Bing Jones">
 
     <aside *ngIf="about.quotes">
       <div class="pullquote">

@@ -29,7 +29,11 @@
   </article>
 
   <article class="block">
-    <img src="assets/images/global/studio-1200.jpg" alt="Whitely Wood Studio">
+    <img srcset="assets/images/global/studio-300.jpg 300w,
+          assets/images/global/studio-600.jpg 600w,
+          assets/images/global/studio-1200.jpg 1200w"
+      sizes="(min-width: 601px) 50vw, 100vw"
+      src="assets/images/global/studio-1200.jpg" alt="Whitely Wood Studio">
 
     <h2>{{commission?.comments.title}}</h2>
     <blockquote *ngFor="let paragraph of commission?.comments.body">
