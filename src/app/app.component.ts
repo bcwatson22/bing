@@ -73,6 +73,8 @@ export class AppComponent implements OnInit {
 
     let pathname = window.location.pathname.substr(1);
 
+    // pathname = pathname.length ? pathname : 'home';
+
     this.initialPage = pathname.indexOf('/') >= 0 ? pathname.substring(0, pathname.indexOf('/')) : pathname;
 
     this.animateIndicator(true);
@@ -91,27 +93,27 @@ export class AppComponent implements OnInit {
 
   }
 
-  animationStart(event: any): void {
-
-    this.updateMainStyle('200%');
-
-  }
-
-  animationDone(event: any): void {
-
-    this.updateMainStyle('auto');
-
-    this.routerState = 'none';
-
-  }
-
-  updateMainStyle(style: string): void {
-
-    let $main = <HTMLElement>document.querySelectorAll('main')[0];
-
-    $main.style.height = style;
-
-  }
+  // animationStart(event: any): void {
+  //
+  //   this.updateMainStyle('200%');
+  //
+  // }
+  //
+  // animationDone(event: any): void {
+  //
+  //   this.updateMainStyle('auto');
+  //
+  //   this.routerState = 'none';
+  //
+  // }
+  //
+  // updateMainStyle(style: string): void {
+  //
+  //   let $main = <HTMLElement>document.querySelectorAll('main')[0];
+  //
+  //   $main.style.height = style;
+  //
+  // }
 
   animateIndicator(init: boolean): void {
 
@@ -130,14 +132,14 @@ export class AppComponent implements OnInit {
     if (init) {
 
       offsetLeft = (this.currentLatLong.left - this.parentLatLong.left).toFixed(1);
-      styleString = 'width: ' + this.currentLatLong.width + 'px; transform: translateX(' + offsetLeft + 'px);';
+      styleString = 'width: ' + this.currentLatLong.width + 'px; transform: translate3d(' + offsetLeft + 'px, 0, 0);';
 
     } else {
 
       $indicator.classList.add('resize');
 
       offsetLeft = (this.targetLatLong.left - this.parentLatLong.left).toFixed(1);
-      styleString = 'width: ' + this.targetLatLong.width + 'px; transform: translateX(' + offsetLeft + 'px);';
+      styleString = 'width: ' + this.targetLatLong.width + 'px; transform: translate3d(' + offsetLeft + 'px, 0, 0);';
 
     }
 

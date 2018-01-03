@@ -12,7 +12,7 @@
         assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-600.jpg 600w'"
     [src]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-2400.jpg'" [alt]="portrait?.subject + ' Portrait'">
 
-  <img *ngIf="portrait?.orientation !== 'landscape'" class="preview" sizes="50vw"
+  <img *ngIf="portrait?.orientation !== 'landscape'" class="preview" sizes="(min-width: 601px) 50vw, 100vw"
     [srcset]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg 1200w,
         assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-600.jpg 600w,
         assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-300.jpg 300w'"
