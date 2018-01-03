@@ -1,18 +1,18 @@
 <section class="content group">
 
   <article class="block">
-    <h1>{{ title }}</h1>
+    <h1 [ngsReveal]="{ scale: 0.95}">{{ title }}</h1>
     <ng-container *ngFor="let subsection of commission?.pricing">
-      <h2>{{subsection?.title}}</h2>
-      <p *ngFor="let paragraph of subsection?.intro">{{paragraph}}</p>
-      <div class="sub-section" *ngFor="let section of subsection?.content">
+      <h2 [ngsReveal]="{ delay: 20, scale: 0.95}">{{subsection?.title}}</h2>
+      <p *ngFor="let paragraph of subsection?.intro; let i = index" [ngsReveal]="{ delay: ((i + 2) * 20), scale: 0.95}">{{paragraph}}</p>
+      <div class="sub-section" *ngFor="let section of subsection?.content; let i = index" [ngsReveal]="{ delay: ((i + 4) * 20), scale: 0.95}">
         <h3>{{section.subheader}}</h3>
 
-        <ng-container *ngIf="section.subheader !== 'Address'">
+        <ng-container *ngIf="section?.subheader !== 'Address'">
           <p *ngFor="let paragraph of section?.body" [innerHTML]="paragraph | keepHtml"></p>
         </ng-container>
 
-        <ng-container *ngIf="section.subheader === 'Address'">
+        <ng-container *ngIf="section?.subheader === 'Address'">
           <div class="vcard">
             <div class="adr" itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address/">
               <span *ngFor="let paragraph of section?.body; let i = index"
@@ -33,10 +33,10 @@
           assets/images/global/studio-600.jpg 600w,
           assets/images/global/studio-1200.jpg 1200w"
       sizes="(min-width: 601px) 50vw, 100vw"
-      src="assets/images/global/studio-1200.jpg" alt="Whitely Wood Studio">
+      src="assets/images/global/studio-1200.jpg" alt="Whitely Wood Studio" [ngsReveal]="{ delay: 80, scale: 0.95}">
 
-    <h2>{{commission?.comments.title}}</h2>
-    <blockquote *ngFor="let paragraph of commission?.comments.body">
+    <h2 [ngsReveal]="{ delay: 100, scale: 0.95}">{{commission?.comments.title}}</h2>
+    <blockquote *ngFor="let paragraph of commission?.comments.body; let i = index" [ngsReveal]="{ delay: ((i + 6) * 20), scale: 0.95}">
       <p class="quote">{{paragraph}}</p>
     </blockquote>
   </article>

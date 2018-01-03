@@ -377,7 +377,14 @@ export class UtilsService {
 
     if (orientation === 'landscape' && !quote) styleClass += ' wide';
 
-    if (!collection.length && i === 9) styleClass = 'none';
+    if (!collection.length) {
+      if (i === 9) styleClass = 'none';
+      if (i === 16) styleClass = 'stacked';
+      if (i === 7 || i === 16) styleClass = 'stacked second';
+    }
+
+    // if (!collection.length && i === 9) styleClass = 'none';
+    // if (!collection.length && i === 16) styleClass = 'stacked';
 
     return styleClass;
 
