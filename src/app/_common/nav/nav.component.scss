@@ -53,6 +53,7 @@ ul {
   left: 0;
   transition: opacity 0.3s ease;
   text-indent: -99999rem;
+  will-change: width;
   @include hwa();
 
   &.init {

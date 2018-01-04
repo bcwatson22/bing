@@ -29,11 +29,11 @@
   </article>
 
   <article class="block">
-    <img srcset="assets/images/global/studio-300.jpg 300w,
+    <img srcset="assets/images/global/studio-1200.jpg 1200w,
           assets/images/global/studio-600.jpg 600w,
-          assets/images/global/studio-1200.jpg 1200w"
+          assets/images/global/studio-300.jpg 300w"
       sizes="(min-width: 601px) 50vw, 100vw"
-      src="assets/images/global/studio-1200.jpg" alt="Whitely Wood Studio" [ngsReveal]="{ delay: 80, scale: 0.95}">
+      src="assets/images/global/studio-300.jpg" alt="Whitely Wood Studio" [ngsReveal]="{ delay: 80, scale: 0.95}">
 
     <h2 [ngsReveal]="{ delay: 100, scale: 0.95}">{{commission?.comments.title}}</h2>
     <blockquote *ngFor="let paragraph of commission?.comments.body; let i = index" [ngsReveal]="{ delay: ((i + 6) * 20), scale: 0.95}">

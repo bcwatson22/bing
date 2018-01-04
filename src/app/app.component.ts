@@ -73,9 +73,11 @@ export class AppComponent implements OnInit {
 
     let pathname = window.location.pathname.substr(1);
 
-    // pathname = pathname.length ? pathname : 'home';
+    pathname = pathname.length ? pathname : 'home';
 
     this.initialPage = pathname.indexOf('/') >= 0 ? pathname.substring(0, pathname.indexOf('/')) : pathname;
+
+    // console.log('onInit. pathname = ' + pathname + ', initialPage = ' + this.initialPage);
 
     this.animateIndicator(true);
 
@@ -125,6 +127,8 @@ export class AppComponent implements OnInit {
     this.currentLatLong = this.utils.getElementCoordinates($initial, false);
     this.targetLatLong = this.utils.getElementCoordinates($target, false);
     this.parentLatLong = this.utils.getElementCoordinates($parent, false);
+
+    // console.log('func. initialPage = ' + this.initialPage);
 
     let offsetLeft,
         styleString;
