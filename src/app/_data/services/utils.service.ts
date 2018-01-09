@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { Meta, Title } from '@angular/platform-browser';
 import { PortraitService } from './portrait.service';
 import { StaticContentService } from './static-content.service';
 import { Coordinates } from './../models/coordinates';
@@ -21,7 +22,9 @@ export class UtilsService {
     private router: Router,
     private location: Location,
     private portraitService: PortraitService,
-    private staticService: StaticContentService
+    private staticService: StaticContentService,
+    private meta: Meta,
+    private title: Title
   ) {
   }
 
@@ -39,14 +42,41 @@ export class UtilsService {
   //
   // }
 
-  getStaticContent(): void {
+  getStaticContent(key: string): void {
 
     this.staticService.getStaticContent().then(
       (val) => {
         this.rawStatic = val;
         this.staticData = this.rawStatic[0];
+        this.updateMetaData(key);
       }
     );
+
+  }
+
+  updateMetaData(targetData: any): void {
+
+    if (typeof(targetData) === 'string') {
+
+      let data = this.staticData[targetData],
+          description = data.description;
+
+      this.title.setTitle(data.title);
+      this.meta.updateTag({ name: 'description', content: description });
+      this.meta.updateTag({ name: 'twitter:description', content: description });
+      this.meta.updateTag({ property: 'og:description', content: description });
+
+    } else {
+
+      let subject = targetData.subject,
+          description = subject + ' portrait by Bing Jones. ' + targetData.material + '.';
+
+      this.title.setTitle(subject + ' | Bing Jones Portraits');
+      this.meta.updateTag({ name: 'description', content: description });
+      this.meta.updateTag({ name: 'twitter:description', content: description });
+      this.meta.updateTag({ property: 'og:description', content: description });
+
+    }
 
   }
 
@@ -61,7 +91,7 @@ export class UtilsService {
 
   }
 
-  bindData(key: any): any {
+  bindStaticData(key: any): any {
 
     let binding;
 

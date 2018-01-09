@@ -17,13 +17,13 @@ export class CommissionComponent implements OnInit {
     private utils: UtilsService
   ) {
 
-    utils.getStaticContent();
+    utils.getStaticContent('commission');
 
   }
 
   ngOnInit() {
 
-    this.commission = this.utils.bindData('commission');
+    this.commission = this.utils.bindStaticData('commission');
 
   }
 

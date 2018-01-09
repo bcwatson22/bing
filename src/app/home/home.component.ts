@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Location, PlatformLocation } from '@angular/common';
 import { UtilsService } from './../_data/services/utils.service';
@@ -35,11 +34,10 @@ export class HomeComponent implements OnInit {
     private location: Location,
     private platform: PlatformLocation,
     private router: Router,
-    private utils: UtilsService,
-    meta: Meta, title: Title
+    private utils: UtilsService
   ) {
 
-    utils.getStaticContent();
+    utils.getStaticContent('home');
     utils.getPortraits();
 
     platform.onPopState((e) => {
@@ -58,19 +56,11 @@ export class HomeComponent implements OnInit {
 
     });
 
-    // Sets the <title></title>
-    title.setTitle('Blogist');
-
-    // Sets the <meta> tag for the page
-    meta.updateTag(
-      { name: 'description', content: 'This is a description.' }
-    );
-
   }
 
   ngOnInit() {
 
-    this.home = this.utils.bindData('home');
+    this.home = this.utils.bindStaticData('home');
     this.unsorted = this.utils.filterPortraits('home', true, false);
     this.portraits = this.sortPortraits();
 
@@ -102,6 +92,8 @@ export class HomeComponent implements OnInit {
 
     this.modalState = this.utils.portraitLaunchUrl('home', $event.id, $event.animate, $event.clickEvent);
 
+    this.utils.updateMetaData(this.activatedPortrait);
+
     if ($event.clickEvent) {
 
       this.latLong = this.utils.getElementCoordinates($event.clickEvent, true);
@@ -114,6 +106,8 @@ export class HomeComponent implements OnInit {
 
     this.modalState = null;
     this.activatedPortrait = null;
+
+    this.utils.updateMetaData('home');
 
     if (history) {
 

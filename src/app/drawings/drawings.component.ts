@@ -42,7 +42,7 @@ export class DrawingsComponent implements OnInit {
     private utils: UtilsService
   ) {
 
-    utils.getStaticContent();
+    utils.getStaticContent('drawings');
     utils.getPortraits();
 
     platform.onPopState((e) => {
@@ -65,7 +65,7 @@ export class DrawingsComponent implements OnInit {
 
   ngOnInit() {
 
-    this.drawings = this.utils.bindData('drawings');
+    this.drawings = this.utils.bindStaticData('drawings');
     this.unsorted = this.utils.filterPortraits('type', 'drawing', false);
 
     this.shuffled = this.utils.shufflePortraits(this.unsorted);
@@ -90,6 +90,8 @@ export class DrawingsComponent implements OnInit {
 
     this.modalState = this.utils.portraitLaunchUrl('drawings', $event.id, $event.animate, $event.clickEvent);
 
+    this.utils.updateMetaData(this.activatedPortrait);
+
     if ($event.clickEvent) {
 
       this.latLong = this.utils.getElementCoordinates($event.clickEvent, true);
@@ -102,6 +104,8 @@ export class DrawingsComponent implements OnInit {
 
     this.modalState = null;
     this.activatedPortrait = null;
+
+    this.utils.updateMetaData('drawings');
 
     if (history) {
 

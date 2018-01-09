@@ -13,7 +13,7 @@ export const PORTRAITS: Portrait[] = [
   },
   {
     "id": "abigail-with-guitar",
-    "subject": "Abigail With Guitar",
+    "subject": "Abigail with Guitar",
     "type": "painting",
     "orientation": "portrait",
     "material": "Oil on canvas",
@@ -261,7 +261,7 @@ export const PORTRAITS: Portrait[] = [
   },
   {
     "id": "esme-in-her-teens",
-    "subject": "Esme In Her Teens",
+    "subject": "Esme in her Teens",
     "type": "drawing",
     "orientation": "portrait",
     "material": "Coloured chalk drawing on Ingres Paper",
@@ -398,7 +398,7 @@ export const PORTRAITS: Portrait[] = [
   },
   {
     "id": "juliette-and-isabella",
-    "subject": "Juliette And Isabella",
+    "subject": "Juliette and Isabella",
     "type": "painting",
     "orientation": "portrait",
     "material": "Oil on canvas",

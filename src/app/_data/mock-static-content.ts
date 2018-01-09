@@ -3,6 +3,8 @@ import { StaticContent } from './models/static-content';
 export const CONTENT: StaticContent[] = [{
   "home": {
     "position": 1,
+    "title": "Home | Bing Jones Portraits",
+    "description": "Traditional portraits by Bing Jones. Paintings in oil and tempera, drawings in chalk and charcoal. Created from live sittings in Yorkshire and London.",
     "intro": [
       "Traditional portraits from live sittings.",
       "Paintings in oil and tempera, drawings in chalk and charcoal.",
@@ -18,6 +20,8 @@ export const CONTENT: StaticContent[] = [{
   },
   "about": {
     "position": 2,
+    "title": "About | Bing Jones Portraits",
+    "description": "About Sheffield based portrait artist Bing Jones. Comprising biography, contact details and quotes alongside a photograph of artist with completed work.",
     "content": [
       {
         "title": "Biography",
@@ -49,6 +53,8 @@ export const CONTENT: StaticContent[] = [{
   },
   "paintings": {
     "position": 3,
+    "title": "Paintings | Bing Jones Portraits",
+    "description": "Paintings by Sheffield based portrait artist Bing Jones. Use of oil and tempera on canvas is a centuries-old method likely to outlive artist and sitter.",
     "intro": [
       "Oil portaits make a lasting record of the sitters likeness, expression and personality. Traditional portraits in oil and tempera on canvas use proven centuries-old methods. These paintings enrich both families and institutions, and will probably outlive artist and sitter."
     ],
@@ -58,6 +64,8 @@ export const CONTENT: StaticContent[] = [{
   },
   "drawings": {
     "position": 4,
+    "title": "Drawings | Bing Jones Portraits",
+    "description": "Drawings by Sheffield based portrait artist Bing Jones. Using charcoal or chalk, with shades, catches expression and likeness in a fresh and lively manner.",
     "intro": [
       "Traditional drawings in charcoal or chalk, with coloured pastel shades, catch expression and likeness in a fresh and lively manner. These can be made quickly or in more detail. They are often commissioned as presents, for birthdays, weddings or retirement."
     ],
@@ -67,6 +75,8 @@ export const CONTENT: StaticContent[] = [{
   },
   "commission": {
     "position": 5,
+    "title": "Commission | Bing Jones Portraits",
+    "description": "Commission information for Sheffield based portrait artist Bing Jones. Includes process, pricing illustration, contact details and sitter's comments.",
     "pricing": [
       {
         "title": "Pricing of commissioned portraits",
