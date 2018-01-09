@@ -5,7 +5,9 @@
     <h1 [ngsReveal]="{ scale: 0.95}">{{title}}</h1>
 
     <article *ngIf="home?.intro" class="intro">
-      <p *ngFor="let paragraph of home?.intro; let i = index" [ngsReveal]="{ delay: ((i + 1) * 20), scale: 0.95}">{{paragraph}}</p>
+      <ul>
+        <li *ngFor="let paragraph of home?.intro; let i = index" [ngsReveal]="{ delay: ((i + 1) * 20), scale: 0.95}">{{paragraph}}</li>
+      </ul>
     </article>
 
   </header>

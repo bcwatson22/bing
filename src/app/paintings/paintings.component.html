@@ -12,7 +12,7 @@
 
   <article class="portraits shuffle group">
 
-    <thumbnail *ngFor="let portrait of portraits; let i = index" [ngsReveal]="{ delay: ((i + 3) * 20), scale: 0.95}" [class]="'reveal ' + utils.getThumbClasses(i, landscape, portrait?.orientation, paintings?.quotes[utils.getQuoteIndex(i)])" [portrait]="portrait" [blockquote]="portrait?.orientation === 'landscape' && paintings?.quotes ? paintings?.quotes[utils.getQuoteIndex(i)] : false" (showPortrait)="showPortrait($event)"></thumbnail>
+    <thumbnail *ngFor="let portrait of portraits; let i = index" [ngsReveal]="{ delay: ((i + 3) * 20), scale: 0.95}" [class]="'reveal ' + utils.getThumbClasses(i, landscape, portraits, portrait?.orientation, paintings?.quotes[utils.getQuoteIndex(i)])" [portrait]="portrait" [blockquote]="portrait?.orientation === 'landscape' && paintings?.quotes ? paintings?.quotes[utils.getQuoteIndex(i)] : false" (showPortrait)="showPortrait($event)"></thumbnail>
 
   </article>
 

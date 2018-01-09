@@ -266,11 +266,12 @@ export class UtilsService {
 
   }
 
-  getThumbClasses(i: number, collection: any, orientation: string, quote: any): string {
+  getThumbClasses(i: number, landscapeCollection: any, fullCollection: any, orientation: string, quote: any): string {
 
     i += 1;
 
-    let styleClass;
+    let j = i,
+        styleClass;
 
     i = (i + 18) % 18;
 
@@ -285,7 +286,6 @@ export class UtilsService {
       case 4:
       case 5:
       case 15:
-      // case 16:
       case 17:
       case 0:
         styleClass = 'stacked';
@@ -316,75 +316,21 @@ export class UtilsService {
         styleClass = 'stacked second';
         break;
 
-      // case 19:
-      //   styleClass = 'quarter clear';
-      //   break;
-      //
-      // case 20:
-      // case 21:
-      // case 0:
-      //   styleClass = 'quarter';
-      //   break;
-
       default:
         styleClass = 'quarter';
         break;
-
-      // case 1:
-      //   styleClass = 'half';
-      //   break;
-      //
-      // case 2:
-      // case 3:
-      // case 4:
-      // case 5:
-      // case 12:
-      // case 13:
-      // case 14:
-      // case 15:
-      //   styleClass = 'stacked';
-      //   break;
-      //
-      // case 6:
-      //   styleClass = 'landscape';
-      //   break;
-      //
-      // case 7:
-      // case 8:
-      // case 9:
-      // case 10:
-      //   styleClass = 'quarter';
-      //   break;
-      //
-      // case 11:
-      //   styleClass = 'half right';
-      //   break;
-      //
-      // case 16:
-      //   styleClass = 'third clear';
-      //   break;
-      //
-      // case 17:
-      // case 0:
-      //   styleClass = 'third';
-      //   break;
-      //
-      // default:
-      //   styleClass = 'quarter';
-      //   break;
 
     }
 
     if (orientation === 'landscape' && !quote) styleClass += ' wide';
 
-    if (!collection.length) {
-      if (i === 9) styleClass = 'none';
-      if (i === 16) styleClass = 'stacked';
-      // if (i === 9 || i === 16) styleClass = 'stacked second';
-    }
+    let multiple = Math.ceil(j / 18);
 
-    // if (!collection.length && i === 9) styleClass = 'none';
-    // if (!collection.length && i === 16) styleClass = 'stacked';
+    if (landscapeCollection.length < multiple) {
+
+      if (i === 9) styleClass = 'none';
+
+    }
 
     return styleClass;
 

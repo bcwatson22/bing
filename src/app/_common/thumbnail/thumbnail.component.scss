@@ -20,7 +20,7 @@
 
     &:active {
       .title {
-          background: rgba($orange, 0.8);
+          background: rgba($dark-blue, 0.6);
           transition: all 0.1s ease;
       }
     }
@@ -96,7 +96,7 @@
     padding: 15px;
     text-align: center;
     cursor: pointer;
-    background: rgba($dark-blue, 0.8);
+    background: rgba($dark-grey, 0.6);
     opacity: 0;
     transform: translateY(100%);
     transition: all 0.25s ease;
