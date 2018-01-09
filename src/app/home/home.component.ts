@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
     private utils: UtilsService
   ) {
 
-    utils.getStaticContent();
+    utils.getStaticContent('home');
     utils.getPortraits();
 
     platform.onPopState((e) => {
@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this.home = this.utils.bindData('home');
+    this.home = this.utils.bindStaticData('home');
     this.unsorted = this.utils.filterPortraits('home', true, false);
     this.portraits = this.sortPortraits();
 
@@ -92,6 +92,8 @@ export class HomeComponent implements OnInit {
 
     this.modalState = this.utils.portraitLaunchUrl('home', $event.id, $event.animate, $event.clickEvent);
 
+    this.utils.updateMetaData(this.activatedPortrait);
+
     if ($event.clickEvent) {
 
       this.latLong = this.utils.getElementCoordinates($event.clickEvent, true);
@@ -104,6 +106,8 @@ export class HomeComponent implements OnInit {
 
     this.modalState = null;
     this.activatedPortrait = null;
+
+    this.utils.updateMetaData('home');
 
     if (history) {
 

@@ -3,17 +3,9 @@
 <head>
   <script>
     (function() {
-      if (sessionStorage.fonts) {
-        document.documentElement.classList.add('wf-active');
-      }
-      // let flexSupport = CSS.supports('flex-wrap', 'wrap');
-      // if (flexSupport) {
-      //   document.documentElement.classList.add('flex');
-      // }
+      if (sessionStorage.fonts) document.documentElement.classList.add('wf-active');
       let flexSupport = document.createElement('p').style.flexWrap;
-      if (typeof(flexSupport) !== 'undefined') {
-        document.documentElement.classList.add('flex');
-      }
+      if (typeof(flexSupport) !== 'undefined') document.documentElement.classList.add('flex');
     })();
   </script>
   <meta charset="utf-8">
@@ -42,7 +34,6 @@
   <meta property="og:image" content="http://www.bingjones.co.uk/assets/images/pictures/painting/stockley-family-2400.jpg" />
   <meta property="og:description" content="Sheffield based portrait artist Bing Jones has been undertaking academic, professional and corporate commissions of paintings and drawings for 30 years." />
   <meta property="og:site_name" content="Bing Jones Portraits" />
-
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async></script>
   <script>
     WebFontConfig = {
@@ -62,7 +53,6 @@
     };
   </script>
   <script src="https://use.fontawesome.com/6f17dc7be1.js"></script>
-  <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet"> -->
 </head>
 <body>
   <app-root></app-root>

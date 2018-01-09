@@ -17,13 +17,13 @@ export class AboutComponent implements OnInit {
     private utils: UtilsService
   ) {
 
-    utils.getStaticContent();
+    utils.getStaticContent('about');
 
   }
 
   ngOnInit() {
 
-    this.about = this.utils.bindData('about');
+    this.about = this.utils.bindStaticData('about');
 
   }
 
