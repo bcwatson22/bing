@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
 
   title = 'About';
 
-  public about;
+  public about: any;
 
   constructor(
     private utils: UtilsService

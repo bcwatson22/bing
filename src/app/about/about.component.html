@@ -1,20 +1,23 @@
 <section class="content group">
 
   <article class="block">
-    <h1>{{ title }}</h1>
-    <div class="sub-section" *ngFor="let section of about?.content">
+    <h1 [ngsReveal]="{ scale: 0.95}">{{ title }}</h1>
+    <div *ngFor="let section of about?.content; let i = index" [ngsReveal]="{ delay: ((i + 1) * 20), scale: 0.95}" class="sub-section">
       <h2>{{section.title}}</h2>
       <p *ngFor="let paragraph of section?.body" [innerHTML]="paragraph | keepHtml"></p>
     </div>
   </article>
 
   <article class="block">
-    <img src="assets/images/global/bing-1200.jpg" alt="Bing Jones">
+    <img srcset="assets/images/global/bing-1200.jpg 1200w,
+          assets/images/global/bing-600.jpg 600w,
+          assets/images/global/bing-300.jpg 300w"
+      sizes="(min-width: 601px) 50vw, 100vw"
+      src="assets/images/global/bing-300.jpg" alt="Bing Jones" [ngsReveal]="{ delay: 80, scale: 0.95}">
 
-    <aside>
+    <aside *ngIf="about?.quotes" [ngsReveal]="{ delay: 100, scale: 0.95}">
       <div class="pullquote">
-        <p>Painting for me is about presenting the world to the viewer in a sorted way.</p>
-        <p>Somehow one has to capture an essence of the subject and then re-construct it, resolving the parts into a whole.</p>
+        <p *ngFor="let paragraph of about?.quotes[0]">{{paragraph}}</p>
       </div>
     </aside>
   </article>

@@ -1,5 +1,6 @@
 @import '../../../../sass/_variables.scss';
 @import '../../../../sass/_mixins.scss';
+@import '../../../../sass/_animations.scss';
 
 .modal-bg {
   position: fixed;
@@ -29,13 +30,7 @@
   }
 
   .landscape {
-    // display: flex;
-    // flex-wrap: wrap;
-    // height: 100%;
-    // overflow: hidden;
     overflow: scroll;
-    // justify-content: space-between;
-    // align-items: center;
 
     img {
       margin-bottom: 30px;
@@ -50,22 +45,6 @@
     // @include hwa();
   }
 
-  img,
-  .details {
-    // float: left;
-  }
-
-  // .picture {
-  //   width: 50%;
-  //   // float: left;
-  //   // height: auto;
-  //   margin-bottom: 30px;
-  //
-  //   img {
-  //     width: 100%;
-  //   }
-  // }
-
   img {
     height: 100%;
     width: auto;
@@ -74,20 +53,20 @@
   }
 
   .details {
-    // width: calc(50% - 30px);
-    // width: 50%;
-    // padding: 30px 0 0 30px;
     padding: 30px 30px 0 0;
-  }
-
-  h2 {
-    span {
-      font-weight: 300;
-    }
   }
 
   .description {
     margin-top: 30px;
+  }
+
+  .pointer {
+    display: none;
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    font-size: 2rem;
+    animation: pointer 2s infinite;
   }
 }
 
@@ -95,8 +74,8 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 20px;
+  right: 20px;
   background: $orange;
   color: #fff;
   border-radius: 30px;
@@ -118,4 +97,89 @@
   &:active {
     background: $orange;
   }
+}
+
+@media screen and (max-width: 950px) {
+
+  .modal-content {
+    .landscape {
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .details {
+        padding-top: 0;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+
+  .modal-content {
+    .portrait {
+      img {
+        margin-right: 20px;
+      }
+    }
+
+    .details {
+      padding-right: 0;
+    }
+
+    h1 {
+      white-space: pre-wrap;
+      word-break: break-all;
+      word-wrap: break-word;
+      -webkit-hyphens: auto;
+         -moz-hyphens: auto;
+              hyphens: auto;
+    }
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+
+  .modal-content {
+    padding: 20px;
+
+    .portrait {
+      overflow: scroll;
+
+      img {
+        float: none;
+        margin: 0 auto 30px;
+      }
+    }
+
+    h1 {
+      clear: both;
+    }
+
+    .pointer {
+      display: block;
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .modal-content {
+    .portrait {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .pointer {
+      top: -600%;
+      right: 20px;
+    }
+  }
+
 }

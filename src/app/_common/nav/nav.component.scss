@@ -9,8 +9,6 @@
 
 ul {
   width: 100%;
-  // display: flex;
-  // justify-content: space-between;
 
   li a {
     font-size: 1.6rem;
@@ -30,19 +28,6 @@ ul {
         opacity: 1;
       }
     }
-
-    // &:active,
-    // &.active {
-    //   &:after {
-    //     content: '';
-    //     width: 100%;
-    //     border-bottom: 2px solid $orange;
-    //     display: block;
-    //     position: absolute;
-    //     bottom: 0;
-    //     left: 0;
-    //   }
-    // }
 
     &.active {
       color: $dark-blue;
@@ -68,6 +53,7 @@ ul {
   left: 0;
   transition: opacity 0.3s ease;
   text-indent: -99999rem;
+  will-change: width;
   @include hwa();
 
   &.init {
@@ -78,4 +64,46 @@ ul {
   &.resize {
     transition: all 0.3s ease;
   }
+}
+
+@media screen and (max-width: 950px) {
+
+  :host {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  ul li {
+    a {
+      width: 40px;
+      height: 40px;
+      display: block;
+      text-indent: -99999rem;
+      white-space: nowrap;
+      // background: $light-blue;
+
+      i {
+        opacity: 1;
+        text-indent: 0;
+        font-size: 2rem;
+        color: $light-blue;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &.active {
+        // background: $light-blue;
+
+        i {
+          color: $dark-blue;
+        }
+      }
+    }
+  }
+
 }

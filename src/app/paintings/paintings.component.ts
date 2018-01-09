@@ -21,19 +21,19 @@ export class PaintingsComponent implements OnInit {
 
   title = 'Paintings';
 
-  public paintings;
-  public unsorted;
-  public shuffled;
-  public landscape;
-  public portrait;
-  public portraits;
+  public paintings: any;
+  public unsorted: any;
+  public shuffled: any;
+  public landscape: any;
+  public portrait: any;
+  public portraits: any;
 
-  public activatedPortrait;
-  public modalState;
+  public activatedPortrait: any;
+  public modalState: string;
 
-  public latLong;
-  public widgetTop;
-  public widgetLeft;
+  public latLong: any;
+  public widgetTop: number;
+  public widgetLeft: number;
 
   constructor(
     private location: Location,

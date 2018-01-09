@@ -95,3 +95,11 @@ footer {
     float: right;
   }
 }
+
+@media screen and (max-width: 500px) {
+
+  .flex nav ul {
+    justify-content: space-around;
+  }
+
+}

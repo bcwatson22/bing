@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { NgsRevealModule } from 'ng-scrollreveal';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +30,8 @@ import { KeepHtmlPipe } from './_pipes/keep-html.pipe';
     BrowserModule.withServerTransition({appId: 'bing'}),
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    NgsRevealModule.forRoot()
   ],
   declarations: [
     AppComponent,

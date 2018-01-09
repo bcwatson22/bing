@@ -28,7 +28,7 @@ export const ModalAnimation = trigger('ModalAnimation', [
     ),
     query('img, h1, h2, h3, p, button',
       style({
-        transform: 'translate3d(0, 50px, 0)',
+        transform: 'translate3d(0, 20px, 0)',
         opacity: 0,
       }),
       { optional: true }

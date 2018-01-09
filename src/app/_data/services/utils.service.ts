@@ -107,7 +107,7 @@ export class UtilsService {
 
       for (let i = 0; i < landscapeArray.length; i++) {
 
-          let sixth = (i * 18) + 5;
+          let sixth = (i * 18) + 8;
 
           pictures.splice(sixth, 0, landscapeArray[i]);
 
@@ -243,21 +243,21 @@ export class UtilsService {
         styleClass = 'stacked';
         break;
 
+      case 6:
       case 7:
       case 8:
-      case 9:
-      case 10:
-        styleClass = 'quarter';
-        break;
-
-      case 11:
-      case 12:
-      case 13:
         styleClass = 'third';
         break;
 
+      case 10:
+      case 11:
+      case 12:
+      case 13:
+        styleClass = 'quarter';
+        break;
+
       default:
-        styleClass = 'wide';
+        styleClass = '';
         break;
 
     }
@@ -266,7 +266,7 @@ export class UtilsService {
 
   }
 
-  getThumbClasses(i: number, collection: any): string {
+  getThumbClasses(i: number, collection: any, orientation: string, quote: any): string {
 
     i += 1;
 
@@ -277,58 +277,126 @@ export class UtilsService {
     switch (i) {
 
       case 1:
-        styleClass = 'half';
+        styleClass = 'half clear';
         break;
 
       case 2:
       case 3:
       case 4:
       case 5:
-      case 12:
-      case 13:
-      case 14:
       case 15:
+      // case 16:
+      case 17:
+      case 0:
         styleClass = 'stacked';
         break;
 
       case 6:
+      case 7:
+      case 8:
+        styleClass = 'third';
+        break;
+
+      case 9:
         styleClass = 'landscape';
         break;
 
-      case 7:
-      case 8:
-      case 9:
       case 10:
+      case 11:
+      case 12:
+      case 13:
         styleClass = 'quarter';
         break;
 
-      case 11:
+      case 14:
         styleClass = 'half right';
         break;
 
       case 16:
-        styleClass = 'third clear';
+        styleClass = 'stacked second';
         break;
 
-      case 17:
-      case 0:
-        styleClass = 'third';
-        break;
+      // case 19:
+      //   styleClass = 'quarter clear';
+      //   break;
+      //
+      // case 20:
+      // case 21:
+      // case 0:
+      //   styleClass = 'quarter';
+      //   break;
 
       default:
         styleClass = 'quarter';
         break;
 
+      // case 1:
+      //   styleClass = 'half';
+      //   break;
+      //
+      // case 2:
+      // case 3:
+      // case 4:
+      // case 5:
+      // case 12:
+      // case 13:
+      // case 14:
+      // case 15:
+      //   styleClass = 'stacked';
+      //   break;
+      //
+      // case 6:
+      //   styleClass = 'landscape';
+      //   break;
+      //
+      // case 7:
+      // case 8:
+      // case 9:
+      // case 10:
+      //   styleClass = 'quarter';
+      //   break;
+      //
+      // case 11:
+      //   styleClass = 'half right';
+      //   break;
+      //
+      // case 16:
+      //   styleClass = 'third clear';
+      //   break;
+      //
+      // case 17:
+      // case 0:
+      //   styleClass = 'third';
+      //   break;
+      //
+      // default:
+      //   styleClass = 'quarter';
+      //   break;
+
     }
 
-    // let landscapeItems = this.filterPortraits('orientation', 'landscape', collection);;
+    if (orientation === 'landscape' && !quote) styleClass += ' wide';
 
-    if (!collection.length && i === 6) {
-      console.log('warn');
-      styleClass = 'none';
+    if (!collection.length) {
+      if (i === 9) styleClass = 'none';
+      if (i === 16) styleClass = 'stacked';
+      // if (i === 9 || i === 16) styleClass = 'stacked second';
     }
+
+    // if (!collection.length && i === 9) styleClass = 'none';
+    // if (!collection.length && i === 16) styleClass = 'stacked';
 
     return styleClass;
+
+  }
+
+  getQuoteIndex(i: number): number {
+
+    i += 1;
+
+    let index = Math.floor(i / 18);
+
+    return index;
 
   }
 

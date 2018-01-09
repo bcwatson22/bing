@@ -27,22 +27,13 @@ h1 {
   font-size: 3.6rem;
   margin-bottom: 30px;
   text-align: center;
-  // text-shadow: 2px 2px 1px #ccc;
 }
 
 h2 {
   font-size: 2rem;
-  // margin-bottom: 24px;
   font-weight: 700;
   color: $orange;
-
-  // .sub-section & {
-    margin-top: 60px;
-  // }
-
-  // .sub-section:first-of-type & {
-  //   margin-top: 0;
-  // }
+  margin-top: 60px;
 }
 
 h3 {
@@ -56,9 +47,20 @@ h3 {
 p {
   margin-bottom: 15px;
 
-  // &:last-of-type {
-  //   margin-bottom: 0;
-  // }
+  &.quote {
+    position: relative;
+    text-indent: 30px;
+
+    &:before {
+      content: '\201C';
+      color: $dark-blue;
+      font-size: 6rem;
+      line-height: 0.85;
+      position: absolute;
+      left: -30px;
+      top: 0px;
+    }
+  }
 }
 
 a {
@@ -89,4 +91,32 @@ span {
   .vcard & {
     display: block;
   }
+}
+
+@media screen and (max-width: 900px) {
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    margin-top: 20px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  h2 {
+    margin-top: 20px;
+  }
+
 }

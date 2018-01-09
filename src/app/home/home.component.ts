@@ -22,14 +22,14 @@ export class HomeComponent implements OnInit {
 
   title = 'Home';
 
-  public home;
-  public unsorted;
-  public portraits;
+  public home: any;
+  public unsorted: any;
+  public portraits: any;
 
-  public activatedPortrait;
-  public modalState;
+  public activatedPortrait: any;
+  public modalState: string;
 
-  public latLong;
+  public latLong: any;
 
   constructor(
     private location: Location,
@@ -75,11 +75,7 @@ export class HomeComponent implements OnInit {
     this.unsorted = this.utils.filterPortraits('home', true, false);
     this.portraits = this.sortPortraits();
 
-    // this.activatedPortrait = this.portraits[0];
-
     let portraitParam = this.utils.getRouteParam();
-
-    // console.log(this.portraits);
 
     if (portraitParam) {
 
@@ -104,8 +100,6 @@ export class HomeComponent implements OnInit {
   showPortrait($event): void {
 
     this.activatedPortrait = this.utils.activatePortraitData(this.portraits, $event.id);
-
-    // console.log(this.activatedPortrait.description);
 
     this.modalState = this.utils.portraitLaunchUrl('home', $event.id, $event.animate, $event.clickEvent);
 

@@ -9,7 +9,6 @@
   .thumbnail {
     overflow: hidden;
     position: relative;
-    // box-shadow: 0 0 3px 1px $dark-grey;
 
     &:hover,
     &:focus {
@@ -30,7 +29,7 @@
   &.half {
     width: calc(50% - 30px);
 
-    &:nth-of-type(2) {
+    &.right {
       float: right;
     }
   }
@@ -48,27 +47,26 @@
     width: calc(33.33% - 30px);
   }
 
+  &.landscape,
+  &.clear {
+    clear: both;
+  }
+
   &.landscape {
     width: calc(100% - 30px);
-    // display: flex;
-    // flex-wrap: wrap;
-    // align-items: center;
-    // height: 100%;
 
-    .thumbnail {
-      // float: right;
+    .thumbnail,
+    &.wide aside + .thumbnail {
       width: calc(75% - 10px);
     }
 
+    &.wide .thumbnail {
+      width: 100%;
+    }
+
     aside {
-      // float: left;
       width: calc(25% - 20px);
       margin: 0 30px 0 0;
-      // position: relative;
-
-      // .pullquote {
-      //   padding-top: 30%;
-      // }
     }
 
     .grid {
@@ -78,6 +76,10 @@
     .preview {
       position: relative;
     }
+  }
+
+  &.none {
+    display: none;
   }
 
   .preview {
@@ -110,7 +112,8 @@
   }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
+
   :host {
     margin: 10px;
     width: calc(25% - 20px);
@@ -131,5 +134,72 @@
     &.third {
       width: calc(33.33% - 20px);
     }
+
+    &.landscape {
+      width: calc(100% - 20px);
+
+      aside {
+        width: calc(25% - 15px);
+        margin-right: 20px;
+      }
+
+      .thumbnail {
+        width: calc(75% - 5px);
+      }
+    }
   }
+
+}
+
+@media screen and (max-width: 700px) {
+
+  :host {
+    &.landscape {
+      aside {
+        display: none;
+      }
+
+      .thumbnail {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  :host {
+    margin: 5px;
+    width: calc(25% - 10px);
+
+    &.half,
+    &.stacked,
+    &.quarter,
+    &.stacked,
+    &.third,
+    &.none {
+      margin-bottom: 5px;
+      width: calc(50% - 10px);
+    }
+
+    &.none {
+      display: block;
+      width: 100%;
+    }
+
+    &.half.clear {
+      clear: none;
+
+      &:first-of-type {
+        width: calc(50% - 10px);
+      }
+    }
+
+    &.landscape,
+    &.stacked.second {
+      width: calc(100% - 10px);
+    }
+  }
+
 }

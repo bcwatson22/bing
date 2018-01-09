@@ -2,11 +2,19 @@
 <div class="modal-content group">
   <button class="modal-close" (click)="closeModal()"></button>
   <section [class]="data?.orientation">
-    <!-- <article class="picture"> -->
-      <!-- <img *ngIf="data" [src]="'assets/images/pictures/' + data?.type + '/' + data?.id + '-1200.jpg'"[alt]="data?.subject + ' Portrait'"> -->
-      <img *ngIf="data" [src]="'assets/images/pictures/' + data?.type + '/' + data?.id + '-1200.jpg'" [alt]="data?.subject + ' Portrait'">
-      <!-- <img *ngIf="data?.modifier" [src]="'assets/images/pictures/' + data?.type + '/' + data?.id + '-' + data?.modifier + '-1200.jpg'"[alt]="data?.subject + ' Portrait'"> -->
-    <!-- </article> -->
+
+    <img *ngIf="data && data?.orientation === 'landscape'" sizes="100vw"
+      [srcset]="'assets/images/pictures/' + data?.type + '/' + data?.id + '-2400.jpg 2400w,
+          assets/images/pictures/' + data?.type + '/' + data?.id + '-1200.jpg 1200w,
+          assets/images/pictures/' + data?.type + '/' + data?.id + '-600.jpg 600w'"
+      [src]="'assets/images/pictures/' + data?.type + '/' + data?.id + '-600.jpg'" [alt]="data?.subject + ' Portrait'">
+
+    <img *ngIf="data && data?.orientation !== 'landscape'" sizes="50vw"
+      [srcset]="'assets/images/pictures/' + data?.type + '/' + data?.id + '-1200.jpg 1200w,
+          assets/images/pictures/' + data?.type + '/' + data?.id + '-600.jpg 600w,
+          assets/images/pictures/' + data?.type + '/' + data?.id + '-300.jpg 300w'"
+      [src]="'assets/images/pictures/' + data?.type + '/' + data?.id + '-300.jpg'" [alt]="data?.subject + ' Portrait'">
+
     <article class="details">
       <h1>{{data?.title}} {{data?.subject}}</h1>
       <h2>{{data?.material}}</h2>
@@ -17,4 +25,5 @@
       </div>
     </article>
   </section>
+  <span class="pointer"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
 </div>

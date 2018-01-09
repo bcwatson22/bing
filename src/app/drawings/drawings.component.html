@@ -2,17 +2,17 @@
 
   <header>
 
-    <h1>{{title}}</h1>
+    <h1 [ngsReveal]="{ scale: 0.95}">{{title}}</h1>
 
     <article *ngIf="drawings?.intro" class="intro">
-      <p *ngFor="let paragraph of drawings?.intro">{{paragraph}}</p>
+      <p *ngFor="let paragraph of drawings?.intro; let i = index" [ngsReveal]="{ delay: ((i + 1) * 20), scale: 0.95}">{{paragraph}}</p>
     </article>
 
   </header>
 
   <article class="portraits shuffle group">
 
-    <thumbnail *ngFor="let portrait of portraits; let i = index" [class]="utils.getThumbClasses(i, landscape)" [portrait]="portrait" (showPortrait)="showPortrait($event)"></thumbnail>
+    <thumbnail *ngFor="let portrait of portraits; let i = index" [ngsReveal]="{ delay: ((i + 3) * 20), scale: 0.95}" [class]="'reveal ' + utils.getThumbClasses(i, landscape, portrait?.orientation, drawings?.quotes[utils.getQuoteIndex(i)])" [portrait]="portrait" [blockquote]="portrait?.orientation === 'landscape' && drawings?.quotes ? drawings?.quotes[utils.getQuoteIndex(i)] : false" (showPortrait)="showPortrait($event)"></thumbnail>
 
   </article>
 

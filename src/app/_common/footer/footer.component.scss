@@ -31,3 +31,19 @@ small {
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 400px) {
+
+  .small-print,
+  .bw-logo {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .small-print {
+    margin-bottom: 20px;
+  }
+
+}
