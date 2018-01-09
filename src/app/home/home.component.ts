@@ -62,10 +62,9 @@ export class HomeComponent implements OnInit {
     title.setTitle('Blogist');
 
     // Sets the <meta> tag for the page
-    meta.addTags([
-      { name: 'author', content: 'Blogist' },
-      { name: 'description', content: 'This is a description.' },
-    ]);
+    meta.updateTag(
+      { name: 'description', content: 'This is a description.' }
+    );
 
   }
 
