@@ -4,7 +4,11 @@ export const CONTENT: StaticContent[] = [{
   "home": {
     "position": 1,
     "intro": [
-      "Traditional portraits from live sittings. Paintings in oil and tempera, drawings in chalk and charcoal. Individual and group portraits. Corporate, academic, families and children. Sittings in Yorkshire and London."
+      "Traditional portraits from live sittings.",
+      "Paintings in oil and tempera, drawings in chalk and charcoal.",
+      "Individual and group portraits.",
+      "Corporate, academic, families and children.",
+      "Sittings in Yorkshire and London."
     ],
     "quotes": [
         [
@@ -46,7 +50,7 @@ export const CONTENT: StaticContent[] = [{
   "paintings": {
     "position": 3,
     "intro": [
-      "Oil portaits make a lasting record of the sitters likeness, expression and personality. Traditional portraits in oil and tempera on canvas use proven centuries-old methods. These paintings will probably outlive artist and sitter, and enrich both families and institutions."
+      "Oil portaits make a lasting record of the sitters likeness, expression and personality. Traditional portraits in oil and tempera on canvas use proven centuries-old methods. These paintings enrich both families and institutions, and will probably outlive artist and sitter."
     ],
     "quotes": [
 

@@ -46,8 +46,12 @@ header {
 .intro {
   width: calc(50% - 15px);
 
-  p:last-of-type {
-    margin: 0;
+  p {
+    // margin-bottom: 10px;
+
+    &:last-of-type {
+      margin: 0;
+    }
   }
 }
 
@@ -93,7 +97,7 @@ aside {
 }
 
 .reveal {
-  // visibility: hidden;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 950px) {
