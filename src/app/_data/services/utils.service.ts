@@ -266,7 +266,7 @@ export class UtilsService {
 
   }
 
-  getThumbClasses(i: number, landscapeCollection: any, fullCollection: any, orientation: string, quote: any): string {
+  getThumbClasses(i: number, landscapeCollection: any, orientation: string, quote: any): string {
 
     i += 1;
 
