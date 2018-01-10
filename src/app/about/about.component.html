@@ -1,8 +1,8 @@
 <section class="content group">
 
   <article class="block">
-    <h1 [ngsReveal]="{ scale: 0.95}">{{ title }}</h1>
-    <div *ngFor="let section of about?.content; let i = index" [ngsReveal]="{ delay: ((i + 1) * 20), scale: 0.95}" class="sub-section">
+    <h1>{{ title }}</h1>
+    <div *ngFor="let section of about?.content; let i = index" class="sub-section">
       <h2>{{section.title}}</h2>
       <p *ngFor="let paragraph of section?.body" [innerHTML]="paragraph | keepHtml"></p>
     </div>
@@ -13,9 +13,9 @@
           assets/images/global/bing-600.jpg 600w,
           assets/images/global/bing-300.jpg 300w"
       sizes="(min-width: 601px) 50vw, 100vw"
-      src="assets/images/global/bing-300.jpg" alt="Bing Jones" [ngsReveal]="{ delay: 80, scale: 0.95}">
+      src="assets/images/global/bing-300.jpg" alt="Bing Jones">
 
-    <aside *ngIf="about?.quotes" [ngsReveal]="{ delay: 100, scale: 0.95}">
+    <aside *ngIf="about?.quotes">
       <div class="pullquote">
         <p *ngFor="let paragraph of about?.quotes[0]">{{paragraph}}</p>
       </div>
