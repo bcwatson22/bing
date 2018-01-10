@@ -5,9 +5,8 @@ import 'rxjs/add/operator/pairwise';
 import { RouterAnimation } from './_animations/router';
 import { StaticContentService } from './_data/services/static-content.service';
 import { UtilsService } from './_data/services/utils.service';
-// import { NavItem } from './_data/models/nav-item';
-// import { NavItemService } from './_data/services/nav-item.service';
-// import { HeaderComponent } from './_common/header/header.component';
+import { Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +16,6 @@ import { UtilsService } from './_data/services/utils.service';
     RouterAnimation
   ],
   providers: [
-    // NavItemService
   ]
 })
 
@@ -37,6 +35,7 @@ export class AppComponent implements OnInit {
   // private indicator = document.querySelectorAll('.nav-indicator')[0];
 
   constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
     private router: Router,
     private staticService: StaticContentService,
     private utils: UtilsService
@@ -61,7 +60,7 @@ export class AppComponent implements OnInit {
 
         }
 
-        this.animateIndicator(false);
+        if (isPlatformBrowser(this.platformId)) this.animateIndicator(false);
 
     });
 
@@ -77,13 +76,15 @@ export class AppComponent implements OnInit {
 
     this.initialPage = pathname.indexOf('/') >= 0 ? pathname.substring(0, pathname.indexOf('/')) : pathname;
 
-    // console.log('onInit. pathname = ' + pathname + ', initialPage = ' + this.initialPage);
+    if (isPlatformBrowser(this.platformId)) {
 
-    this.animateIndicator(true);
+      this.animateIndicator(true);
 
-    let $indicator = <HTMLElement>document.querySelectorAll('.nav-indicator')[0];
+      let $indicator = <HTMLElement>document.querySelectorAll('.nav-indicator')[0];
 
-    $indicator.classList.add('init');
+      $indicator.classList.add('init');
+
+    }
 
   }
 
