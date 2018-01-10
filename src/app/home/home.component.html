@@ -2,11 +2,11 @@
 
   <header class="group">
 
-    <h1 [ngsReveal]="{ scale: 0.95}">{{title}}</h1>
+    <h1>{{title}}</h1>
 
     <article *ngIf="home?.intro" class="intro">
       <ul>
-        <li *ngFor="let paragraph of home?.intro; let i = index" [ngsReveal]="{ delay: ((i + 1) * 20), scale: 0.95}">{{paragraph}}</li>
+        <li *ngFor="let paragraph of home?.intro; let i = index">{{paragraph}}</li>
       </ul>
     </article>
 
@@ -14,7 +14,7 @@
 
   <article class="portraits group">
 
-    <thumbnail *ngFor="let portrait of portraits; let i = index" [ngsReveal]="{ delay: ((i + 3) * 20), scale: 0.95}" [class]="'reveal ' + utils.getHomeClasses(i)" [class.group]="portrait?.orientation === 'landscape'" [class.landscape]="portrait?.orientation === 'landscape'" [portrait]="portrait" [blockquote]="portrait?.orientation === 'landscape' ? home?.quotes[0] : false" (showPortrait)="showPortrait($event)"></thumbnail>
+    <thumbnail *ngFor="let portrait of portraits; let i = index" [class]="utils.getHomeClasses(i)" [class.group]="portrait?.orientation === 'landscape'" [class.landscape]="portrait?.orientation === 'landscape'" [portrait]="portrait" [blockquote]="portrait?.orientation === 'landscape' ? home?.quotes[0] : false" (showPortrait)="showPortrait($event)"></thumbnail>
 
   </article>
 
