@@ -376,4 +376,245 @@ export class UtilsService {
 
   }
 
+  public pCount: any;
+
+  progressiveImages(): void {
+
+      console.log('elems!');
+
+      if (window.addEventListener && window.requestAnimationFrame && document.getElementsByClassName) window.addEventListener('load', function() {
+
+        // start
+        var pItem = document.getElementsByClassName('progressive replace'), pCount, timer;
+
+        // scroll and resize events
+        window.addEventListener('scroll', function() {timer = timer || setTimeout(function() {
+          timer = null;
+          this.inView(pItem);
+        }, 300);}, false);
+        window.addEventListener('resize', function() {timer = timer || setTimeout(function() {
+          timer = null;
+          this.inView(pItem);
+        }, 300);}, false);
+
+        // DOM mutation observer
+        if (MutationObserver) {
+
+          var observer = new MutationObserver(function() {
+            if (pItem.length !== this.pCount) this.inView(pItem);
+          });
+          observer.observe(document.body, { subtree: true, childList: true, attributes: true, characterData: true });
+
+        }
+
+        // initial check
+        this.inView(pItem);
+
+
+        // throttled scroll/resize
+        // function scroller() {
+        //
+        //   timer = timer || setTimeout(function() {
+        //     timer = null;
+        //     inView();
+        //   }, 300);
+        //
+        // }
+
+        // image in view?
+        // function inView() {
+        //
+        //   if (pItem.length) requestAnimationFrame(function() {
+        //
+        //     var windowTop = window.pageYOffset, windowBottom = windowTop + window.innerHeight, cRect, imageTop, imageBottom, imageHeight, top, bottom, elem, p = 0;
+        //     while (p < pItem.length) {
+        //
+        //       elem = pItem[p].querySelectorAll('img')[0];
+        //       cRect = elem.getBoundingClientRect();
+        //       imageTop = windowTop + cRect.top;
+        //       imageBottom = imageTop + cRect.height;
+        //
+        //       top = imageTop + cRect.height * 0.2;
+        //       bottom = imageBottom - cRect.height * 0.2;
+        //
+        //       if (top < windowBottom && bottom > windowTop) {
+        //         loadFullImage(pItem[p]);
+        //         pItem[p].classList.remove('replace');
+        //       }
+        //       else p++;
+        //
+        //     }
+        //
+        //     pCount = pItem.length;
+        //
+        //   });
+        //
+        // }
+
+
+        // replace with full image
+        // function loadFullImage(item) {
+        //
+        //   var href = item && (item.getAttribute('data-href') || item.href);
+        //   if (!href) return;
+        //
+        //   // load image
+        //   var img = new Image();
+        //   if (item.dataset) {
+        //     img.srcset = item.dataset.srcset || '';
+        //     img.sizes = item.dataset.sizes || '';
+        //   }
+        //   img.src = href;
+        //   img.className = 'reveal';
+        //
+        //   if (img.complete) addImg();
+        //   else img.onload = addImg;
+        //
+        //   // replace image
+        //   function addImg() {
+        //
+        //     requestAnimationFrame(function() {
+        //
+        //       // disable click
+        //       if (href === item.href) {
+        //         item.style.cursor = 'default';
+        //         item.addEventListener('click', function(e) { e.preventDefault(); }, false);
+        //       }
+        //
+        //       img.style.position = 'absolute';
+        //
+        //       // add full image
+        //       item.appendChild(img).addEventListener('animationend', function(e) {
+        //
+        //         img.removeAttribute('style');
+        //
+        //         // remove preview image
+        //         var pImg = item.querySelector && item.querySelector('img.enhance');
+        //         if (pImg) {
+        //           e.target.alt = pImg.alt || '';
+        //           item.removeChild(pImg);
+        //           // e.target.classList.remove('reveal');
+        //         }
+        //
+        //       });
+        //
+        //     });
+        //
+        //   }
+        //
+        // }
+
+      }, false);
+
+  }
+
+  inView(pItem: any): void {
+
+    if (pItem.length) requestAnimationFrame(function() {
+
+      var windowTop = window.pageYOffset, windowBottom = windowTop + window.innerHeight, cRect, imageTop, imageBottom, imageHeight, top, bottom, elem, p = 0;
+      while (p < pItem.length) {
+
+        elem = pItem[p].querySelectorAll('img')[0];
+        cRect = elem.getBoundingClientRect();
+        imageTop = windowTop + cRect.top;
+        imageBottom = imageTop + cRect.height;
+
+        top = imageTop + cRect.height * 0.2;
+        bottom = imageBottom - cRect.height * 0.2;
+
+        if (top < windowBottom && bottom > windowTop) {
+          this.loadFullImage(pItem[p]);
+          pItem[p].classList.remove('replace');
+        }
+        else p++;
+
+      }
+
+      this.pCount = pItem.length;
+
+    });
+
+  }
+
+  loadFullImage(item: any): void {
+
+    var href = item && (item.getAttribute('data-href') || item.href);
+    if (!href) return;
+
+    // load image
+    var img = new Image();
+    if (item.dataset) {
+      img.srcset = item.dataset.srcset || '';
+      img.sizes = item.dataset.sizes || '';
+    }
+    img.src = href;
+    img.className = 'reveal';
+
+    if (img.complete) this.addImg(item, href, img);
+    else img.onload = this.addImg;
+
+    // replace image
+    // function addImg() {
+    //
+    //   requestAnimationFrame(function() {
+    //
+    //     // disable click
+    //     if (href === item.href) {
+    //       item.style.cursor = 'default';
+    //       item.addEventListener('click', function(e) { e.preventDefault(); }, false);
+    //     }
+    //
+    //     img.style.position = 'absolute';
+    //
+    //     // add full image
+    //     item.appendChild(img).addEventListener('animationend', function(e) {
+    //
+    //       img.removeAttribute('style');
+    //
+    //       // remove preview image
+    //       var pImg = item.querySelector && item.querySelector('img.enhance');
+    //       if (pImg) {
+    //         e.target.alt = pImg.alt || '';
+    //         item.removeChild(pImg);
+    //         // e.target.classList.remove('reveal');
+    //       }
+    //
+    //     });
+    //
+    //   });
+
+    }
+
+    addImg(item: any, href: any, img: any): void {
+
+      requestAnimationFrame(function() {
+
+        // disable click
+        if (href === item.href) {
+          item.style.cursor = 'default';
+          item.addEventListener('click', function(e) { e.preventDefault(); }, false);
+        }
+
+        img.style.position = 'absolute';
+
+        // add full image
+        item.appendChild(img).addEventListener('animationend', function(e) {
+
+          img.removeAttribute('style');
+
+          // remove preview image
+          var pImg = item.querySelector && item.querySelector('img.enhance');
+          if (pImg) {
+            e.target.alt = pImg.alt || '';
+            item.removeChild(pImg);
+            // e.target.classList.remove('reveal');
+          }
+
+        });
+
+      });
+
+  }
+
 }

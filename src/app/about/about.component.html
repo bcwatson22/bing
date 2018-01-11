@@ -8,18 +8,10 @@
     </div>
   </article>
 
-  <article class="block">
-    <img srcset="assets/images/global/bing-1200.jpg 1200w,
-          assets/images/global/bing-600.jpg 600w,
-          assets/images/global/bing-300.jpg 300w"
-      sizes="(min-width: 601px) 50vw, 100vw"
-      src="assets/images/global/bing-300.jpg" alt="Bing Jones">
+  <article class="portraits shuffle group">
 
-    <aside *ngIf="about?.quotes">
-      <div class="pullquote">
-        <p *ngFor="let paragraph of about?.quotes[0]">{{paragraph}}</p>
-      </div>
-    </aside>
+    <thumbnail *ngFor="let portrait of portraits; let i = index" [class]="utils.getThumbClasses(i, landscape, portraits, portrait?.orientation, drawings?.quotes[utils.getQuoteIndex(i)])" [portrait]="portrait" [blockquote]="portrait?.orientation === 'landscape' && drawings?.quotes ? drawings?.quotes[utils.getQuoteIndex(i)] : false" (showPortrait)="showPortrait($event)"></thumbnail>
+
   </article>
 
 </section>

@@ -72,6 +72,15 @@ export class HomeComponent implements OnInit {
 
     }
 
+    // try {
+      this.utils.progressiveImages();
+    // }
+    // catch(error) {
+    //   console.log(error);
+    //   // expected output: SyntaxError: unterminated string literal
+    //   // Note - error messages will vary depending on browser
+    // }
+
   }
 
   sortPortraits(): any {

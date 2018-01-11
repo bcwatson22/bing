@@ -12,7 +12,7 @@
 
   </header>
 
-  <article class="portraits group">
+  <article class="portraits group dynamic">
 
     <thumbnail *ngFor="let portrait of portraits; let i = index" [class]="utils.getHomeClasses(i)" [class.group]="portrait?.orientation === 'landscape'" [class.landscape]="portrait?.orientation === 'landscape'" [portrait]="portrait" [blockquote]="portrait?.orientation === 'landscape' ? home?.quotes[0] : false" (showPortrait)="showPortrait($event)"></thumbnail>
 

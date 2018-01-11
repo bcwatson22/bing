@@ -6,17 +6,19 @@
 <div class="thumbnail">
   <img class="grid" src="assets/images/global/thumbnail.png">
 
-  <img *ngIf="portrait?.orientation === 'landscape'" class="preview" sizes="100vw"
-    [srcset]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-2400.jpg 2400w,
-        assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg 1200w,
-        assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-600.jpg 600w'"
-    [src]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-600.jpg'" [alt]="portrait?.subject + ' Portrait'">
+  <a *ngIf="portrait?.orientation === 'landscape'"
+      [href]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-2400.jpg'"
+      [attr.data-srcset]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-2400.jpg 2400w, assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg 1200w, assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-600.jpg 600w'"
+      data-sizes="100vw" class="progressive replace">
+    <img class="enhance preview" [src]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-12.jpg'" [alt]="portrait?.subject + ' Portrait'">
+  </a>
 
-  <img *ngIf="portrait?.orientation !== 'landscape'" class="preview" sizes="(min-width: 601px) 50vw, 100vw"
-    [srcset]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg 1200w,
-        assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-600.jpg 600w,
-        assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-300.jpg 300w'"
-    [src]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-300.jpg'" [alt]="portrait?.subject + ' Portrait'">
+  <a *ngIf="portrait?.orientation !== 'landscape'"
+      [href]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg'"
+      [attr.data-srcset]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg 1200w, assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-600.jpg 600w, assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-300.jpg 300w'"
+      data-sizes="(min-width: 601px) 50vw, 100vw" class="progressive replace">
+    <img class="enhance preview" [src]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-10.jpg'" [alt]="portrait?.subject + ' Portrait'">
+  </a>
 
   <div class="title" (click)="launchModal(portrait?.id, true, $event)">
     <h2>{{portrait?.title}} {{portrait?.subject}}</h2>

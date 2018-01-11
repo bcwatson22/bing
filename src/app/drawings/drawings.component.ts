@@ -82,6 +82,8 @@ export class DrawingsComponent implements OnInit {
 
     }
 
+    // this.utils.progressiveImages();
+
   }
 
   showPortrait($event): void {

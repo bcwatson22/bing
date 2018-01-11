@@ -29,11 +29,17 @@
   </article>
 
   <article class="block">
-    <img srcset="assets/images/global/studio-1200.jpg 1200w,
+    <!-- <img srcset="assets/images/global/studio-1200.jpg 1200w,
           assets/images/global/studio-600.jpg 600w,
           assets/images/global/studio-300.jpg 300w"
       sizes="(min-width: 601px) 50vw, 100vw"
-      src="assets/images/global/studio-300.jpg" alt="Whitely Wood Studio">
+      src="assets/images/global/studio-300.jpg" alt="Whitely Wood Studio"> -->
+
+      <a href="assets/images/global/studio-1200.jpg"
+          data-srcset="assets/images/global/studio-1200.jpg 1200w, assets/images/global/studio-600.jpg 600w, assets/images/global/studio-300.jpg 300w"
+          data-sizes="(min-width: 601px) 50vw, 100vw" class="progressive replace">
+        <img class="enhance preview" src="assets/images/global/studio-10.jpg" alt="Whitely Wood Studio">
+      </a>
 
     <h2>{{commission?.comments.title}}</h2>
     <blockquote *ngFor="let paragraph of commission?.comments.body; let i = index">

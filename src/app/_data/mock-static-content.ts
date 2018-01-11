@@ -44,6 +44,16 @@ export const CONTENT: StaticContent[] = [{
         ]
       }
     ],
+    "portrait": {
+      "id": "bing",
+      "subject": "Bing",
+      "type": "about",
+      "orientation": "portrait",
+      "material": "Photograph",
+      "description": [
+        "Photograph of Bing Jones"
+      ]
+    },
     "quotes": [
         [
           "Painting for me is about presenting the world to the viewer in a sorted way.",

@@ -1,9 +1,10 @@
 .root {
   position: absolute;
+  top: -99999rem;
   overflow: hidden;
   clip: rect(0 0 0 0);
   height: 1px; width: 1px;
-  margin: -1px; padding: 0; border: 0; 
+  margin: -1px; padding: 0; border: 0;
 }
 
 html,
@@ -104,8 +105,31 @@ aside {
   }
 }
 
-.reveal {
-  visibility: hidden;
+a.progressive {
+  // position: relative;
+  display: block;
+  overflow: hidden;
+  outline: none;
+
+  img {
+    position: absolute;
+    top: 0;
+    @include hwa();
+
+    .landscape & {
+      position: relative;
+    }
+
+    &.enhance {
+      filter: blur(2vw);
+      transform: scale(1.05);
+    }
+
+    &.reveal {
+      will-change: transform, opacity;
+      animation: reveal 0.5s ease-out;
+    }
+  }
 }
 
 @media screen and (max-width: 950px) {
