@@ -101,12 +101,12 @@ export const CONTENT: StaticContent[] = [{
           {
             "subheader": "Pricing illustration",
             "body": [
-              "Charcoal drawings from £250 single sitting.",
-              "Coloured chalk drawings from £500, usually two sittings.",
-              "Larger and more finished drawings from £1000, two or more sittings.",
-              "Oil Portraits from £2500 for a head and shoulders. Three or more sittings.",
-              "Half-length portraits, including hands, from £4000. Up to five sittings.",
-              "Full-length portraits from £6000.",
+              "Charcoal drawings from &pound;250 single sitting.",
+              "Coloured chalk drawings from &pound;500, usually two sittings.",
+              "Larger and more finished drawings from &pound;1000, two or more sittings.",
+              "Oil Portraits from &pound;2500 for a head and shoulders. Three or more sittings.",
+              "Half-length portraits, including hands, from &pound;4000. Up to five sittings.",
+              "Full-length portraits from &pound;6000.",
               "Group portraits are priced around the number of subjects. The artist will organise and coordinate sittings with each sitter. They are a bonding and team-building exercise, sometimes a challenge and always a pleasure!",
               "Personalised additional subjects such as landscape backgrounds will be included with pleasure and priced individually.",
               "Frames can be discussed, priced, arranged and fitted if required."
