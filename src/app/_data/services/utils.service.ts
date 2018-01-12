@@ -56,12 +56,7 @@ export class UtilsService {
 
     this.staticService.getStaticContent().subscribe(
       (val) => {
-        // this.portraitData = val;
-        // this.shared.changeState('portraits');
-        // console.log(val);
-        // this.rawStatic = val;
         this.staticData = val;
-        // console.log(this.staticData);
         if (key) this.updateMetaData(key);
         this.shared.changeState('content');
       },
@@ -140,9 +135,6 @@ export class UtilsService {
   filterPortraits(key: string, value: any, array: any): any {
 
     let collection = (array) ? array : this.portraitData.json();
-    // let json = collection.json();
-
-    // console.log(json);
 
     let pictures = collection.filter(o => o[key] === value);
 

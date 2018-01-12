@@ -70,7 +70,6 @@ export class PaintingsComponent implements OnInit {
 
     this.sub = this.shared.currentState.subscribe(
       (val) => {
-        console.log('paintings - ' + val);
         if (val === 'portraits') {
           this.unsorted = this.utils.filterPortraits('type', 'painting', false);
 
@@ -85,15 +84,6 @@ export class PaintingsComponent implements OnInit {
         }
       }
     );
-
-    // this.paintings = this.utils.bindStaticData('paintings');
-    // this.unsorted = this.utils.filterPortraits('type', 'painting', false);
-    //
-    // this.shuffled = this.utils.shufflePortraits(this.unsorted);
-    // this.landscape = this.utils.filterPortraits('orientation', 'landscape', this.shuffled);
-    // this.portrait = this.utils.filterPortraits('orientation', 'portrait', this.shuffled);
-    //
-    // this.portraits = this.utils.insertLandscapes(this.portrait, this.landscape);
 
     let portraitParam = this.utils.getRouteParam();
 

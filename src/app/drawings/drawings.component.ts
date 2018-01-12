@@ -68,15 +68,9 @@ export class DrawingsComponent implements OnInit {
 
   ngOnInit() {
 
-    // this.drawings = this.utils.bindStaticData('drawings');
-
     this.sub = this.shared.currentState.subscribe(
       (val) => {
-        console.log('drawings - ' + val);
         if (val === 'portraits') {
-          // this.unsorted = this.utils.filterPortraits('home', true, false);
-          // this.portraits = this.sortPortraits();
-
           this.unsorted = this.utils.filterPortraits('type', 'drawing', false);
 
           this.shuffled = this.utils.shufflePortraits(this.unsorted);
@@ -90,14 +84,6 @@ export class DrawingsComponent implements OnInit {
         }
       }
     );
-
-    // this.unsorted = this.utils.filterPortraits('type', 'drawing', false);
-    //
-    // this.shuffled = this.utils.shufflePortraits(this.unsorted);
-    // this.landscape = this.utils.filterPortraits('orientation', 'landscape', this.shuffled);
-    // this.portrait = this.utils.filterPortraits('orientation', 'portrait', this.shuffled);
-    //
-    // this.portraits = this.utils.insertLandscapes(this.portrait, this.landscape);
 
     let portraitParam = this.utils.getRouteParam();
 

@@ -28,14 +28,11 @@ export class AboutComponent implements OnInit {
 
     this.sub = this.shared.currentState.subscribe(
       (val) => {
-        console.log('about - ' + val);
         if (val === 'content') {
           this.about = this.utils.bindStaticData('about');
         }
       }
     );
-
-    // this.about = this.utils.bindStaticData('about');
 
   }
 

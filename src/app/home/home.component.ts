@@ -63,11 +63,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    // this.home = this.utils.bindStaticData('home');
-
     this.sub = this.shared.currentState.subscribe(
       (val) => {
-        console.log('home - ' + val);
         if (val === 'portraits') {
           this.unsorted = this.utils.filterPortraits('home', true, false);
           this.portraits = this.sortPortraits();

@@ -28,14 +28,11 @@ export class CommissionComponent implements OnInit {
 
     this.sub = this.shared.currentState.subscribe(
       (val) => {
-        console.log('commission - ' + val);
         if (val === 'content') {
           this.commission = this.utils.bindStaticData('commission');
         }
       }
     );
-
-    // this.commission = this.utils.bindStaticData('commission');
 
   }
 
