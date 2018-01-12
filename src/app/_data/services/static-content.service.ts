@@ -6,36 +6,32 @@ import { StaticContent } from './../models/static-content';
 
 import { CONTENT } from './../mock-static-content';
 
-// @Injectable()
-//
-// export class StaticContentService {
-//
-//   getStaticContent(): object {
-//
-//     return CONTENT;
-//
-//   }
-//
-// }
-
 @Injectable()
 export class StaticContentService {
 
    constructor(private http: Http) {
    }
 
-  //  getStaticContent(): Observable<StaticContent[]> {
+   // getStaticContent(): Observable<StaticContent[]> {
    //
-  //     return this.http.get('http://billywatson.net/plusnet/userData.json')
-  //        .map((res: Response) => res.json())
-  //        .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+   //    return this.http.get('http://billywatson.net/plusnet/userData.json')
+   //       .map((res: Response) => res.json())
+   //       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
    //
-  //  }
+   // }
 
-  getStaticContent(): Promise<StaticContent[]> {
+   getStaticContent(): Observable<StaticContent[]> {
 
-    return Promise.resolve(CONTENT);
+      return this.http.get('assets/data/static-content.json')
+         .map((res: Response) => res)
+         .catch((error: any) => Observable.throw(error));
 
-  }
+   }
+
+  // getStaticContent(): Promise<StaticContent[]> {
+  //
+  //   return Promise.resolve(CONTENT);
+  //
+  // }
 
 }

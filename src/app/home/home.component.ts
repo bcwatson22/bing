@@ -4,6 +4,7 @@ import { Location, PlatformLocation } from '@angular/common';
 import { UtilsService } from './../_data/services/utils.service';
 import { StaticContentService } from './../_data/services/static-content.service';
 import { ModalAnimation } from './../_animations/modal';
+import { SharedService } from './../_data/services/shared.service';
 
 @Component({
   selector: 'home',
@@ -29,12 +30,14 @@ export class HomeComponent implements OnInit {
   public modalState: string;
 
   public latLong: any;
+  public sub: any;
 
   constructor(
     private location: Location,
     private platform: PlatformLocation,
     private router: Router,
-    private utils: UtilsService
+    private utils: UtilsService,
+    private shared: SharedService
   ) {
 
     utils.getStaticContent('home');
@@ -60,9 +63,20 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this.home = this.utils.bindStaticData('home');
-    this.unsorted = this.utils.filterPortraits('home', true, false);
-    this.portraits = this.sortPortraits();
+    // this.home = this.utils.bindStaticData('home');
+
+    this.sub = this.shared.currentState.subscribe(
+      (val) => {
+        console.log('home - ' + val);
+        if (val === 'portraits') {
+          this.unsorted = this.utils.filterPortraits('home', true, false);
+          this.portraits = this.sortPortraits();
+        }
+        if (val === 'content') {
+          this.home = this.utils.bindStaticData('home');
+        }
+      }
+    );
 
     let portraitParam = this.utils.getRouteParam();
 
@@ -71,6 +85,12 @@ export class HomeComponent implements OnInit {
       this.showPortrait({id: portraitParam, animate: false, clickEvent: false});
 
     }
+
+  }
+
+  ngOnDestroy() {
+
+    this.sub.unsubscribe();
 
   }
 

@@ -4,6 +4,7 @@ import { Location, PlatformLocation } from '@angular/common';
 import { UtilsService } from './../_data/services/utils.service';
 import { StaticContentService } from './../_data/services/static-content.service';
 import { ModalAnimation } from './../_animations/modal';
+import { SharedService } from './../_data/services/shared.service';
 
 @Component({
   selector: 'drawings',
@@ -34,12 +35,14 @@ export class DrawingsComponent implements OnInit {
   public latLong: any;
   public widgetTop: number;
   public widgetLeft: number;
+  public sub: any;
 
   constructor(
     private location: Location,
     private platform: PlatformLocation,
     private router: Router,
-    private utils: UtilsService
+    private utils: UtilsService,
+    private shared: SharedService
   ) {
 
     utils.getStaticContent('drawings');
@@ -65,14 +68,36 @@ export class DrawingsComponent implements OnInit {
 
   ngOnInit() {
 
-    this.drawings = this.utils.bindStaticData('drawings');
-    this.unsorted = this.utils.filterPortraits('type', 'drawing', false);
+    // this.drawings = this.utils.bindStaticData('drawings');
 
-    this.shuffled = this.utils.shufflePortraits(this.unsorted);
-    this.landscape = this.utils.filterPortraits('orientation', 'landscape', this.shuffled);
-    this.portrait = this.utils.filterPortraits('orientation', 'portrait', this.shuffled);
+    this.sub = this.shared.currentState.subscribe(
+      (val) => {
+        console.log('drawings - ' + val);
+        if (val === 'portraits') {
+          // this.unsorted = this.utils.filterPortraits('home', true, false);
+          // this.portraits = this.sortPortraits();
 
-    this.portraits = this.utils.insertLandscapes(this.portrait, this.landscape);
+          this.unsorted = this.utils.filterPortraits('type', 'drawing', false);
+
+          this.shuffled = this.utils.shufflePortraits(this.unsorted);
+          this.landscape = this.utils.filterPortraits('orientation', 'landscape', this.shuffled);
+          this.portrait = this.utils.filterPortraits('orientation', 'portrait', this.shuffled);
+
+          this.portraits = this.utils.insertLandscapes(this.portrait, this.landscape);
+        }
+        if (val === 'content') {
+          this.drawings = this.utils.bindStaticData('drawings');
+        }
+      }
+    );
+
+    // this.unsorted = this.utils.filterPortraits('type', 'drawing', false);
+    //
+    // this.shuffled = this.utils.shufflePortraits(this.unsorted);
+    // this.landscape = this.utils.filterPortraits('orientation', 'landscape', this.shuffled);
+    // this.portrait = this.utils.filterPortraits('orientation', 'portrait', this.shuffled);
+    //
+    // this.portraits = this.utils.insertLandscapes(this.portrait, this.landscape);
 
     let portraitParam = this.utils.getRouteParam();
 
@@ -81,6 +106,12 @@ export class DrawingsComponent implements OnInit {
       this.showPortrait({id: portraitParam, animate: false, clickEvent: false});
 
     }
+
+  }
+
+  ngOnDestroy() {
+
+    this.sub.unsubscribe();
 
   }
 
