@@ -68,20 +68,15 @@ export class HomeComponent implements OnInit {
         if (val === 'portraits') {
           this.unsorted = this.utils.filterPortraits('home', true, false);
           this.portraits = this.sortPortraits();
+
+          let portraitParam = this.utils.getRouteParam();
+          if (portraitParam) this.showPortrait({id: portraitParam, animate: false, clickEvent: false});
         }
         if (val === 'content') {
           this.home = this.utils.bindStaticData('home');
         }
       }
     );
-
-    let portraitParam = this.utils.getRouteParam();
-
-    if (portraitParam) {
-
-      this.showPortrait({id: portraitParam, animate: false, clickEvent: false});
-
-    }
 
   }
 

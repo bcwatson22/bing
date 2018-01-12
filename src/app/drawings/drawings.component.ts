@@ -78,20 +78,15 @@ export class DrawingsComponent implements OnInit {
           this.portrait = this.utils.filterPortraits('orientation', 'portrait', this.shuffled);
 
           this.portraits = this.utils.insertLandscapes(this.portrait, this.landscape);
+
+          let portraitParam = this.utils.getRouteParam();
+          if (portraitParam) this.showPortrait({id: portraitParam, animate: false, clickEvent: false});
         }
         if (val === 'content') {
           this.drawings = this.utils.bindStaticData('drawings');
         }
       }
     );
-
-    let portraitParam = this.utils.getRouteParam();
-
-    if (portraitParam) {
-
-      this.showPortrait({id: portraitParam, animate: false, clickEvent: false});
-
-    }
 
   }
 
