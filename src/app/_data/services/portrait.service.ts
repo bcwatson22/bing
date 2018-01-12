@@ -6,36 +6,24 @@ import { Portrait } from './../models/portrait';
 
 import { PORTRAITS } from './../mock-portraits';
 
-// @Injectable()
-//
-// export class PortraitService {
-//
-//   getPortrait(): object {
-//
-//     return PORTRAITS;
-//
-//   }
-//
-// }
-
 @Injectable()
 export class PortraitService {
 
    constructor(private http: Http) {
    }
 
-  //  getPortrait(): Observable<Portrait[]> {
-   //
-  //     return this.http.get('http://billywatson.net/plusnet/userData.json')
-  //        .map((res: Response) => res.json())
-  //        .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
-   //
-  //  }
+   getPortraits(): Observable<Portrait[]> {
 
-  getPortraits(): Promise<Portrait[]> {
+      return this.http.get('assets/data/portraits.json')
+         .map((res: Response) => res)
+         .catch((error: any) => Observable.throw(error));
 
-    return Promise.resolve(PORTRAITS);
+   }
 
-  }
+  // getPortraits(): Promise<Portrait[]> {
+  //
+  //   return Promise.resolve(PORTRAITS);
+  //
+  // }
 
 }

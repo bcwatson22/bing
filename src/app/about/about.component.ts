@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UtilsService } from './../_data/services/utils.service';
+import { SharedService } from './../_data/services/shared.service';
 
 @Component({
   selector: 'about',
@@ -12,9 +13,11 @@ export class AboutComponent implements OnInit {
   title = 'About';
 
   public about: any;
+  public sub: any;
 
   constructor(
-    private utils: UtilsService
+    private utils: UtilsService,
+    private shared: SharedService
   ) {
 
     utils.getStaticContent('about');
@@ -23,7 +26,22 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
 
-    this.about = this.utils.bindStaticData('about');
+    this.sub = this.shared.currentState.subscribe(
+      (val) => {
+        console.log('about - ' + val);
+        if (val === 'content') {
+          this.about = this.utils.bindStaticData('about');
+        }
+      }
+    );
+
+    // this.about = this.utils.bindStaticData('about');
+
+  }
+
+  ngOnDestroy() {
+
+    this.sub.unsubscribe();
 
   }
 

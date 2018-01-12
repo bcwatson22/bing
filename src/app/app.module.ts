@@ -21,6 +21,7 @@ import { CommissionComponent } from './commission/commission.component';
 import { UtilsService } from './_data/services/utils.service';
 import { StaticContentService } from './_data/services/static-content.service';
 import { PortraitService } from './_data/services/portrait.service';
+import { SharedService } from './_data/services/shared.service';
 
 import { FormatDatePipe } from './_pipes/format-date.pipe';
 import { KeepHtmlPipe } from './_pipes/keep-html.pipe';
@@ -52,7 +53,8 @@ import { KeepHtmlPipe } from './_pipes/keep-html.pipe';
   providers: [
     UtilsService,
     StaticContentService,
-    PortraitService
+    PortraitService,
+    SharedService
   ],
   bootstrap: [ AppComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

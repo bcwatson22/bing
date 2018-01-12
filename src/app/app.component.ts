@@ -5,6 +5,7 @@ import 'rxjs/add/operator/pairwise';
 import { RouterAnimation } from './_animations/router';
 import { StaticContentService } from './_data/services/static-content.service';
 import { UtilsService } from './_data/services/utils.service';
+import { SharedService } from './_data/services/shared.service';
 // import { NavItem } from './_data/models/nav-item';
 // import { NavItemService } from './_data/services/nav-item.service';
 // import { HeaderComponent } from './_common/header/header.component';
@@ -33,14 +34,16 @@ export class AppComponent implements OnInit {
   public currentLatLong: any;
   public parentLatLong: any;
   public targetLatLong: any;
-
-  // private indicator = document.querySelectorAll('.nav-indicator')[0];
+  public sub: any;
 
   constructor(
     private router: Router,
     private staticService: StaticContentService,
-    private utils: UtilsService
+    private utils: UtilsService,
+    private shared: SharedService
   ) {
+
+    utils.getStaticContent(false);
 
     this.router.events
       .filter(event => event instanceof NavigationStart)
@@ -50,16 +53,16 @@ export class AppComponent implements OnInit {
         this.currentPage = value[0].url.substr(1);
         this.targetPage = value[1].url.substr(1);
 
-        let sameBase = utils.matchBaseRoute(this.currentPage, this.targetPage);
-
-        if (!sameBase) {
-
-          let currentItem = this.static[this.currentPage];
-          let targetItem = this.static[this.targetPage];
-
-          this.routerState = this.animationDirection(currentItem.position, targetItem.position);
-
-        }
+        // let sameBase = utils.matchBaseRoute(this.currentPage, this.targetPage);
+        //
+        // if (!sameBase) {
+        //
+        //   let currentItem = this.static[this.currentPage];
+        //   let targetItem = this.static[this.targetPage];
+        //
+        //   this.routerState = this.animationDirection(currentItem.position, targetItem.position);
+        //
+        // }
 
         this.animateIndicator(false);
 
@@ -69,7 +72,16 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.staticService.getStaticContent().then(data => this.static = data[0]);
+    // this.sub = this.shared.currentState.subscribe(
+    //   (val) => {
+    //     console.log('app - ' + val);
+    //     // if (val === 'content') {
+    //     //   this.home = this.utils.bindStaticData('home');
+    //     // }
+    //   }
+    // );
+
+    // this.staticService.getStaticContent().then(data => this.static = data[0]);
 
     let pathname = window.location.pathname.substr(1);
 

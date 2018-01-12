@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 import { PortraitService } from './portrait.service';
 import { StaticContentService } from './static-content.service';
+import { SharedService } from './shared.service';
 import { Coordinates } from './../models/coordinates';
 
 @Injectable()
@@ -23,6 +24,7 @@ export class UtilsService {
     private location: Location,
     private portraitService: PortraitService,
     private staticService: StaticContentService,
+    private shared: SharedService,
     private meta: Meta,
     private title: Title
   ) {
@@ -42,14 +44,28 @@ export class UtilsService {
   //
   // }
 
-  getStaticContent(key: string): void {
+  getStaticContent(key: any): void {
 
-    this.staticService.getStaticContent().then(
+    // this.staticService.getStaticContent().then(
+    //   (val) => {
+    //     this.rawStatic = val;
+    //     this.staticData = this.rawStatic[0];
+    //     this.updateMetaData(key);
+    //   }
+    // );
+
+    this.staticService.getStaticContent().subscribe(
       (val) => {
-        this.rawStatic = val;
-        this.staticData = this.rawStatic[0];
-        this.updateMetaData(key);
-      }
+        // this.portraitData = val;
+        // this.shared.changeState('portraits');
+        // console.log(val);
+        // this.rawStatic = val;
+        this.staticData = val;
+        // console.log(this.staticData);
+        if (key) this.updateMetaData(key);
+        this.shared.changeState('content');
+      },
+      (err) => console.log(err)
     );
 
   }
@@ -58,7 +74,8 @@ export class UtilsService {
 
     if (typeof(targetData) === 'string') {
 
-      let data = this.staticData[targetData],
+      let json = this.staticData.json(),
+          data = json[targetData],
           description = data.description;
 
       this.title.setTitle(data.title);
@@ -82,38 +99,50 @@ export class UtilsService {
 
   getPortraits(): void {
 
-    this.portraitService.getPortraits().then(
+    // this.portraitService.getPortraits().then(
+    //   (val) => {
+    //     this.portraitData = val;
+    //     // this.portraitData = this.rawPortraits[0];
+    //   }
+    // );
+
+    this.portraitService.getPortraits().subscribe(
       (val) => {
         this.portraitData = val;
-        // this.portraitData = this.rawPortraits[0];
-      }
+        this.shared.changeState('portraits');
+      },
+      (err) => console.log(err)
     );
 
   }
 
   bindStaticData(key: any): any {
 
-    let binding;
+    let data = this.staticData.json(),
+        binding;
 
-    binding = this.staticData[key];
+    binding = data[key];
 
     return binding;
 
   }
 
-  bindPortraits(): any {
-
-    // let binding;
-    //
-    // binding = this.portraitData[key];
-
-    return this.portraitData;
-
-  }
+  // bindPortraits(): any {
+  //
+  //   // let binding;
+  //   //
+  //   // binding = this.portraitData[key];
+  //
+  //   return this.portraitData;
+  //
+  // }
 
   filterPortraits(key: string, value: any, array: any): any {
 
-    let collection = (array) ? array : this.portraitData;
+    let collection = (array) ? array : this.portraitData.json();
+    // let json = collection.json();
+
+    // console.log(json);
 
     let pictures = collection.filter(o => o[key] === value);
 

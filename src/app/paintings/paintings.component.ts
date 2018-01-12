@@ -4,6 +4,7 @@ import { Location, PlatformLocation } from '@angular/common';
 import { UtilsService } from './../_data/services/utils.service';
 import { StaticContentService } from './../_data/services/static-content.service';
 import { ModalAnimation } from './../_animations/modal';
+import { SharedService } from './../_data/services/shared.service';
 
 @Component({
   selector: 'paintings',
@@ -34,12 +35,14 @@ export class PaintingsComponent implements OnInit {
   public latLong: any;
   public widgetTop: number;
   public widgetLeft: number;
+  public sub: any;
 
   constructor(
     private location: Location,
     private platform: PlatformLocation,
     private router: Router,
-    private utils: UtilsService
+    private utils: UtilsService,
+    private shared: SharedService
   ) {
 
     utils.getStaticContent('paintings');
@@ -65,14 +68,32 @@ export class PaintingsComponent implements OnInit {
 
   ngOnInit() {
 
-    this.paintings = this.utils.bindStaticData('paintings');
-    this.unsorted = this.utils.filterPortraits('type', 'painting', false);
+    this.sub = this.shared.currentState.subscribe(
+      (val) => {
+        console.log('paintings - ' + val);
+        if (val === 'portraits') {
+          this.unsorted = this.utils.filterPortraits('type', 'painting', false);
 
-    this.shuffled = this.utils.shufflePortraits(this.unsorted);
-    this.landscape = this.utils.filterPortraits('orientation', 'landscape', this.shuffled);
-    this.portrait = this.utils.filterPortraits('orientation', 'portrait', this.shuffled);
+          this.shuffled = this.utils.shufflePortraits(this.unsorted);
+          this.landscape = this.utils.filterPortraits('orientation', 'landscape', this.shuffled);
+          this.portrait = this.utils.filterPortraits('orientation', 'portrait', this.shuffled);
 
-    this.portraits = this.utils.insertLandscapes(this.portrait, this.landscape);
+          this.portraits = this.utils.insertLandscapes(this.portrait, this.landscape);
+        }
+        if (val === 'content') {
+          this.paintings = this.utils.bindStaticData('paintings');
+        }
+      }
+    );
+
+    // this.paintings = this.utils.bindStaticData('paintings');
+    // this.unsorted = this.utils.filterPortraits('type', 'painting', false);
+    //
+    // this.shuffled = this.utils.shufflePortraits(this.unsorted);
+    // this.landscape = this.utils.filterPortraits('orientation', 'landscape', this.shuffled);
+    // this.portrait = this.utils.filterPortraits('orientation', 'portrait', this.shuffled);
+    //
+    // this.portraits = this.utils.insertLandscapes(this.portrait, this.landscape);
 
     let portraitParam = this.utils.getRouteParam();
 
@@ -81,6 +102,12 @@ export class PaintingsComponent implements OnInit {
       this.showPortrait({id: portraitParam, animate: false, clickEvent: false});
 
     }
+
+  }
+
+  ngOnDestroy() {
+
+    this.sub.unsubscribe();
 
   }
 
