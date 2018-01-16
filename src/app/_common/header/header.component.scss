@@ -13,10 +13,10 @@ ul {
   font-size: 3.6rem;
   text-indent: -99999rem;
   max-width: 495px;
-  background: url('/assets/images/global/bing-logo.png') 0 0 no-repeat;
-  background-size: 495px 47px;
-  background: url('/assets/images/global/bing-logo.svg') 0 0 no-repeat, linear-gradient(transparent, transparent);
-  background-size: 100% auto;
+  background: url('/assets/images/global/bing-logo-double.png') 0 0 no-repeat;
+  background-size: 495px 46px;
+  // background: url('/assets/images/global/bing-logo.svg') 0 0 no-repeat, linear-gradient(transparent, transparent);
+  // background-size: 100% auto;
 
   &:hover {
     opacity: 0.8;
