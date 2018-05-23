@@ -375,6 +375,7 @@ export class UtilsService {
 
     if (orientation === 'landscape' && !quote) styleClass += ' wide';
 
+<<<<<<< HEAD
     let multiple = Math.ceil(j / 18);
 
     if (landscapeCollection.length < multiple) {
@@ -382,6 +383,9 @@ export class UtilsService {
       if (i === 9) styleClass = 'none';
 
     }
+=======
+    if (!collection.length && i === 9) styleClass = 'none';
+>>>>>>> parent of 1dcc4b1... lazy load with scroll reveal
 
     return styleClass;
 

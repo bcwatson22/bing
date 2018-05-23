@@ -21,9 +21,7 @@
       "styles": [
         "styles.scss"
       ],
-      "scripts": [
-        "../node_modules/scrollreveal/dist/scrollreveal.js"
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
