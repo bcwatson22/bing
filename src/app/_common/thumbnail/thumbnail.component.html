@@ -6,7 +6,7 @@
 <div class="thumbnail">
   <img class="grid" src="assets/images/global/thumbnail.png">
 
-  <img *ngIf="portrait?.orientation === 'landscape'" class="preview" sizes="100vw"
+  <!-- <img *ngIf="portrait?.orientation === 'landscape'" class="preview" sizes="100vw"
     [srcset]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-2400.jpg 2400w,
         assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg 1200w,
         assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-600.jpg 600w'"
@@ -16,7 +16,11 @@
     [srcset]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-1200.jpg 1200w,
         assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-600.jpg 600w,
         assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-300.jpg 300w'"
-    [src]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-300.jpg'" [alt]="portrait?.subject + ' Portrait'">
+    [src]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-300.jpg'" [alt]="portrait?.subject + ' Portrait'"> -->
+
+  <img *ngIf="portrait?.type === 'drawing'" class="preview" [src]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-10.jpg'" [alt]="portrait?.subject + ' Portrait'">
+
+  <img *ngIf="portrait?.type === 'painting'" class="preview" [src]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-300.jpg'" [alt]="portrait?.subject + ' Portrait'">
 
   <div class="title" (click)="launchModal(portrait?.id, true, $event)">
     <h2>{{portrait?.title}} {{portrait?.subject}}</h2>
