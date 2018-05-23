@@ -13,13 +13,9 @@
           assets/images/global/bing-600.jpg 600w,
           assets/images/global/bing-300.jpg 300w"
       sizes="(min-width: 601px) 50vw, 100vw"
-<<<<<<< HEAD
-      src="assets/images/global/bing-300.jpg" alt="Bing Jones" [ngsReveal]="{ delay: 80, scale: 0.95}">
-=======
-      src="assets/images/global/bing-1200.jpg" alt="Bing Jones">
->>>>>>> parent of 1dcc4b1... lazy load with scroll reveal
+      src="assets/images/global/bing-300.jpg" alt="Bing Jones">
 
-    <aside *ngIf="about.quotes">
+    <aside *ngIf="about?.quotes">
       <div class="pullquote">
         <p *ngFor="let paragraph of about?.quotes[0]">{{paragraph}}</p>
       </div>

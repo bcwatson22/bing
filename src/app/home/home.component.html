@@ -5,13 +5,11 @@
     <h1>{{title}}</h1>
 
     <article *ngIf="home?.intro" class="intro">
-<<<<<<< HEAD
+
       <ul>
-        <li *ngFor="let paragraph of home?.intro; let i = index" [ngsReveal]="{ delay: ((i + 1) * 20), scale: 0.95}">{{paragraph}}</li>
+        <li *ngFor="let paragraph of home?.intro; let i = index">{{paragraph}}</li>
       </ul>
-=======
-      <p *ngFor="let paragraph of home?.intro">{{paragraph}}</p>
->>>>>>> parent of 1dcc4b1... lazy load with scroll reveal
+
     </article>
 
   </header>
