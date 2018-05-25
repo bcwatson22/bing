@@ -16,7 +16,7 @@ export class CommissionComponent implements OnInit {
   public sub: any;
 
   constructor(
-    private utils: UtilsService,
+    public utils: UtilsService,
     private shared: SharedService
   ) {
 

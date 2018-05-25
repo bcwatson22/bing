@@ -397,4 +397,36 @@ export class UtilsService {
 
   }
 
+  getSrcSet(portrait: any): string {
+
+    let string;
+
+    if (typeof(portrait) === 'object') {
+
+      if (portrait.orientation === 'landscape') {
+
+        string = `assets/images/pictures/${portrait.type}/${portrait.id}-2400.jpg 2400w,
+                  assets/images/pictures/${portrait.type}/${portrait.id}-1200.jpg 1200w,
+                  assets/images/pictures/${portrait.type}/${portrait.id}-600.jpg 600w`;
+
+      } else {
+
+        string = `assets/images/pictures/${portrait.type}/${portrait.id}-1200.jpg 1200w,
+                  assets/images/pictures/${portrait.type}/${portrait.id}-600.jpg 600w,
+                  assets/images/pictures/${portrait.type}/${portrait.id}-300.jpg 300w`;
+
+      }
+
+    } else if (typeof(portrait) === 'string') {
+
+      string = `assets/images/global/${portrait}-1200.jpg 1200w,
+                assets/images/global/${portrait}-600.jpg 600w,
+                assets/images/global/${portrait}-300.jpg 300w`;
+
+    }
+
+    return string;
+
+  }
+
 }

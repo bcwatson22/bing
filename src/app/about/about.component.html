@@ -9,11 +9,10 @@
   </article>
 
   <article class="block">
-    <img srcset="assets/images/global/bing-1200.jpg 1200w,
-          assets/images/global/bing-600.jpg 600w,
-          assets/images/global/bing-300.jpg 300w"
-      sizes="(min-width: 601px) 50vw, 100vw"
-      src="assets/images/global/bing-300.jpg" alt="Bing Jones">
+
+    <div class="reveal">
+      <img class="lazy" src="assets/images/global/bing-300.jpg" defaultImage="assets/images/global/bing-10.jpg" useSrcset="true" sizes="100vw" [lazyLoad]="utils.getSrcSet('bing')" alt="Bing Jones">
+    </div>
 
     <aside *ngIf="about?.quotes">
       <div class="pullquote">

@@ -29,11 +29,10 @@
   </article>
 
   <article class="block">
-    <img srcset="assets/images/global/studio-1200.jpg 1200w,
-          assets/images/global/studio-600.jpg 600w,
-          assets/images/global/studio-300.jpg 300w"
-      sizes="(min-width: 601px) 50vw, 100vw"
-      src="assets/images/global/studio-300.jpg" alt="Whitely Wood Studio">
+
+    <div class="reveal">
+      <img class="lazy" src="assets/images/global/studio-300.jpg" defaultImage="assets/images/global/studio-10.jpg" useSrcset="true" sizes="100vw" [lazyLoad]="utils.getSrcSet('studio')" alt="Whitely Wood Studio">
+    </div>
 
     <h2>{{commission?.comments.title}}</h2>
     <blockquote *ngFor="let paragraph of commission?.comments.body">

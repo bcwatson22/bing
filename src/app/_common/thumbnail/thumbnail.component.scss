@@ -1,10 +1,5 @@
 @import '~sass/variables';
 
-@keyframes loadImage {
-  from { transform: scale(1.05); opacity: 0; }
-  to   { transform: scale(1); opacity: 1; }
-}
-
 :host {
   margin: 15px;
   float: left;
@@ -91,14 +86,6 @@
   .preview {
     position: absolute;
     top: 0;
-    left: 0;
-    filter: blur(2vw);
-
-    &.ng-lazyloaded {
-      filter: none;
-      will-change: transform, opacity;
-      animation: loadImage 1s ease-out;
-    }
   }
 
   .title {
@@ -124,6 +111,30 @@
       transform: translate(-50%, -50%);
     }
   }
+
+  // &:nth-of-type(18n+1) {
+  //   .preview.ng-lazyloaded {
+  //     animation-delay: 0.1s;
+  //   }
+  // }
+  //
+  // &:nth-of-type(18n+2) {
+  //   .preview.ng-lazyloaded {
+  //     animation-delay: 2s;
+  //   }
+  // }
+  //
+  // &:nth-of-type(18n+3) {
+  //   .preview.ng-lazyloaded {
+  //     animation-delay: 3s;
+  //   }
+  // }
+  //
+  // &:nth-of-type(18n+4) {
+  //   .preview.ng-lazyloaded {
+  //     animation-delay: 4s;
+  //   }
+  // }
 }
 
 @media screen and (max-width: 900px) {

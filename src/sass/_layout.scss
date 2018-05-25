@@ -1,3 +1,5 @@
+@import '~sass/animations';
+
 .root {
   position: absolute;
   overflow: hidden;
@@ -103,13 +105,27 @@ aside {
   float: left;
   margin: 15px;
 
-  img {
+  .reveal {
     margin-bottom: 30px;
   }
 }
 
 .reveal {
   // visibility: hidden;
+  overflow: hidden;
+}
+
+.lazy {
+  // position: absolute;
+  // top: 0;
+  left: 0;
+  filter: blur(2vw);
+
+  &.ng-lazyloaded {
+    filter: none;
+    will-change: transform, opacity;
+    animation: loadImage 1s ease-out;
+  }
 }
 
 @media screen and (max-width: 950px) {
