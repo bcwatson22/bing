@@ -1,5 +1,10 @@
 @import '~sass/variables';
 
+@keyframes loadImage {
+  from { transform: scale(1.05); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
 :host {
   margin: 15px;
   float: left;
@@ -86,6 +91,14 @@
   .preview {
     position: absolute;
     top: 0;
+    left: 0;
+    filter: blur(2vw);
+
+    &.ng-lazyloaded {
+      filter: none;
+      will-change: transform, opacity;
+      animation: loadImage 1s ease-out;
+    }
   }
 
   .title {

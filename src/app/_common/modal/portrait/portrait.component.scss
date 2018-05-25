@@ -76,7 +76,8 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  background: $orange;
+  background: transparent;
+  border: 1px solid #fff;
   color: #fff;
   border-radius: 30px;
   cursor: pointer;
