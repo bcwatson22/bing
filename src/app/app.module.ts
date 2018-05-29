@@ -4,6 +4,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { CookieLawModule } from 'angular2-cookie-law';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -33,7 +34,8 @@ import { KeepHtmlPipe } from './_pipes/keep-html.pipe';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    CookieLawModule
   ],
   declarations: [
     AppComponent,

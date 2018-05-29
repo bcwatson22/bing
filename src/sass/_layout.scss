@@ -1,5 +1,26 @@
 @import '~sass/animations';
 
+page-foot .cookie-law .cookie-law-wrapper {
+  font-family: inherit;
+
+  .copy {
+    padding: 10px 60px 10px 10px;
+    font-size: 14px;
+    font-size: 1.4rem;
+
+    .dismiss {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
 .root {
   position: absolute;
   overflow: hidden;
