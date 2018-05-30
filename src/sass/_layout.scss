@@ -141,11 +141,13 @@ aside {
   // top: 0;
   left: 0;
   filter: blur(2vw);
+  transform: scale(1.1);
+  will-change: transform, opacity;
 
   &.ng-lazyloaded {
     filter: none;
-    will-change: transform, opacity;
     animation: loadImage 1s ease-out;
+    transform: scale(1);
   }
 }
 

@@ -15,7 +15,7 @@
     &:focus {
       .title {
         opacity: 1;
-        transform: translateY(0);
+        transition: opacity 0.1s ease;
       }
     }
 
@@ -99,8 +99,7 @@
     cursor: pointer;
     background: rgba($dark-grey, 0.6);
     opacity: 0;
-    transform: translateY(100%);
-    transition: all 0.25s ease;
+    transition: opacity 0.3s ease;
 
     h2 {
       color: #fff;
