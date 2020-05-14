@@ -56,7 +56,7 @@ export const CONTENT: StaticContent[] = [{
     "title": "Paintings | Bing Jones Portraits",
     "description": "Paintings by Sheffield based portrait artist Bing Jones. Use of oil and tempera on canvas is a centuries-old method likely to outlive artist and sitter.",
     "intro": [
-      "Oil portaits make a lasting record of the sitters likeness, expression and personality. Traditional portraits in oil and tempera on canvas use proven centuries-old methods. These paintings enrich both families and institutions, and will probably outlive artist and sitter."
+      "Oil portaits make a lasting record of the sitter's likeness, expression and personality. Traditional portraits in oil and tempera on canvas use proven centuries-old methods. These paintings enrich both families and institutions, and will probably outlive artist and sitter."
     ],
     "quotes": [
 

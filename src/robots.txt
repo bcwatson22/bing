@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bingjones.co.uk/sitemap.xml

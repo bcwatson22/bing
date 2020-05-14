@@ -65,7 +65,7 @@ p {
 
 a {
   text-decoration: none;
-  color: $orange;
+  color: $dark-blue;
 
   &:hover,
   &:focus {
@@ -74,7 +74,7 @@ a {
 
   &:active {
     text-decoration: none;
-    color: $dark-blue;
+    color: $orange;
   }
 }
 

@@ -65,7 +65,20 @@ export class UtilsService {
 
   }
 
+  updateCanonicalUrl(url:string){
+    const head = <HTMLElement>document.getElementsByTagName('head')[0];
+    var element = <HTMLElement>document.querySelector('link[rel="canonical"]') || null;
+    if (element == null) {
+      element = document.createElement('link') as HTMLLinkElement;
+      head.appendChild(element);
+    }
+    element.setAttribute('rel', 'canonical')
+    element.setAttribute('href', url)
+  }
+
   updateMetaData(targetData: any): void {
+
+    const titleSuffix = ' | Bing Jones Portraits';
 
     if (typeof(targetData) === 'string') {
 
@@ -73,7 +86,8 @@ export class UtilsService {
           data = json[targetData],
           description = data.description;
 
-      this.title.setTitle(data.title);
+      this.title.setTitle(`${data.title}${titleSuffix}`);
+      this.updateCanonicalUrl(`https://bingjones.co.uk/${data.title.toLowerCase()}`);
       this.meta.updateTag({ name: 'description', content: description });
       this.meta.updateTag({ name: 'twitter:description', content: description });
       this.meta.updateTag({ property: 'og:description', content: description });
@@ -83,7 +97,7 @@ export class UtilsService {
       let subject = targetData.subject,
           description = subject + ' portrait by Bing Jones. ' + targetData.material + '.';
 
-      this.title.setTitle(subject + ' | Bing Jones Portraits');
+      this.title.setTitle(`${subject}${titleSuffix}`);
       this.meta.updateTag({ name: 'description', content: description });
       this.meta.updateTag({ name: 'twitter:description', content: description });
       this.meta.updateTag({ property: 'og:description', content: description });
