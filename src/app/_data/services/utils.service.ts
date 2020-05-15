@@ -14,10 +14,7 @@ export class UtilsService {
   private rawStatic;
   private staticData;
 
-  // private rawPortraits;
   private portraitData;
-
-  // private coordinates: Coordinates = new Coordinates();
 
   constructor(
     private router: Router,
@@ -30,29 +27,7 @@ export class UtilsService {
   ) {
   }
 
-  // getUserData(): void {
-  //
-  //   this.userDataService.getUserData().subscribe(
-  //     (val) => {
-  //       this.userData = val;
-  //     },
-  //     (err) => console.log(err),
-  //     () => {
-  //       this.getTargetData(1);
-  //     }
-  //   );
-  //
-  // }
-
   getStaticContent(key: any): void {
-
-    // this.staticService.getStaticContent().then(
-    //   (val) => {
-    //     this.rawStatic = val;
-    //     this.staticData = this.rawStatic[0];
-    //     this.updateMetaData(key);
-    //   }
-    // );
 
     this.staticService.getStaticContent().subscribe(
       (val) => {
@@ -108,13 +83,6 @@ export class UtilsService {
 
   getPortraits(): void {
 
-    // this.portraitService.getPortraits().then(
-    //   (val) => {
-    //     this.portraitData = val;
-    //     // this.portraitData = this.rawPortraits[0];
-    //   }
-    // );
-
     this.portraitService.getPortraits().subscribe(
       (val) => {
         this.portraitData = val;
@@ -135,16 +103,6 @@ export class UtilsService {
     return binding;
 
   }
-
-  // bindPortraits(): any {
-  //
-  //   // let binding;
-  //   //
-  //   // binding = this.portraitData[key];
-  //
-  //   return this.portraitData;
-  //
-  // }
 
   filterPortraits(key: string, value: any, array: any): any {
 
@@ -179,14 +137,6 @@ export class UtilsService {
       }
 
     }
-
-    // for (let i = 0; i < landscapeArray.length; i++) {
-    //
-    //     let sixth = (i * 18) + 5;
-    //
-    //     pictures.splice(sixth, 0, landscapeArray[i]);
-    //
-    // }
 
     return pictures;
 
