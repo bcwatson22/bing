@@ -31,7 +31,20 @@
   <article class="block">
 
     <div class="reveal">
-      <img class="lazy" src="assets/images/global/studio-300.jpg" defaultImage="assets/images/global/studio-10.jpg" useSrcset="true" sizes="100vw" [lazyLoad]="utils.getSrcSet('studio')" alt="Whitely Wood Studio">
+      <picture>
+        <source
+          type="image/webp"
+          [attr.lazyLoad]="utils.getSrcSet('studio', 'webp')">
+        <source
+          type="image/jpeg"
+          [attr.lazyLoad]="utils.getSrcSet('studio', 'jpg')">
+        <img
+          class="lazy"
+          lazyLoad="assets/images/global/studio-300.jpg"
+          defaultImage="assets/images/global/studio-10.jpg"
+          sizes="(min-width: 601px) calc(50vw - 30px), calc(100vw - 10px)"
+          alt="Whiteley Wood Studio">
+      </picture>
     </div>
 
     <h2>{{commission?.comments.title}}</h2>

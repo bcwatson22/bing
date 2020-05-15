@@ -5,22 +5,14 @@
 </aside>
 <div class="thumbnail">
   <picture>
-    <!-- <img
-      *ngIf="portrait?.orientation !== 'landscape'"
-      class="preview lazy"
-      [src]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-300.jpg'"
-      [defaultImage]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-10.jpg'"
-      sizes="(min-width: 601px) 50vw, 100vw"
-      [lazyLoad]="utils.getSrcSet(portrait, 'jpg')"
-      [alt]="portrait?.subject + ' Portrait'"> -->
     <source
       *ngIf="portrait?.orientation === 'landscape'"
       type="image/webp"
-      [attr.lazyLoad]="utils.getSrcSet(landscape, 'webp')">
+      [attr.lazyLoad]="utils.getSrcSet(portrait, 'webp')">
     <source
       *ngIf="portrait?.orientation === 'landscape'"
       type="image/jpeg"
-      [attr.lazyLoad]="utils.getSrcSet(landscape, 'jpg')">
+      [attr.lazyLoad]="utils.getSrcSet(portrait, 'jpg')">
     <source
       *ngIf="portrait?.orientation !== 'landscape'"
       type="image/webp"
@@ -29,20 +21,19 @@
       *ngIf="portrait?.orientation !== 'landscape'"
       type="image/jpeg"
       [attr.lazyLoad]="utils.getSrcSet(portrait, 'jpg')">
-
     <img
       *ngIf="portrait?.orientation === 'landscape'"
       class="preview lazy"
       [lazyLoad]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-600.jpg'"
       [defaultImage]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-10.jpg'"
-      sizes="100vw"
+      [sizes]="sizes"
       [alt]="portrait?.subject + ' Portrait'">
     <img
       *ngIf="portrait?.orientation !== 'landscape'"
       class="preview lazy"
       [lazyLoad]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-300.jpg'"
       [defaultImage]="'assets/images/pictures/' + portrait?.type + '/' + portrait?.id + '-10.jpg'"
-      sizes="(min-width: 601px) 50vw, 100vw"
+      [sizes]="sizes"
       [alt]="portrait?.subject + ' Portrait'">
   </picture>
 

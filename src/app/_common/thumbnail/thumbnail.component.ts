@@ -11,6 +11,7 @@ export class ThumbnailComponent implements OnInit {
 
   @Input() portrait: any;
   @Input() blockquote: any;
+  @Input() sizes: any;
   @Output() showPortrait = new EventEmitter<any>();
 
   constructor(

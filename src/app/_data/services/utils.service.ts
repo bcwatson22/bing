@@ -351,6 +351,44 @@ export class UtilsService {
 
   }
 
+  getThumbSizes(classes: string): string {
+
+    let clean = classes.split(' ')[0],
+        width;
+
+    switch (clean) {
+
+      case 'half':
+        width = '50vw - 30px';
+        break;
+
+      case 'third':
+        width = '33vw - 15px';
+        break;
+
+      case 'stacked':
+      case 'quarter':
+        width = '25vw - 15px';
+        break;
+
+      case 'landscape':
+        width = '75vw - 45px';
+        break;
+
+      case 'wide':
+        width = '100vw - 30px';
+        break;
+
+      default:
+        width = '50vw - 30px';
+        break;
+
+    }
+
+    return `(min-width: 601px) calc(${width}), calc(100vw - 10px)`;
+
+  }
+
   getQuoteIndex(i: number): number {
 
     i += 1;

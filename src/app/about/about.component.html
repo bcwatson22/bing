@@ -11,7 +11,20 @@
   <article class="block">
 
     <div class="reveal">
-      <img class="lazy" src="assets/images/global/bing-300.jpg" defaultImage="assets/images/global/bing-10.jpg" useSrcset="true" sizes="100vw" [lazyLoad]="utils.getSrcSet('bing')" alt="Bing Jones">
+      <picture>
+        <source
+          type="image/webp"
+          [attr.lazyLoad]="utils.getSrcSet('bing', 'webp')">
+        <source
+          type="image/jpeg"
+          [attr.lazyLoad]="utils.getSrcSet('bing', 'jpg')">
+        <img
+          class="lazy"
+          lazyLoad="assets/images/global/bing-300.jpg"
+          defaultImage="assets/images/global/bing-10.jpg"
+          sizes="(min-width: 601px) calc(50vw - 30px), calc(100vw - 10px)"
+          alt="Bing Jones">
+      </picture>
     </div>
 
     <aside *ngIf="about?.quotes">
