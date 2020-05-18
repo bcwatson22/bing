@@ -1,12 +1,17 @@
 <IfModule mod_rewrite.c>
     Header set Access-Control-Allow-Origin "*"
     Header set Access-Control-Allow-Credentials true
-    Options Indexes FollowSymLinks
 
-    RewriteEngine On
+    RewriteEngine on
     RewriteBase /
 
+    RewriteCond %{HTTP_HOST} ^yoursite\.domen [NC]
+    RewriteCond %{HTTP:X-Forwarded-Proto} ^http$
+    RewriteCond %{HTTPS} off
+    RewriteRule (.*) https://%{HTTP_HOST} [R=301,L]
+
+    RewriteRule ^index\.html$ - [L]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule . index.html [L]
+    RewriteRule . /index.html [L]
 </IfModule>
