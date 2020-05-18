@@ -1,6 +1,5 @@
 <div class="modal-bg" (click)="closeModal()"></div>
 <div class="modal-content group">
-  <button class="modal-close" (click)="closeModal()"></button>
   <section [class]="data?.orientation">
 
     <img *ngIf="data && data?.orientation === 'landscape'" sizes="100vw"
@@ -25,5 +24,6 @@
       </div>
     </article>
   </section>
+  <button class="modal-close" (click)="closeModal()"></button>
   <span class="pointer"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
 </div>

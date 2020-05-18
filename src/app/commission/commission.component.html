@@ -34,15 +34,14 @@
       <picture>
         <source
           type="image/webp"
-          [attr.lazyLoad]="utils.getSrcSet('studio', 'webp')">
+          [attr.data-srcset]="utils.getSrcSet('studio', 'webp')">
         <source
           type="image/jpeg"
-          [attr.lazyLoad]="utils.getSrcSet('studio', 'jpg')">
+          [attr.data-srcset]="utils.getSrcSet('studio', 'jpg')">
         <img
-          class="lazy"
-          lazyLoad="assets/images/global/studio-300.jpg"
-          defaultImage="assets/images/global/studio-10.jpg"
-          sizes="(min-width: 601px) calc(50vw - 30px), calc(100vw - 10px)"
+          class="preview lazyload"
+          src="assets/images/global/studio-10.jpg"
+          data-sizes="auto"
           alt="Whiteley Wood Studio">
       </picture>
     </div>

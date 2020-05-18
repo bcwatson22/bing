@@ -23,7 +23,7 @@ ul {
   }
 
   &:active {
-    opacity: 1;
+     opacity: 0.999;
   }
 }
 
@@ -55,6 +55,14 @@ ul {
   .bing-logo {
     margin-bottom: 0;
     background-position: 0 50%;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .bing-logo {
+    width: calc(100% - 20px);
   }
 
 }

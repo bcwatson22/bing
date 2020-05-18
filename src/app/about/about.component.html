@@ -14,15 +14,14 @@
       <picture>
         <source
           type="image/webp"
-          [attr.lazyLoad]="utils.getSrcSet('bing', 'webp')">
+          [attr.data-srcset]="utils.getSrcSet('bing', 'webp')">
         <source
           type="image/jpeg"
-          [attr.lazyLoad]="utils.getSrcSet('bing', 'jpg')">
+          [attr.data-srcset]="utils.getSrcSet('bing', 'jpg')">
         <img
-          class="lazy"
-          lazyLoad="assets/images/global/bing-300.jpg"
-          defaultImage="assets/images/global/bing-10.jpg"
-          sizes="(min-width: 601px) calc(50vw - 30px), calc(100vw - 10px)"
+          class="preview lazyload"
+          src="assets/images/global/bing-10.jpg"
+          data-sizes="auto"
           alt="Bing Jones">
       </picture>
     </div>

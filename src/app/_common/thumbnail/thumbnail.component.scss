@@ -15,7 +15,7 @@
     &:hover,
     &:focus {
       .title {
-        opacity: 1;
+         opacity: 0.999;
         transition: opacity 0.1s ease;
       }
     }
@@ -99,7 +99,7 @@
     text-align: center;
     cursor: pointer;
     background: rgba($dark-grey, 0.6);
-    opacity: 0;
+     opacity: 0.001;
     transition: opacity 0.3s ease;
 
     h2 {

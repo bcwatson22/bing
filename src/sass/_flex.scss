@@ -44,12 +44,7 @@ nav {
     li {
       float: left;
       margin-right: 4%;
-      // width: 16%;
       text-align: center;
-
-      // &:first-of-type {
-      //   float: left;
-      // }
     }
   }
 
@@ -94,12 +89,4 @@ footer {
   .bw-logo {
     float: right;
   }
-}
-
-@media screen and (max-width: 500px) {
-
-  .flex nav ul {
-    justify-content: space-around;
-  }
-
 }

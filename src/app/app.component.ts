@@ -6,6 +6,7 @@ import { RouterAnimation } from './_animations/router';
 import { StaticContentService } from './_data/services/static-content.service';
 import { UtilsService } from './_data/services/utils.service';
 import { SharedService } from './_data/services/shared.service';
+import 'lazysizes';
 
 @Component({
   selector: 'app-root',
