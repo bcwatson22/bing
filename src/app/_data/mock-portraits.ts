@@ -90,16 +90,6 @@ export const PORTRAITS: Portrait[] = [
       "A likeness in color and line. Drawn in two sittings."
     ]
   },
-  // {
-  //   "id": "professor-barry-hancock",
-  //   "subject": "Professor Barry Hancock",
-  //   "type": "painting",
-  //   "orientation": "landscape",
-  //   "material": "Oil and tempera on canvas",
-  //   "description": [
-  //     "A cancer specialist and lively teacher demonstrating the Reed Sternberg Cell."
-  //   ]
-  // },
   {
     "id": "ben",
     "subject": "Ben",

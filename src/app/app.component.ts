@@ -6,9 +6,6 @@ import { RouterAnimation } from './_animations/router';
 import { StaticContentService } from './_data/services/static-content.service';
 import { UtilsService } from './_data/services/utils.service';
 import { SharedService } from './_data/services/shared.service';
-// import { NavItem } from './_data/models/nav-item';
-// import { NavItemService } from './_data/services/nav-item.service';
-// import { HeaderComponent } from './_common/header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -16,9 +13,6 @@ import { SharedService } from './_data/services/shared.service';
   styleUrls: ['./app.component.scss'],
   animations: [
     RouterAnimation
-  ],
-  providers: [
-    // NavItemService
   ]
 })
 
@@ -53,17 +47,6 @@ export class AppComponent implements OnInit {
         this.currentPage = value[0].url.substr(1);
         this.targetPage = value[1].url.substr(1);
 
-        // let sameBase = utils.matchBaseRoute(this.currentPage, this.targetPage);
-        //
-        // if (!sameBase) {
-        //
-        //   let currentItem = this.static[this.currentPage];
-        //   let targetItem = this.static[this.targetPage];
-        //
-        //   this.routerState = this.animationDirection(currentItem.position, targetItem.position);
-        //
-        // }
-
         this.animateIndicator(false);
 
     });
@@ -72,24 +55,11 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // this.sub = this.shared.currentState.subscribe(
-    //   (val) => {
-    //     console.log('app - ' + val);
-    //     // if (val === 'content') {
-    //     //   this.home = this.utils.bindStaticData('home');
-    //     // }
-    //   }
-    // );
-
-    // this.staticService.getStaticContent().then(data => this.static = data[0]);
-
     let pathname = window.location.pathname.substr(1);
 
     pathname = pathname.length ? pathname : 'home';
 
     this.initialPage = pathname.indexOf('/') >= 0 ? pathname.substring(0, pathname.indexOf('/')) : pathname;
-
-    // console.log('onInit. pathname = ' + pathname + ', initialPage = ' + this.initialPage);
 
     this.animateIndicator(true);
 
@@ -107,28 +77,6 @@ export class AppComponent implements OnInit {
 
   }
 
-  // animationStart(event: any): void {
-  //
-  //   this.updateMainStyle('200%');
-  //
-  // }
-  //
-  // animationDone(event: any): void {
-  //
-  //   this.updateMainStyle('auto');
-  //
-  //   this.routerState = 'none';
-  //
-  // }
-  //
-  // updateMainStyle(style: string): void {
-  //
-  //   let $main = <HTMLElement>document.querySelectorAll('main')[0];
-  //
-  //   $main.style.height = style;
-  //
-  // }
-
   animateIndicator(init: boolean): void {
 
     let $initial = <HTMLElement>document.querySelectorAll('.nav-' + this.initialPage)[0],
@@ -139,8 +87,6 @@ export class AppComponent implements OnInit {
     this.currentLatLong = this.utils.getElementCoordinates($initial, false);
     this.targetLatLong = this.utils.getElementCoordinates($target, false);
     this.parentLatLong = this.utils.getElementCoordinates($parent, false);
-
-    // console.log('func. initialPage = ' + this.initialPage);
 
     let offsetLeft,
         styleString;

@@ -85,7 +85,6 @@ ul {
       display: block;
       text-indent: -99999rem;
       white-space: nowrap;
-      // background: $light-blue;
 
       i {
         opacity: 1;
@@ -96,12 +95,8 @@ ul {
         transform: translate(-50%, -50%);
       }
 
-      &.active {
-        // background: $light-blue;
-
-        i {
-          color: $dark-blue;
-        }
+      &.active i {
+        color: $dark-blue;
       }
     }
   }

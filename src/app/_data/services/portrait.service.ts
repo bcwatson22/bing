@@ -20,10 +20,4 @@ export class PortraitService {
 
    }
 
-  // getPortraits(): Promise<Portrait[]> {
-  //
-  //   return Promise.resolve(PORTRAITS);
-  //
-  // }
-
 }
