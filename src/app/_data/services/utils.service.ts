@@ -62,7 +62,7 @@ export class UtilsService {
           description = data.description;
 
       this.title.setTitle(`${data.title}${titleSuffix}`);
-      this.updateCanonicalUrl(`https://bingjones.co.uk/${data.title.toLowerCase()}`);
+      this.updateCanonicalUrl(`https://www.bingjones.co.uk/${data.title.toLowerCase()}`);
       this.meta.updateTag({ name: 'description', content: description });
       this.meta.updateTag({ name: 'twitter:description', content: description });
       this.meta.updateTag({ property: 'og:description', content: description });
